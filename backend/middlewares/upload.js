@@ -1,0 +1,148 @@
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+const { nanoid } = require('nanoid');
+const cloudinaryConfig = require('../config/cloudinary');
+const { BadRequestError } = require('../utils/errors');
+const logger = require('../utils/logger');
+
+// Ensure upload directories exist
+const uploadDirs = ['resumes', 'images', 'logos', 'avatars', 'documents'];
+uploadDirs.forEach(dir => {
+  const dirPath = path.join(__dirname, '..', 'uploads', dir);
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+});
+
+// Local storage configuration
+const localStorage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    let uploadDir = 'documents';
+    if (file.mimetype.startsWith('image/')) {
+      uploadDir = 'images';
+    }
+    if (file.fieldname === 'resume' || file.fieldname === 'cv') {
+      uploadDir = 'resumes';
+    }
+    if (file.fieldname === 'logo' || file.fieldname === 'companyLogo') {
+      uploadDir = 'logos';
+    }
+    if (file.fieldname === 'avatar' || file.fieldname === 'profileImage') {
+      uploadDir = 'avatars';
+    }
+    cb(null, path.join(__dirname, '..', 'uploads', uploadDir));
+  },
+  filename: (req, file, cb) => {
+    const uniqueName = `${nanoid(12)}${path.extname(file.originalname)}`;
+    cb(null, uniqueName);
+  },
+});
+
+// File filter
+const fileFilter = (req, file, cb) => {
+  const allowedMimeTypes = [
+    'image/jpeg',
+    'image/png',
+    'image/webp',
+    'image/gif',
+    'application/pdf',
+    'application/msword',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  ];
+
+  if (!allowedMimeTypes.includes(file.mimetype)) {
+    cb(new BadRequestError(`File type ${file.mimetype} is not allowed`), false);
+  }
+  cb(null, true);
+};
+
+// Create multer upload instance
+const upload = multer({
+  storage: localStorage,
+  fileFilter,
+  limits: {
+    fileSize: parseInt(process.env.MAX_FILE_SIZE) || 5 * 1024 * 1024, // 5MB
+    files: 5,
+  },
+});
+
+// Upload to Cloudinary middleware
+const uploadToCloudinary = async (req, res, next) => {
+  try {
+    if (!req.file && !req.files) {
+      return next();
+    }
+
+    const files = req.files || [req.file];
+    const uploadedFiles = [];
+
+    for (const file of Array.isArray(files) ? files : [files]) {
+      const result = await cloudinaryConfig.uploadFile(file.path, {
+        folder: `job-reqruitment/${file.fieldname || 'general'}`,
+        public_id: `file_${Date.now()}_${nanoid(8)}`,
+      });
+
+      // Delete local file after upload
+      fs.unlink(file.path, (err) => {
+        if (err) logger.error('Failed to delete local file:', err);
+      });
+
+      uploadedFiles.push({
+        url: result.secure_url,
+        publicId: result.public_id,
+        originalName: file.originalname,
+        mimeType: file.mimetype,
+        size: file.size,
+        width: result.width,
+        height: result.height,
+        format: result.format,
+      });
+    }
+
+    req.uploadedFiles = uploadedFiles;
+    next();
+  } catch (error) {
+    logger.error('Cloudinary upload error:', error);
+    next(new BadRequestError('File upload failed'));
+  }
+};
+
+// Single file upload middleware
+const uploadSingle = (fieldName) => {
+  return [upload.single(fieldName), uploadToCloudinary];
+};
+
+// Multiple files upload middleware
+const uploadMultiple = (fieldName, maxCount = 5) => {
+  return [upload.array(fieldName, maxCount), uploadToCloudinary];
+};
+
+// Mixed files upload middleware
+const uploadFields = (fields) => {
+  return [upload.fields(fields), uploadToCloudinary];
+};
+
+// Resume upload with specific validation
+const uploadResume = uploadSingle('resume');
+
+// Image upload with optimization
+const uploadImage = uploadSingle('image');
+
+// Company logo upload
+const uploadLogo = uploadSingle('logo');
+
+// Profile avatar upload
+const uploadAvatar = uploadSingle('avatar');
+
+module.exports = {
+  upload,
+  uploadSingle,
+  uploadMultiple,
+  uploadFields,
+  uploadResume,
+  uploadImage,
+  uploadLogo,
+  uploadAvatar,
+  uploadToCloudinary,
+};

@@ -1,0 +1,359 @@
+2026-07-17 12:27:50 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 12:28:00 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 12:28:10 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 12:28:20 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 12:28:30 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 12:28:40 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:04:27 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:04:37 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:04:47 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:04:57 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:05:07 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:05:17 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:38:04 [ERROR]: Seeding failed: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.categories index: slug_1 dup key: { slug: null } MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.categories index: slug_1 dup key: { slug: null }
+    at Connection.onMessage (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:202:26)
+    at MessageStream.<anonymous> (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:509:28)
+    at processIncomingData (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:124:16)
+    at MessageStream._write (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at TLSSocket.ondata (node:internal/streams/readable:1012:24)
+    at TLSSocket.emit (node:events:509:28) {
+  "ok": 0,
+  "code": 11000,
+  "codeName": "DuplicateKey",
+  "keyPattern": {
+    "slug": 1
+  },
+  "keyValue": {
+    "slug": null
+  },
+  "$clusterTime": {
+    "clusterTime": {
+      "$timestamp": "7663405709828030500"
+    },
+    "signature": {
+      "hash": "xNadVOIu1bT1Oi41WzIPLTPY2fs=",
+      "keyId": {
+        "low": 3,
+        "high": 1773255841,
+        "unsigned": false
+      }
+    }
+  },
+  "operationTime": {
+    "$timestamp": "7663405709828030500"
+  }
+}
+2026-07-17 13:38:39 [ERROR]: Seeding failed: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.categories index: slug_1 dup key: { slug: null } MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.categories index: slug_1 dup key: { slug: null }
+    at Connection.onMessage (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:202:26)
+    at MessageStream.<anonymous> (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:509:28)
+    at processIncomingData (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:124:16)
+    at MessageStream._write (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at TLSSocket.ondata (node:internal/streams/readable:1012:24)
+    at TLSSocket.emit (node:events:509:28) {
+  "ok": 0,
+  "code": 11000,
+  "codeName": "DuplicateKey",
+  "keyPattern": {
+    "slug": 1
+  },
+  "keyValue": {
+    "slug": null
+  },
+  "$clusterTime": {
+    "clusterTime": {
+      "$timestamp": "7663405860151885856"
+    },
+    "signature": {
+      "hash": "v31ep0PK2st7GzAj5SGMFqaP1+w=",
+      "keyId": {
+        "low": 3,
+        "high": 1773255841,
+        "unsigned": false
+      }
+    }
+  },
+  "operationTime": {
+    "$timestamp": "7663405860151885856"
+  }
+}
+2026-07-17 13:39:55 [ERROR]: Internal Server Error Cannot read properties of undefined (reading 'setRefreshTokenCookie') TypeError: Cannot read properties of undefined (reading 'setRefreshTokenCookie')
+    at login (D:\job-reqruitment\backend\controllers\auth.controller.js:49:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  "requestId": "UPuPu6D5NZip",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "statusCode": 500
+}
+2026-07-17 13:40:08 [ERROR]: Internal Server Error Cannot read properties of undefined (reading 'setRefreshTokenCookie') TypeError: Cannot read properties of undefined (reading 'setRefreshTokenCookie')
+    at login (D:\job-reqruitment\backend\controllers\auth.controller.js:49:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  "requestId": "Cde_FkO3Iark",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "statusCode": 500
+}
+2026-07-17 13:40:46 [ERROR]: Internal Server Error Cannot read properties of undefined (reading 'setRefreshTokenCookie') TypeError: Cannot read properties of undefined (reading 'setRefreshTokenCookie')
+    at login (D:\job-reqruitment\backend\controllers\auth.controller.js:49:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  "requestId": "0fcjWSo_ZqHF",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "statusCode": 500
+}

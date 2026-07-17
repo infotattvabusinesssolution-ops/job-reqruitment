@@ -1,0 +1,584 @@
+2026-07-17 12:27:50 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 12:27:50 [INFO]: Retrying connection... Attempt 1/5  
+2026-07-17 12:28:00 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 12:28:00 [INFO]: Retrying connection... Attempt 2/5  
+2026-07-17 12:28:10 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 12:28:10 [INFO]: Retrying connection... Attempt 3/5  
+2026-07-17 12:28:20 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 12:28:20 [INFO]: Retrying connection... Attempt 4/5  
+2026-07-17 12:28:30 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 12:28:30 [INFO]: Retrying connection... Attempt 5/5  
+2026-07-17 12:28:40 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:04:27 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:04:27 [INFO]: Retrying connection... Attempt 1/5  
+2026-07-17 13:04:37 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:04:37 [INFO]: Retrying connection... Attempt 2/5  
+2026-07-17 13:04:47 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:04:47 [INFO]: Retrying connection... Attempt 3/5  
+2026-07-17 13:04:57 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:04:57 [INFO]: Retrying connection... Attempt 4/5  
+2026-07-17 13:05:07 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:05:07 [INFO]: Retrying connection... Attempt 5/5  
+2026-07-17 13:05:17 [ERROR]: MongoDB connection error: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017 MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:46:7)
+    at async ServerBootstrap.start (D:\job-reqruitment\backend\server.js:19:7) {
+  "reason": {
+    "type": "Unknown",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": null,
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 13:23:08 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 13:23:08 [INFO]: Database connected successfully  
+2026-07-17 13:23:08 [INFO]: Socket.IO initialized successfully  
+2026-07-17 13:23:09 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 13:23:21 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-17 13:23:21 [INFO]: HTTP server closed  
+2026-07-17 13:23:21 [INFO]: Socket.IO server closed  
+2026-07-17 13:24:13 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 13:24:13 [INFO]: Database connected successfully  
+2026-07-17 13:24:13 [INFO]: Socket.IO initialized successfully  
+2026-07-17 13:24:13 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 13:26:50 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-17 13:26:50 [INFO]: HTTP server closed  
+2026-07-17 13:26:50 [INFO]: Socket.IO server closed  
+2026-07-17 13:27:27 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 13:27:27 [INFO]: Database connected successfully  
+2026-07-17 13:27:27 [INFO]: Socket.IO initialized successfully  
+2026-07-17 13:27:27 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 13:27:39 [HTTP]: ::1 - - [17/Jul/2026:07:57:39 +0000] "POST /api/auth/login HTTP/1.1" 401 455 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:27:39 [HTTP]: ::1 - - [17/Jul/2026:07:57:39 +0000] "POST /api/auth/refresh-token HTTP/1.1" 401 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:27:59 [HTTP]: ::1 - - [17/Jul/2026:07:57:59 +0000] "POST /api/auth/login HTTP/1.1" 401 455 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:27:59 [HTTP]: ::1 - - [17/Jul/2026:07:57:59 +0000] "POST /api/auth/refresh-token HTTP/1.1" 401 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:28:08 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-17 13:28:08 [INFO]: HTTP server closed  
+2026-07-17 13:28:08 [INFO]: Socket.IO server closed  
+2026-07-17 13:28:15 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 13:28:15 [INFO]: Database connected successfully  
+2026-07-17 13:28:15 [INFO]: Socket.IO initialized successfully  
+2026-07-17 13:28:15 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 13:28:26 [HTTP]: ::1 - - [17/Jul/2026:07:58:26 +0000] "POST /api/auth/login HTTP/1.1" 401 455 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:28:26 [HTTP]: ::1 - - [17/Jul/2026:07:58:26 +0000] "POST /api/auth/refresh-token HTTP/1.1" 401 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:37:59 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-17 13:37:59 [INFO]: HTTP server closed  
+2026-07-17 13:37:59 [INFO]: Socket.IO server closed  
+2026-07-17 13:38:03 [INFO]: Starting database seeding...  
+2026-07-17 13:38:04 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 13:38:04 [INFO]: Seeding roles...  
+2026-07-17 13:38:04 [INFO]: Roles seeded successfully  
+2026-07-17 13:38:04 [INFO]: Seeding categories...  
+2026-07-17 13:38:04 [ERROR]: Seeding failed: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.categories index: slug_1 dup key: { slug: null } MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.categories index: slug_1 dup key: { slug: null }
+    at Connection.onMessage (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:202:26)
+    at MessageStream.<anonymous> (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:509:28)
+    at processIncomingData (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:124:16)
+    at MessageStream._write (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at TLSSocket.ondata (node:internal/streams/readable:1012:24)
+    at TLSSocket.emit (node:events:509:28) {
+  "ok": 0,
+  "code": 11000,
+  "codeName": "DuplicateKey",
+  "keyPattern": {
+    "slug": 1
+  },
+  "keyValue": {
+    "slug": null
+  },
+  "$clusterTime": {
+    "clusterTime": {
+      "$timestamp": "7663405709828030500"
+    },
+    "signature": {
+      "hash": "xNadVOIu1bT1Oi41WzIPLTPY2fs=",
+      "keyId": {
+        "low": 3,
+        "high": 1773255841,
+        "unsigned": false
+      }
+    }
+  },
+  "operationTime": {
+    "$timestamp": "7663405709828030500"
+  }
+}
+2026-07-17 13:38:38 [INFO]: Starting database seeding...  
+2026-07-17 13:38:38 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 13:38:38 [INFO]: Seeding roles...  
+2026-07-17 13:38:39 [INFO]: Roles seeded successfully  
+2026-07-17 13:38:39 [INFO]: Seeding categories...  
+2026-07-17 13:38:39 [ERROR]: Seeding failed: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.categories index: slug_1 dup key: { slug: null } MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.categories index: slug_1 dup key: { slug: null }
+    at Connection.onMessage (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:202:26)
+    at MessageStream.<anonymous> (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:509:28)
+    at processIncomingData (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:124:16)
+    at MessageStream._write (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:570:12)
+    at _write (node:internal/streams/writable:499:10)
+    at Writable.write (node:internal/streams/writable:508:10)
+    at TLSSocket.ondata (node:internal/streams/readable:1012:24)
+    at TLSSocket.emit (node:events:509:28) {
+  "ok": 0,
+  "code": 11000,
+  "codeName": "DuplicateKey",
+  "keyPattern": {
+    "slug": 1
+  },
+  "keyValue": {
+    "slug": null
+  },
+  "$clusterTime": {
+    "clusterTime": {
+      "$timestamp": "7663405860151885856"
+    },
+    "signature": {
+      "hash": "v31ep0PK2st7GzAj5SGMFqaP1+w=",
+      "keyId": {
+        "low": 3,
+        "high": 1773255841,
+        "unsigned": false
+      }
+    }
+  },
+  "operationTime": {
+    "$timestamp": "7663405860151885856"
+  }
+}
+2026-07-17 13:39:28 [INFO]: Starting database seeding...  
+2026-07-17 13:39:29 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 13:39:29 [INFO]: Seeding roles...  
+2026-07-17 13:39:29 [INFO]: Roles seeded successfully  
+2026-07-17 13:39:29 [INFO]: Seeding categories...  
+2026-07-17 13:39:30 [INFO]: Categories seeded successfully  
+2026-07-17 13:39:30 [INFO]: Seeding admin user...  
+2026-07-17 13:39:30 [INFO]: Admin user created: admin@jobreqruitment.com / Admin@12345  
+2026-07-17 13:39:38 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 13:39:38 [INFO]: Database connected successfully  
+2026-07-17 13:39:38 [INFO]: AutoSeed: Checking database records...  
+2026-07-17 13:39:39 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-17 13:39:40 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-17 13:39:40 [INFO]: AutoSeed: Admin user already exists  
+2026-07-17 13:39:40 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-17 13:39:40 [INFO]: Socket.IO initialized successfully  
+2026-07-17 13:39:40 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 13:39:55 [ERROR]: Internal Server Error Cannot read properties of undefined (reading 'setRefreshTokenCookie') TypeError: Cannot read properties of undefined (reading 'setRefreshTokenCookie')
+    at login (D:\job-reqruitment\backend\controllers\auth.controller.js:49:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  "requestId": "UPuPu6D5NZip",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "statusCode": 500
+}
+2026-07-17 13:39:55 [HTTP]: ::1 - - [17/Jul/2026:08:09:55 +0000] "POST /api/auth/login HTTP/1.1" 500 453 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:40:08 [ERROR]: Internal Server Error Cannot read properties of undefined (reading 'setRefreshTokenCookie') TypeError: Cannot read properties of undefined (reading 'setRefreshTokenCookie')
+    at login (D:\job-reqruitment\backend\controllers\auth.controller.js:49:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  "requestId": "Cde_FkO3Iark",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "statusCode": 500
+}
+2026-07-17 13:40:08 [HTTP]: ::1 - - [17/Jul/2026:08:10:08 +0000] "POST /api/auth/login HTTP/1.1" 500 453 "http://localhost:5173/login" "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36"  
+2026-07-17 13:40:46 [ERROR]: Internal Server Error Cannot read properties of undefined (reading 'setRefreshTokenCookie') TypeError: Cannot read properties of undefined (reading 'setRefreshTokenCookie')
+    at login (D:\job-reqruitment\backend\controllers\auth.controller.js:49:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  "requestId": "0fcjWSo_ZqHF",
+  "method": "POST",
+  "url": "/api/auth/login",
+  "ip": "::1",
+  "statusCode": 500
+}
+2026-07-17 13:40:46 [HTTP]: ::1 - - [17/Jul/2026:08:10:46 +0000] "POST /api/auth/login HTTP/1.1" 500 453 "http://localhost:5173/login" "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36"  
+2026-07-17 13:41:33 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-17 13:41:33 [INFO]: HTTP server closed  
+2026-07-17 13:41:33 [INFO]: Socket.IO server closed  
+2026-07-17 13:41:45 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 13:41:45 [INFO]: Database connected successfully  
+2026-07-17 13:41:45 [INFO]: AutoSeed: Checking database records...  
+2026-07-17 13:41:46 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-17 13:41:46 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-17 13:41:46 [INFO]: AutoSeed: Admin user already exists  
+2026-07-17 13:41:46 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-17 13:41:46 [INFO]: Socket.IO initialized successfully  
+2026-07-17 13:41:46 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 13:41:50 [HTTP]: ::1 - - [17/Jul/2026:08:11:50 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:41:59 [HTTP]: ::1 - - [17/Jul/2026:08:11:59 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 200 79 "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:42:22 [HTTP]: ::1 - - [17/Jul/2026:08:12:22 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 200 80 "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:42:33 [HTTP]: ::1 - - [17/Jul/2026:08:12:33 +0000] "POST /api/auth/logout HTTP/1.1" 401 - "http://localhost:5173/contact" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:42:33 [HTTP]: ::1 - - [17/Jul/2026:08:12:33 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 - "http://localhost:5173/contact" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:42:33 [HTTP]: ::1 - - [17/Jul/2026:08:12:33 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/contact" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:42:34 [HTTP]: ::1 - - [17/Jul/2026:08:12:34 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:43:09 [HTTP]: ::1 - - [17/Jul/2026:08:13:09 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:44:49 [HTTP]: ::1 - - [17/Jul/2026:08:14:49 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:45:19 [HTTP]: ::1 - - [17/Jul/2026:08:15:19 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:45:19 [HTTP]: ::1 - - [17/Jul/2026:08:15:19 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:45:55 [HTTP]: ::1 - - [17/Jul/2026:08:15:55 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:16 [HTTP]: ::1 - - [17/Jul/2026:08:17:16 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:16 [HTTP]: ::1 - - [17/Jul/2026:08:17:16 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:35 [HTTP]: ::1 - - [17/Jul/2026:08:17:35 +0000] "POST /api/auth/logout HTTP/1.1" 401 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:35 [HTTP]: ::1 - - [17/Jul/2026:08:17:35 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:35 [HTTP]: ::1 - - [17/Jul/2026:08:17:35 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:35 [HTTP]: ::1 - - [17/Jul/2026:08:17:35 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:44 [HTTP]: ::1 - - [17/Jul/2026:08:17:44 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:44 [HTTP]: ::1 - - [17/Jul/2026:08:17:44 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 229 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:47 [HTTP]: ::1 - - [17/Jul/2026:08:17:47 +0000] "GET /api/admin/users?limit=100 HTTP/1.1" 200 800 "http://localhost:5173/dashboard/admin/users" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:49 [HTTP]: ::1 - - [17/Jul/2026:08:17:49 +0000] "GET /api/jobs?limit=100 HTTP/1.1" 200 81 "http://localhost:5173/dashboard/admin/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:51 [HTTP]: ::1 - - [17/Jul/2026:08:17:51 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 82 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:47:54 [HTTP]: ::1 - - [17/Jul/2026:08:17:54 +0000] "GET /api/admin/settings HTTP/1.1" 200 140 "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:49:02 [HTTP]: ::1 - - [17/Jul/2026:08:19:02 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/analytics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:49:02 [HTTP]: ::1 - - [17/Jul/2026:08:19:02 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/analytics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:49:04 [HTTP]: ::1 - - [17/Jul/2026:08:19:04 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 230 "http://localhost:5173/dashboard/admin/analytics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:49:05 [HTTP]: ::1 - - [17/Jul/2026:08:19:05 +0000] "GET /api/admin/settings HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:49:10 [HTTP]: ::1 - - [17/Jul/2026:08:19:10 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:49:14 [HTTP]: ::1 - - [17/Jul/2026:08:19:14 +0000] "GET /api/admin/users?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/users" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:49:24 [HTTP]: ::1 - - [17/Jul/2026:08:19:24 +0000] "GET /api/jobs?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:51:29 [HTTP]: ::1 - - [17/Jul/2026:08:21:29 +0000] "POST /api/blogs HTTP/1.1" 201 542 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:51:29 [HTTP]: ::1 - - [17/Jul/2026:08:21:29 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 699 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:51:34 [HTTP]: ::1 - - [17/Jul/2026:08:21:34 +0000] "GET /api/auth/me HTTP/1.1" 429 87 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:51:34 [HTTP]: ::1 - - [17/Jul/2026:08:21:34 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:54:06 [HTTP]: ::1 - - [17/Jul/2026:08:24:06 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:54:10 [HTTP]: ::1 - - [17/Jul/2026:08:24:10 +0000] "GET /api/jobs?page=1&limit=8&workMode=remote HTTP/1.1" 200 79 "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:54:12 [HTTP]: ::1 - - [17/Jul/2026:08:24:12 +0000] "GET /api/jobs?page=1&limit=8&workMode=remote&employmentType=full-time HTTP/1.1" 200 79 "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:54:15 [HTTP]: ::1 - - [17/Jul/2026:08:24:15 +0000] "GET /api/jobs?page=1&limit=8&workMode=remote&employmentType=full-time&experienceLevel=mid HTTP/1.1" 200 79 "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:54:17 [HTTP]: ::1 - - [17/Jul/2026:08:24:17 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 200 697 "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 13:54:21 [HTTP]: ::1 - - [17/Jul/2026:08:24:21 +0000] "GET /api/blogs/slug/jh HTTP/1.1" 200 641 "http://localhost:5173/blogs/jh" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 14:04:28 [HTTP]: ::1 - - [17/Jul/2026:08:34:28 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 14:05:24 [HTTP]: ::1 - - [17/Jul/2026:08:35:24 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 200 697 "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 15:09:00 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 15:09:01 [INFO]: Retrying connection... Attempt 1/5  
+2026-07-17 15:42:13 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 15:42:20 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 15:42:20 [INFO]: Retrying connection... Attempt 1/5  
+2026-07-17 15:42:20 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 15:42:20 [INFO]: Retrying connection... Attempt 2/5  
+2026-07-17 15:42:20 [INFO]: MongoDB reconnected successfully  
+2026-07-17 15:42:20 [INFO]: MongoDB reconnected successfully  
+2026-07-17 15:42:25 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 15:42:25 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 15:44:17 [HTTP]: ::1 - - [17/Jul/2026:10:14:17 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 15:49:26 [HTTP]: ::1 - - [17/Jul/2026:10:19:26 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 15:55:29 [HTTP]: ::1 - - [17/Jul/2026:10:25:29 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 15:58:36 [HTTP]: ::1 - - [17/Jul/2026:10:28:36 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36"  
+2026-07-17 16:03:23 [HTTP]: ::1 - - [17/Jul/2026:10:33:23 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:05:35 [HTTP]: ::1 - - [17/Jul/2026:10:35:35 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:19:22 [HTTP]: ::1 - - [17/Jul/2026:10:49:22 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:44:37 [HTTP]: ::1 - - [17/Jul/2026:11:14:37 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:47:11 [HTTP]: ::1 - - [17/Jul/2026:11:17:11 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:47:57 [HTTP]: ::1 - - [17/Jul/2026:11:17:57 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:49:17 [HTTP]: ::1 - - [17/Jul/2026:11:19:17 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:49:18 [HTTP]: ::1 - - [17/Jul/2026:11:19:18 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 232 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:49:21 [HTTP]: ::1 - - [17/Jul/2026:11:19:21 +0000] "GET /api/admin/users?limit=100 HTTP/1.1" 200 800 "http://localhost:5173/dashboard/admin/users" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:49:22 [HTTP]: ::1 - - [17/Jul/2026:11:19:22 +0000] "GET /api/jobs?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:49:26 [HTTP]: ::1 - - [17/Jul/2026:11:19:26 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 699 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:49:29 [HTTP]: ::1 - - [17/Jul/2026:11:19:29 +0000] "GET /api/admin/settings HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 16:50:47 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-17 16:50:47 [INFO]: HTTP server closed  
+2026-07-17 16:50:47 [INFO]: Socket.IO server closed  
