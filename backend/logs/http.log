@@ -582,3 +582,30 @@
 2026-07-17 16:50:47 [INFO]: SIGINT received. Starting graceful shutdown...  
 2026-07-17 16:50:47 [INFO]: HTTP server closed  
 2026-07-17 16:50:47 [INFO]: Socket.IO server closed  
+2026-07-17 17:06:49 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 17:06:49 [INFO]: Database connected successfully  
+2026-07-17 17:06:49 [INFO]: AutoSeed: Checking database records...  
+2026-07-17 17:06:50 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-17 17:06:50 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-17 17:06:50 [INFO]: AutoSeed: Admin user already exists  
+2026-07-17 17:06:50 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-17 17:06:50 [INFO]: Socket.IO initialized successfully  
+2026-07-17 17:06:50 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 17:06:52 [HTTP]: ::1 - - [17/Jul/2026:11:36:52 +0000] "GET /api/auth/me HTTP/1.1" 401 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 17:06:52 [HTTP]: ::1 - - [17/Jul/2026:11:36:52 +0000] "GET /api/auth/me HTTP/1.1" 401 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 17:06:52 [HTTP]: ::1 - - [17/Jul/2026:11:36:52 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 17:06:52 [HTTP]: ::1 - - [17/Jul/2026:11:36:52 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 17:06:52 [HTTP]: ::1 - - [17/Jul/2026:11:36:52 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 17:07:35 [HTTP]: ::1 - - [17/Jul/2026:11:37:35 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 17:07:36 [HTTP]: ::1 - - [17/Jul/2026:11:37:36 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
