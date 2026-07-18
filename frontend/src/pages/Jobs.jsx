@@ -74,7 +74,7 @@ const Jobs = () => {
 
   return (
     <div className="pt-24 pb-16 bg-gray-50 min-h-screen">
-      <Helmet><title>Explore Premium Careers - JobReqruitment</title></Helmet>
+      <Helmet><title>Explore Premium Careers - JobRecruitment</title></Helmet>
 
       {/* Header Banner */}
       <div className="relative py-16 mb-8 overflow-hidden bg-gradient-to-br from-secondary-950 via-secondary-900 to-primary-950 border-b border-secondary-800">

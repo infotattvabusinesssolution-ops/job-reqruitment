@@ -44,7 +44,7 @@ const Blogs = () => {
 
   return (
     <div className="pt-24 pb-16 bg-gray-50 min-h-screen">
-      <Helmet><title>Career Insights & Industry Trends - JobReqruitment</title></Helmet>
+      <Helmet><title>Career Insights & Industry Trends - JobRecruitment</title></Helmet>
 
       {/* Hero Banner */}
       <div className="bg-gradient-to-r from-secondary-900 via-secondary-800 to-primary-950 text-white py-12 mb-8">
@@ -142,19 +142,29 @@ const Blogs = () => {
                   className="bg-white rounded-2xl border border-gray-150 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-all"
                 >
                   {/* Cover Image */}
-                  <div className="h-48 bg-gradient-to-br from-primary-100 to-accent-100 relative overflow-hidden flex items-center justify-center">
-                    {blog.coverImage?.url ? (
+                  <div className="h-48 bg-gradient-to-br from-primary-100 to-accent-100 relative overflow-hidden flex items-center justify-center group">
+                    {blog.coverImage?.url || (typeof blog.coverImage === 'string' && blog.coverImage) ? (
                       <img
-                        src={blog.coverImage.url}
-                        alt={blog.coverImage.alt || blog.title}
-                        className="w-full h-full object-cover"
+                        src={typeof blog.coverImage === 'string' ? blog.coverImage : blog.coverImage.url}
+                        alt={blog.coverImage?.alt || blog.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                        }}
                       />
                     ) : (
                       <div className="text-4xl text-primary-300">📝</div>
                     )}
+
                     {blog.isFeatured && (
-                      <span className="absolute top-4 left-4 bg-accent-500 text-white text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded-md">
+                      <span className="absolute top-3 left-3 bg-accent-500 text-white text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded-md shadow-sm">
                         Featured
+                      </span>
+                    )}
+
+                    {blog.images && blog.images.length > 0 && (
+                      <span className="absolute top-3 right-3 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded-lg flex items-center gap-1 backdrop-blur-sm">
+                        📷 {blog.images.length + 1}
                       </span>
                     )}
                   </div>

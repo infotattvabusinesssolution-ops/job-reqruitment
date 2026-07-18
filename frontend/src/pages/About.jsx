@@ -155,7 +155,7 @@ const About = () => (
         <div className="grid md:grid-cols-3 gap-8">
           {[
             { icon: HiLocationMarker, title: 'Corporate Address', info: 'Geo India Limited\n723, 7th Floor, Tower Siddhi,\nMahagun Mantra, Greater Noida West 201306' },
-            { icon: HiPhone, title: 'Enquiries', info: 'Phone: +91 120 319 3279\nWhatsApp: +91 96346 85866' },
+            { icon: HiPhone, title: 'Enquiries', info: 'Phone: +91 95993 44168\nWhatsApp: +91 95993 44168' },
             { icon: HiMail, title: 'Email Address', info: 'Hr@geoindialimited.com' },
           ].map((item) => (
             <motion.div key={item.title} {...fadeInUp} className="bg-white rounded-2xl p-6 border border-gray-150 flex items-center space-x-4">

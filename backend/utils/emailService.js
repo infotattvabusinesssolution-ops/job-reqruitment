@@ -42,17 +42,17 @@ class EmailService {
   }
 
   async sendWelcomeEmail(user) {
-    const subject = 'Welcome to JobReqruitment Platform';
+    const subject = 'Welcome to JobRecruitment Platform';
     const html = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; text-align: center; border-radius: 10px 10px 0 0;">
-          <h1 style="color: white; margin: 0; font-size: 28px;">Welcome to JobReqruitment!</h1>
+          <h1 style="color: white; margin: 0; font-size: 28px;">Welcome to JobRecruitment!</h1>
           <p style="color: rgba(255,255,255,0.9); margin-top: 10px;">Your dream career starts here</p>
         </div>
         <div style="background: #ffffff; padding: 40px; border: 1px solid #e0e0e0; border-top: none; border-radius: 0 0 10px 10px;">
           <p>Hello <strong>${user.firstName}</strong>,</p>
-          <p>Thank you for joining JobReqruitment! We're excited to help you take the next step in your career journey.</p>
-          <p>With JobReqruitment, you can:</p>
+          <p>Thank you for joining JobRecruitment! We're excited to help you take the next step in your career journey.</p>
+          <p>With JobRecruitment, you can:</p>
           <ul>
             <li>Browse thousands of job opportunities</li>
             <li>Connect with top employers and recruiters</li>
@@ -74,18 +74,20 @@ class EmailService {
 
   async sendPasswordResetEmail(user, resetToken) {
     const resetUrl = `${process.env.FRONTEND_URL || 'http://localhost:5173'}/reset-password/${resetToken}`;
-    const subject = 'Password Reset Request';
+    logger.info(`Password reset link generated for ${user.email}: ${resetUrl}`);
+    const subject = 'Password Reset Request - JobRecruitment';
     const html = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; text-align: center; border-radius: 10px 10px 0 0;">
+        <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 40px; text-align: center; border-radius: 10px 10px 0 0;">
           <h1 style="color: white; margin: 0;">Reset Your Password</h1>
+          <p style="color: #94a3b8; margin-top: 10px;">Geo India Limited / JobRecruitment</p>
         </div>
         <div style="background: #ffffff; padding: 40px; border: 1px solid #e0e0e0; border-top: none; border-radius: 0 0 10px 10px;">
-          <p>Hello <strong>${user.firstName}</strong>,</p>
-          <p>You recently requested to reset your password. Click the button below to reset it:</p>
+          <p>Hello <strong>${user.firstName || 'User'}</strong>,</p>
+          <p>You recently requested to reset your password. Click the button below to set a new password:</p>
           <div style="text-align: center; margin: 30px 0;">
             <a href="${resetUrl}" 
-               style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+               style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; padding: 14px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">
               Reset Password
             </a>
           </div>

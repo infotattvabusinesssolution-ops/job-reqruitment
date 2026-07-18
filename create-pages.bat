@@ -1,7 +1,7 @@
 @echo off
 set BASE=d:\job-reqruitment\frontend\src\pages
 
-call :createPage About "About Us" "Learn more about JobReqruitment and our mission to connect talent with opportunity."
+call :createPage About "About Us" "Learn more about JobRecruitment and our mission to connect talent with opportunity."
 call :createPage Services "Our Services" "Comprehensive recruitment and staffing solutions for businesses of all sizes."
 call :createPage Industries "Industries" "We serve diverse industries with specialized recruitment expertise."
 call :createPage Jobs "Find Jobs" "Browse thousands of job opportunities from top employers."
@@ -14,7 +14,7 @@ call :createPage BlogDetails "Blog Post" "Read our latest blog post."
 call :createPage Testimonials "Testimonials" "Hear from our satisfied clients and candidates."
 call :createPage FAQ "FAQ" "Frequently asked questions about our platform."
 call :createPage Contact "Contact Us" "Get in touch with our team."
-call :createPage Register "Create Account" "Join JobReqruitment and start your journey."
+call :createPage Register "Create Account" "Join JobRecruitment and start your journey."
 call :createPage ForgotPassword "Forgot Password" "Reset your password."
 call :createPage ResetPassword "Reset Password" "Set a new password for your account."
 
@@ -40,7 +40,7 @@ echo const %PNAME% = () ^{
 echo   return (
 echo     ^<div className="pt-24 pb-16"^>
 echo       ^<Helmet^>
-echo         ^<title^>%PTITLE% - JobReqruitment^</title^>
+echo         ^<title^>%PTITLE% - JobRecruitment^</title^>
 echo         ^<meta name="description" content="%PDESC%" /^>
 echo       ^</Helmet^>
 echo       ^<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"^>
@@ -70,7 +70,7 @@ echo const %PNAME% = () ^{
 echo   return (
 echo     ^<div^>
 echo       ^<Helmet^>
-echo         ^<title^>%PTITLE% - JobReqruitment^</title^>
+echo         ^<title^>%PTITLE% - JobRecruitment^</title^>
 echo       ^</Helmet^>
 echo       ^<div class="mb-8"^>
 echo         ^<h1 className="text-2xl font-heading font-bold text-secondary-900"^>%PTITLE%^</h1^>

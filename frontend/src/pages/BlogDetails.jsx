@@ -86,7 +86,7 @@ const BlogDetails = () => {
 
   return (
     <div className="pt-24 pb-16 bg-gray-50 min-h-screen">
-      <Helmet><title>{blog.title} - JobReqruitment</title></Helmet>
+      <Helmet><title>{blog.title} - JobRecruitment</title></Helmet>
 
       {/* Back button */}
       <div className="max-w-4xl mx-auto px-4 mb-6">
@@ -125,22 +125,60 @@ const BlogDetails = () => {
           </div>
 
           {/* Cover image */}
-          <div className="h-64 sm:h-96 rounded-2xl bg-gradient-to-br from-primary-50 to-accent-50 relative overflow-hidden flex items-center justify-center">
-            {blog.coverImage?.url ? (
-              <img
-                src={blog.coverImage.url}
-                alt={blog.coverImage.alt || blog.title}
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <div className="text-6xl text-primary-200">📝</div>
-            )}
-          </div>
+          {(blog.coverImage?.url || (typeof blog.coverImage === 'string' && blog.coverImage)) && (
+            <div className="space-y-2">
+              <div className="h-64 sm:h-96 rounded-2xl bg-gradient-to-br from-primary-50 to-accent-50 relative overflow-hidden flex items-center justify-center border border-gray-150 shadow-inner">
+                <img
+                  src={typeof blog.coverImage === 'string' ? blog.coverImage : blog.coverImage.url}
+                  alt={blog.coverImage?.alt || blog.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {blog.coverImage?.alt && (
+                <p className="text-[11px] text-gray-400 italic text-center font-medium">
+                  {blog.coverImage.alt}
+                </p>
+              )}
+            </div>
+          )}
 
           {/* Body content */}
           <div className="text-secondary-700 text-sm leading-relaxed whitespace-pre-line border-b border-gray-100 pb-8">
             {blog.content}
           </div>
+
+          {/* Article / Section Images Gallery */}
+          {blog.images && blog.images.length > 0 && (
+            <div className="py-6 border-b border-gray-100 space-y-4">
+              <div className="flex items-center justify-between">
+                <h3 className="text-base font-heading font-bold text-secondary-900 flex items-center gap-2">
+                  <span className="p-1.5 bg-primary-50 rounded-lg text-primary-600">🖼️</span> Visual Gallery & Key Highlights
+                </h3>
+                <span className="text-xs text-gray-400 font-semibold">{blog.images.length} Image{blog.images.length !== 1 ? 's' : ''}</span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {blog.images.map((img, idx) => (
+                  <div key={idx} className="bg-gray-50 border border-gray-150 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+                    <div className="h-48 overflow-hidden bg-gray-200 relative">
+                      <img
+                        src={img.url}
+                        alt={img.alt || img.caption || `Section image ${idx + 1}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        onError={(e) => { e.target.src = 'https://via.placeholder.com/400x250?text=Image+Not+Found'; }}
+                      />
+                    </div>
+                    {(img.caption || img.alt) && (
+                      <div className="p-3 bg-white border-t border-gray-100 space-y-0.5">
+                        {img.caption && <p className="text-xs font-bold text-secondary-800 line-clamp-1">{img.caption}</p>}
+                        {img.alt && <p className="text-[10px] text-gray-400 truncate">{img.alt}</p>}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Actions (Likes) */}
           <div className="flex items-center gap-6 pt-4 text-sm font-semibold text-secondary-600">

@@ -42,7 +42,7 @@ async function seedAdminUser() {
     return;
   }
 
-  const existingAdmin = await User.findOne({ email: 'admin@jobreqruitment.com' });
+  const existingAdmin = await User.findOne({ email: 'admin@jobrecruitment.com' });
   if (existingAdmin) {
     logger.info('AutoSeed: Admin user already exists');
     return;
@@ -51,14 +51,14 @@ async function seedAdminUser() {
   await User.create({
     firstName: 'Super',
     lastName: 'Admin',
-    email: 'admin@jobreqruitment.com',
+    email: 'admin@jobrecruitment.com',
     password: 'Admin@12345',
     role: adminRole._id,
     isEmailVerified: true,
     isActive: true,
   });
 
-  logger.info('AutoSeed: Admin user created successfully: admin@jobreqruitment.com / Admin@12345');
+  logger.info('AutoSeed: Admin user created successfully: admin@jobrecruitment.com / Admin@12345');
 }
 
 async function autoSeed() {

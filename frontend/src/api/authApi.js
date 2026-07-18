@@ -35,8 +35,12 @@ export const authApi = {
     return axiosInstance.post('/auth/forgot-password', { email });
   },
 
-  resetPassword: async (token, password) => {
-    return axiosInstance.post('/auth/reset-password', { token, password });
+  resetPassword: async (token, password, confirmPassword) => {
+    return axiosInstance.post('/auth/reset-password', {
+      token,
+      password,
+      confirmPassword: confirmPassword || password,
+    });
   },
 
   verifyEmail: async (token) => {

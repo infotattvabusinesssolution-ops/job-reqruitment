@@ -83,7 +83,7 @@ const uploadToCloudinary = async (req, res, next) => {
 
       try {
         const result = await cloudinaryConfig.uploadFile(file.path, {
-          folder: `job-reqruitment/${file.fieldname || 'general'}`,
+          folder: `job-recruitment/${file.fieldname || 'general'}`,
           public_id: `file_${Date.now()}_${nanoid(8)}`,
           resource_type: 'auto',
         });

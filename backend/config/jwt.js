@@ -45,10 +45,10 @@ class JWTManager {
 
   verifyAccessToken(token) {
     try {
-      return jwt.verify(token, process.env.JWT_ACCESS_SECRET, {
-        issuer: process.env.JWT_ISSUER,
-        audience: process.env.JWT_AUDIENCE,
-      });
+      const options = {};
+      if (process.env.JWT_ISSUER) options.issuer = process.env.JWT_ISSUER;
+      if (process.env.JWT_AUDIENCE) options.audience = process.env.JWT_AUDIENCE;
+      return jwt.verify(token, process.env.JWT_ACCESS_SECRET, options);
     } catch (error) {
       if (error.name === 'TokenExpiredError') {
         throw new Error('Access token expired');
@@ -62,10 +62,10 @@ class JWTManager {
 
   verifyRefreshToken(token) {
     try {
-      return jwt.verify(token, process.env.JWT_REFRESH_SECRET, {
-        issuer: process.env.JWT_ISSUER,
-        audience: process.env.JWT_AUDIENCE,
-      });
+      const options = {};
+      if (process.env.JWT_ISSUER) options.issuer = process.env.JWT_ISSUER;
+      if (process.env.JWT_AUDIENCE) options.audience = process.env.JWT_AUDIENCE;
+      return jwt.verify(token, process.env.JWT_REFRESH_SECRET, options);
     } catch (error) {
       if (error.name === 'TokenExpiredError') {
         throw new Error('Refresh token expired');
@@ -87,18 +87,24 @@ class JWTManager {
   }
 
   generateEmailVerificationToken(userId) {
+    const options = { expiresIn: '24h' };
+    if (process.env.JWT_ISSUER) options.issuer = process.env.JWT_ISSUER;
+    if (process.env.JWT_AUDIENCE) options.audience = process.env.JWT_AUDIENCE;
     return jwt.sign(
       { userId, purpose: 'email_verification' },
       process.env.JWT_ACCESS_SECRET,
-      { expiresIn: '24h' }
+      options
     );
   }
 
   generatePasswordResetToken(userId) {
+    const options = { expiresIn: '1h' };
+    if (process.env.JWT_ISSUER) options.issuer = process.env.JWT_ISSUER;
+    if (process.env.JWT_AUDIENCE) options.audience = process.env.JWT_AUDIENCE;
     return jwt.sign(
       { userId, purpose: 'password_reset' },
       process.env.JWT_ACCESS_SECRET,
-      { expiresIn: '1h' }
+      options
     );
   }
 

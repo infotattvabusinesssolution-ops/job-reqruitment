@@ -122,7 +122,7 @@ async function seedAdminUser() {
     return;
   }
 
-  const existingAdmin = await User.findOne({ email: 'admin@jobreqruitment.com' });
+  const existingAdmin = await User.findOne({ email: 'abhishek@geoindialimited.com' });
   if (existingAdmin) {
     logger.info('Admin user already exists');
     return;
@@ -131,14 +131,14 @@ async function seedAdminUser() {
   await User.create({
     firstName: 'Super',
     lastName: 'Admin',
-    email: 'admin@jobreqruitment.com',
+    email: 'abhishek@geoindialimited.com',
     password: 'Admin@12345',
     role: adminRole._id,
     isEmailVerified: true,
     isActive: true,
   });
 
-  logger.info('Admin user created: admin@jobreqruitment.com / Admin@12345');
+  logger.info('Admin user created: abhishek@geoindialimited.com / Admin@12345');
 }
 
 async function seedFAQs() {
@@ -229,7 +229,7 @@ async function seedFAQs() {
     },
     {
       question: 'How can I contact support?',
-      answer: 'You can reach our support team through the Contact page email us at contact@geoindialimited.com or call us at +91 (22) 4567-8900. We are available Monday to Friday 9 AM to 6 PM IST.',
+      answer: 'You can reach our support team through the Contact page email us at contact@geoindialimited.com or call us at +91 95993 44168. We are available Monday to Friday 9 AM to 6 PM IST.',
       category: 'Account & Support',
       order: 15
     }
@@ -429,7 +429,7 @@ async function seedServices() {
 }
 
 async function seedBlogs() {
-  const admin = await User.findOne({ email: 'admin@jobreqruitment.com' });
+  const admin = await User.findOne({ email: 'abhishek@geoindialimited.com' });
   if (!admin) {
     logger.error('Admin user not found for seeding blogs');
     return;
@@ -502,7 +502,7 @@ async function seedCareers() {
 }
 
 async function seedJobs() {
-  const admin = await User.findOne({ email: 'admin@jobreqruitment.com' });
+  const admin = await User.findOne({ email: 'abhishek@geoindialimited.com' });
   if (!admin) {
     logger.error('Admin user not found for seeding jobs');
     return;

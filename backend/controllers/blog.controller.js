@@ -114,6 +114,10 @@ class BlogController {
     try {
       const authorId = req.user._id;
 
+      if (typeof req.body.coverImage === 'string') {
+        req.body.coverImage = { url: req.body.coverImage, alt: req.body.title || '' };
+      }
+
       const blogData = {
         ...req.body,
         author: authorId,
@@ -149,6 +153,10 @@ class BlogController {
       // Check access permission (author or admin)
       if (blog.author.toString() !== userId.toString() && !['admin', 'super_admin'].includes(userRole)) {
         throw new ForbiddenError('You are not authorized to update this article');
+      }
+
+      if (typeof req.body.coverImage === 'string') {
+        req.body.coverImage = { url: req.body.coverImage, alt: req.body.title || blog.title };
       }
 
       if (req.body.title) {
@@ -271,7 +279,7 @@ class BlogController {
         commentData.email = req.user.email;
       } else {
         commentData.name = req.body.name || 'Anonymous Reader';
-        commentData.email = req.body.email || 'anonymous@jobreqruitment.com';
+        commentData.email = req.body.email || 'anonymous@jobrecruitment.com';
       }
 
       blog.comments.push(commentData);

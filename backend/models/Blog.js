@@ -36,6 +36,12 @@ const blogSchema = new mongoose.Schema({
     publicId: { type: String, default: '' },
     alt: String,
   },
+  images: [{
+    url: { type: String, default: '' },
+    publicId: { type: String, default: '' },
+    alt: { type: String, default: '' },
+    caption: { type: String, default: '' },
+  }],
   status: {
     type: String,
     enum: ['draft', 'published', 'archived'],

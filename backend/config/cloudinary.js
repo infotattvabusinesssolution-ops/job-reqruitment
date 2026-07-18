@@ -20,7 +20,7 @@ class CloudinaryConfig {
     return new CloudinaryStorage({
       cloudinary: cloudinary,
       params: {
-        folder: `job-reqruitment/${folder}`,
+        folder: `job-recruitment/${folder}`,
         allowed_formats: allowedFormats,
         transformation: [{ quality: 'auto', fetch_format: 'auto' }],
         resource_type: 'auto',
@@ -31,7 +31,7 @@ class CloudinaryConfig {
   async uploadFile(filePath, options = {}) {
     try {
       const result = await cloudinary.uploader.upload(filePath, {
-        folder: options.folder || 'job-reqruitment/general',
+        folder: options.folder || 'job-recruitment/general',
         use_filename: true,
         unique_filename: true,
         resource_type: 'auto',

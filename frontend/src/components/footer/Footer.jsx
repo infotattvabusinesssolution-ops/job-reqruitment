@@ -71,11 +71,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2.5">
                 <HiPhone className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                <span>+91 120 319 3279</span>
+                <a href="tel:+919599344168" className="hover:text-white transition-colors">+91 95993 44168</a>
               </li>
               <li className="flex items-center space-x-2.5">
                 <FaWhatsapp className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span>+91 96346 85866</span>
+                <a href="https://wa.me/919599344168" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">+91 95993 44168</a>
               </li>
               <li className="flex items-center space-x-2.5">
                 <HiMail className="w-5 h-5 text-primary-400 flex-shrink-0" />

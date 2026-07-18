@@ -787,10 +787,10 @@ const ContactHome = () => {
             </p>
             <div className="space-y-3 text-xs text-secondary-600 flex flex-col items-center lg:items-start font-semibold">
               <div className="flex items-center gap-2">
-                <HiPhone className="w-4 h-4 text-primary-500" /> Phone: +91 120 319 3279
+                <HiPhone className="w-4 h-4 text-primary-500" /> Phone: <a href="tel:+919599344168" className="hover:text-primary-600 transition-colors">+91 95993 44168</a>
               </div>
               <div className="flex items-center gap-2">
-                <FaWhatsapp className="w-4 h-4 text-green-500" /> WhatsApp: +91 96346 85866
+                <FaWhatsapp className="w-4 h-4 text-green-500" /> WhatsApp: <a href="https://wa.me/919599344168" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 transition-colors">+91 95993 44168</a>
               </div>
               <div className="flex items-center gap-2">
                 <HiMail className="w-4 h-4 text-primary-500" /> Email: Hr@geoindialimited.com

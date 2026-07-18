@@ -106,3 +106,13 @@ export const careerApi = {
   update: async (id, data) => axiosInstance.put(`/careers/${id}`, data),
   delete: async (id) => axiosInstance.delete(`/careers/${id}`),
 };
+
+export const uploadApi = {
+  uploadImage: async (file) => {
+    const formData = new FormData();
+    formData.append('image', file);
+    return axiosInstance.post('/uploads/image', formData, {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    });
+  },
+};

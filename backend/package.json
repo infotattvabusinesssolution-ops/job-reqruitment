@@ -1,5 +1,5 @@
 {
-  "name": "job-reqruitment-backend",
+  "name": "job-recruitment-backend",
   "version": "1.0.0",
   "description": "Enterprise Recruitment Platform - Backend API",
   "main": "server.js",

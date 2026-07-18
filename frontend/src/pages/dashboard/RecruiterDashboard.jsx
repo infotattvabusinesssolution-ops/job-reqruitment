@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const RecruiterDashboard = () => (
   <div>
-    <Helmet><title>Recruiter Dashboard - JobReqruitment</title></Helmet>
+    <Helmet><title>Recruiter Dashboard - JobRecruitment</title></Helmet>
     <div className="mb-8">
       <h1 className="text-2xl font-heading font-bold text-secondary-900">Recruiter Dashboard</h1>
       <p className="text-secondary-500">Dashboard overview and management</p>

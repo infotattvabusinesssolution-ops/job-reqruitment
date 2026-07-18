@@ -106,7 +106,7 @@ const JobDetails = () => {
 
   return (
     <div className="pt-24 pb-16 bg-gray-50 min-h-screen">
-      <Helmet><title>{job.title} - JobReqruitment</title></Helmet>
+      <Helmet><title>{job.title} - JobRecruitment</title></Helmet>
 
       {/* Back Link */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">

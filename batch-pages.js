@@ -21,7 +21,7 @@ pages.forEach(name => {
 import { Helmet } from 'react-helmet-async';
 const ${name} = () => (
   <div className="pt-24 pb-16">
-    <Helmet><title>${name} - JobReqruitment</title></Helmet>
+    <Helmet><title>${name} - JobRecruitment</title></Helmet>
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center py-20">
         <h1 className="text-5xl font-heading font-bold text-secondary-900 mb-4">${name.replace(/([A-Z])/g, ' $1').trim()}</h1>
@@ -40,7 +40,7 @@ dashboards.forEach(name => {
 import { Helmet } from 'react-helmet-async';
 const ${name} = () => (
   <div>
-    <Helmet><title>${name.replace(/([A-Z])/g, ' $1').trim()} - JobReqruitment</title></Helmet>
+    <Helmet><title>${name.replace(/([A-Z])/g, ' $1').trim()} - JobRecruitment</title></Helmet>
     <div className="mb-8">
       <h1 className="text-2xl font-heading font-bold text-secondary-900">${name.replace(/([A-Z])/g, ' $1').trim()}</h1>
       <p className="text-secondary-500">Dashboard overview and management</p>

@@ -121,19 +121,19 @@ const Contact = () => {
             {
               icon: HiPhone,
               title: 'Call Support',
-              desc: '+91 120 319 3279',
+              desc: '+91 95993 44168',
               sub: 'Mon - Sat, 9:30 AM to 6:30 PM',
               action: 'Call Us Now',
-              link: 'tel:+911203193279',
+              link: 'tel:+919599344168',
               accent: 'from-accent-500 to-amber-600',
             },
             {
               icon: FaWhatsapp,
               title: 'WhatsApp Chat',
-              desc: '+91 96346 85866',
+              desc: '+91 95993 44168',
               sub: 'Instant recruiter messaging',
               action: 'Start WhatsApp Chat',
-              link: 'https://wa.me/919634685866',
+              link: 'https://wa.me/919599344168',
               accent: 'from-emerald-500 to-teal-600',
             },
             {
@@ -409,12 +409,12 @@ const Contact = () => {
                   </div>
 
                   <a
-                    href="https://wa.me/919634685866"
+                    href="https://wa.me/919599344168"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center bg-emerald-500 hover:bg-emerald-400 text-secondary-950 font-extrabold text-xs rounded-xl px-6 py-3.5 shadow-lg transition-all transform hover:-translate-y-0.5"
                   >
-                    Chat on WhatsApp (+91 96346 85866)
+                    Chat on WhatsApp (+91 95993 44168)
                   </a>
                 </div>
               </div>

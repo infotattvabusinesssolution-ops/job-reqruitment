@@ -91,7 +91,7 @@ class UploadController {
       }
 
       // Check if Cloudinary configuration is used, otherwise try deleting local file
-      if (publicId.startsWith('job-reqruitment/')) {
+      if (publicId.startsWith('job-recruitment/') || publicId.startsWith('job-reqruitment/')) {
         await cloudinaryConfig.deleteFile(publicId);
       } else {
         // Try deleting local file

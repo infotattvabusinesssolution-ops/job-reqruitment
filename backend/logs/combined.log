@@ -1650,3 +1650,28 @@
 2026-07-18 14:12:33 [INFO]: SIGINT received. Starting graceful shutdown...  
 2026-07-18 14:12:33 [INFO]: HTTP server closed  
 2026-07-18 14:12:33 [INFO]: Socket.IO server closed  
+2026-07-18 14:12:39 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 14:12:39 [INFO]: Database connected successfully  
+2026-07-18 14:12:39 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 14:12:40 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 14:12:41 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 14:12:41 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 14:12:41 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 14:12:41 [INFO]: Socket.IO initialized successfully  
+2026-07-18 14:12:41 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 14:13:23 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 14:13:23 [WARN]: Cloudinary upload failed, using local file URL fallback:  
+2026-07-18 14:13:25 [INFO]: Email sent successfully to Hr@geoindialimited.com: <3e3c2824-3bca-b3d7-3a90-e4dcc7451278@geoindialimited.com>  
+2026-07-18 14:13:25 [HTTP]: ::1 - - [18/Jul/2026:08:43:25 +0000] "POST /api/careers/upload-resume HTTP/1.1" 200 127 "http://localhost:5173/job-seekers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 14:13:35 [HTTP]: ::1 - - [18/Jul/2026:08:43:35 +0000] "GET /uploads/resumes/whLOxqxvx10x.pdf HTTP/1.1" 200 160974 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  

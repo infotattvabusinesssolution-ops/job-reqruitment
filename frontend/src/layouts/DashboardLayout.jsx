@@ -120,7 +120,7 @@ const DashboardLayout = () => {
                 <span className="text-white font-bold text-lg">JR</span>
               </div>
               <div>
-                <span className="text-lg font-heading font-bold block leading-tight">JobReqruitment</span>
+                <span className="text-lg font-heading font-bold block leading-tight">JobRecruitment</span>
                 <span className="text-xs text-secondary-500 capitalize">{userRole}</span>
               </div>
             </Link>

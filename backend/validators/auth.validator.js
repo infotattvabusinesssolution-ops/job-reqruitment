@@ -75,13 +75,12 @@ const resetPasswordValidator = [
 
   body('password')
     .notEmpty().withMessage('Password is required')
-    .isLength({ min: 8, max: 128 }).withMessage('Password must be between 8 and 128 characters')
-    .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)
-    .withMessage('Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character'),
+    .isLength({ min: 6, max: 128 }).withMessage('Password must be at least 6 characters'),
 
   body('confirmPassword')
+    .optional()
     .custom((value, { req }) => {
-      if (value !== req.body.password) {
+      if (value && value !== req.body.password) {
         throw new Error('Passwords do not match');
       }
       return true;

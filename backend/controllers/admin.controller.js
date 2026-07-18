@@ -171,9 +171,9 @@ class AdminController {
     try {
       // Mock log structure to fulfill dashboard audit demands
       const mockLogs = [
-        { action: 'user_login', details: 'Admin logged in', user: 'admin@jobreqruitment.com', timestamp: new Date() },
+        { action: 'user_login', details: 'Admin logged in', user: 'admin@jobrecruitment.com', timestamp: new Date() },
         { action: 'job_publish', details: 'Job posted: Senior Developer', user: 'employer@techcorp.com', timestamp: new Date(Date.now() - 3600000) },
-        { action: 'role_update', details: 'User role updated', user: 'admin@jobreqruitment.com', timestamp: new Date(Date.now() - 7200000) },
+        { action: 'role_update', details: 'User role updated', user: 'admin@jobrecruitment.com', timestamp: new Date(Date.now() - 7200000) },
       ];
 
       res.status(200).json({
@@ -193,7 +193,7 @@ class AdminController {
       res.status(200).json({
         success: true,
         data: {
-          siteName: 'JobReqruitment Platform',
+          siteName: 'JobRecruitment Platform',
           allowRegistrations: true,
           defaultUserRole: 'candidate',
           smtpConfigured: true,

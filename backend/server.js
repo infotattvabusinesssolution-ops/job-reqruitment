@@ -33,7 +33,7 @@ class ServerBootstrap {
       this.server.listen(this.port, this.host, () => {
         logger.info(`
 ╔══════════════════════════════════════════════════════════╗
-║            JobReqruitment Platform Server                ║
+║            JobRecruitment Platform Server                ║
 ╠══════════════════════════════════════════════════════════╣
 ║  Status:    Running                                      ║
 ║  Port:      ${String(this.port).padEnd(43)}║
