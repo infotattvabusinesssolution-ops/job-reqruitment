@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { motion, AnimatePresence } from 'framer-motion';
 import { blogApi } from '../api/candidateApi';
+import { getImageUrl } from '../constants';
 import {
   HiSearch,
   HiClock,
@@ -145,7 +146,7 @@ const Blogs = () => {
                   <div className="h-48 bg-gradient-to-br from-primary-100 to-accent-100 relative overflow-hidden flex items-center justify-center group">
                     {blog.coverImage?.url || (typeof blog.coverImage === 'string' && blog.coverImage) ? (
                       <img
-                        src={typeof blog.coverImage === 'string' ? blog.coverImage : blog.coverImage.url}
+                        src={getImageUrl(typeof blog.coverImage === 'string' ? blog.coverImage : blog.coverImage.url)}
                         alt={blog.coverImage?.alt || blog.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         onError={(e) => {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'react-hot-toast';
 import { blogApi, uploadApi } from '../../../api/candidateApi';
+import { getImageUrl } from '../../../constants';
 import {
   HiTrash,
   HiPlus,
@@ -263,7 +264,7 @@ const AdminBlogs = () => {
                     <div className="flex items-center gap-3">
                       {b.coverImage?.url ? (
                         <img
-                          src={b.coverImage.url}
+                          src={getImageUrl(b.coverImage.url)}
                           alt={b.title}
                           className="w-10 h-10 rounded-lg object-cover border border-gray-200"
                         />
@@ -383,7 +384,7 @@ const AdminBlogs = () => {
                 {blogForm.coverImage?.url ? (
                   <div className="relative rounded-xl overflow-hidden border border-gray-200 h-44 bg-gray-100 flex items-center justify-center">
                     <img
-                      src={blogForm.coverImage.url}
+                      src={getImageUrl(blogForm.coverImage.url)}
                       alt={blogForm.coverImage.alt || 'Cover preview'}
                       className="w-full h-full object-cover"
                     />
@@ -537,7 +538,7 @@ const AdminBlogs = () => {
                         className="bg-white border border-gray-200 rounded-xl p-2.5 flex items-center gap-3 relative group hover:shadow-sm transition-all"
                       >
                         <img
-                          src={img.url}
+                          src={getImageUrl(img.url)}
                           alt={img.alt || 'Section thumbnail'}
                           className="w-14 h-14 rounded-lg object-cover border border-gray-150"
                         />

@@ -735,3 +735,28 @@
 2026-07-18 14:10:27 [ERROR]: Cloudinary upload failed detail:  
 2026-07-18 14:13:23 [ERROR]: Cloudinary upload failed detail:  
 2026-07-18 15:32:29 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 16:30:04 [ERROR]: Uncaught Exception: listen EADDRINUSE: address already in use ::1:5000 Error: listen EADDRINUSE: address already in use ::1:5000
+    at Server.setupListenHandle [as _listen2] (node:net:2009:16)
+    at listenInCluster (node:net:2066:12)
+    at GetAddrInfoReqWrap.callback (node:net:2275:7)
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+  "code": "EADDRINUSE",
+  "errno": -4091,
+  "syscall": "listen",
+  "address": "::1",
+  "port": 5000
+}
+2026-07-18 16:30:15 [ERROR]: Uncaught Exception: listen EADDRINUSE: address already in use ::1:5000 Error: listen EADDRINUSE: address already in use ::1:5000
+    at Server.setupListenHandle [as _listen2] (node:net:2009:16)
+    at listenInCluster (node:net:2066:12)
+    at GetAddrInfoReqWrap.callback (node:net:2275:7)
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+  "code": "EADDRINUSE",
+  "errno": -4091,
+  "syscall": "listen",
+  "address": "::1",
+  "port": 5000
+}
+2026-07-18 16:37:29 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 16:39:03 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 16:39:41 [ERROR]: Cloudinary upload failed detail:  

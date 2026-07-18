@@ -4,6 +4,37 @@ const logger = require('../utils/logger');
 const fs = require('fs');
 const path = require('path');
 
+// Helper: Convert local file path to a proper browser-accessible URL
+function getFileUrl(fileData, req) {
+  // If uploadToCloudinary middleware already set a proper URL
+  if (fileData.url && (fileData.url.startsWith('http://') || fileData.url.startsWith('https://'))) {
+    return fileData.url;
+  }
+
+  // Convert local file path to /uploads/... URL
+  const uploadsDir = path.join(__dirname, '..', 'uploads');
+  let filePath = fileData.url || fileData.path || '';
+
+  // Normalize the path
+  filePath = filePath.replace(/\\/g, '/');
+  const uploadsNorm = uploadsDir.replace(/\\/g, '/');
+
+  if (filePath.includes('/uploads/')) {
+    // Extract everything after /uploads/
+    const relativePart = filePath.split('/uploads/')[1];
+    return `/uploads/${relativePart}`;
+  }
+
+  // Fallback: use filename directly
+  const filename = fileData.filename || path.basename(filePath);
+  // Determine subdirectory from mimetype
+  let subDir = 'documents';
+  if (fileData.mimetype && fileData.mimetype.startsWith('image/')) subDir = 'images';
+  if (fileData.fieldname === 'resume' || fileData.fieldname === 'cv') subDir = 'resumes';
+
+  return `/uploads/${subDir}/${filename}`;
+}
+
 class UploadController {
   /**
    * General file upload
@@ -19,7 +50,7 @@ class UploadController {
         success: true,
         message: 'File uploaded successfully',
         data: {
-          url: fileData.url || fileData.path,
+          url: getFileUrl(fileData, req),
           publicId: fileData.publicId || fileData.filename,
           originalName: fileData.originalName || fileData.originalname,
           size: fileData.size,
@@ -44,7 +75,7 @@ class UploadController {
         success: true,
         message: 'Resume uploaded successfully',
         data: {
-          url: fileData.url || fileData.path,
+          url: getFileUrl(fileData, req),
           publicId: fileData.publicId || fileData.filename,
           originalName: fileData.originalName || fileData.originalname,
           size: fileData.size,
@@ -69,7 +100,7 @@ class UploadController {
         success: true,
         message: 'Image uploaded successfully',
         data: {
-          url: fileData.url || fileData.path,
+          url: getFileUrl(fileData, req),
           publicId: fileData.publicId || fileData.filename,
           originalName: fileData.originalName || fileData.originalname,
           size: fileData.size,

@@ -103,7 +103,20 @@ export const ITEMS_PER_PAGE = 12;
 
 export const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
-export const FILE_SIZE_LIMIT = 5 * 1024 * 1024; // 5MB
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
+
+// Helper: resolve image URLs - handles Cloudinary URLs, relative /uploads/ paths, and full URLs
+export const getImageUrl = (url) => {
+  if (!url) return '';
+  // Already a full URL (Cloudinary, external, etc.)
+  if (url.startsWith('http://') || url.startsWith('https://')) return url;
+  // Relative /uploads/ path — works with both Vite dev proxy and Nginx prod proxy
+  if (url.startsWith('/uploads/')) return url;
+  // Bare filename fallback
+  return `/uploads/images/${url}`;
+};
+
+export const FILE_SIZE_LIMIT = 50 * 1024 * 1024; // 50MB
 
 export const ALLOWED_FILE_TYPES = {
   image: ['image/jpeg', 'image/png', 'image/webp', 'image/gif'],

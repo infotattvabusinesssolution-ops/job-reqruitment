@@ -1715,3 +1715,193 @@
 2026-07-18 15:46:03 [HTTP]: ::1 - - [18/Jul/2026:10:16:03 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
 2026-07-18 15:46:03 [HTTP]: ::1 - - [18/Jul/2026:10:16:03 +0000] "GET /uploads/images/wv7UDALTIaVT.png HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
 2026-07-18 15:46:08 [HTTP]: ::1 - - [18/Jul/2026:10:16:08 +0000] "GET /api/blogs/slug/a HTTP/1.1" 200 708 "http://localhost:5173/blogs/a" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:30:02 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 16:30:02 [INFO]: Database connected successfully  
+2026-07-18 16:30:02 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 16:30:04 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 16:30:04 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 16:30:04 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 16:30:04 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 16:30:04 [INFO]: Socket.IO initialized successfully  
+2026-07-18 16:30:04 [ERROR]: Uncaught Exception: listen EADDRINUSE: address already in use ::1:5000 Error: listen EADDRINUSE: address already in use ::1:5000
+    at Server.setupListenHandle [as _listen2] (node:net:2009:16)
+    at listenInCluster (node:net:2066:12)
+    at GetAddrInfoReqWrap.callback (node:net:2275:7)
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+  "code": "EADDRINUSE",
+  "errno": -4091,
+  "syscall": "listen",
+  "address": "::1",
+  "port": 5000
+}
+2026-07-18 16:30:04 [INFO]: UNCAUGHT_EXCEPTION received. Starting graceful shutdown...  
+2026-07-18 16:30:13 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 16:30:13 [INFO]: Database connected successfully  
+2026-07-18 16:30:13 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 16:30:14 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 16:30:15 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 16:30:15 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 16:30:15 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 16:30:15 [INFO]: Socket.IO initialized successfully  
+2026-07-18 16:30:15 [ERROR]: Uncaught Exception: listen EADDRINUSE: address already in use ::1:5000 Error: listen EADDRINUSE: address already in use ::1:5000
+    at Server.setupListenHandle [as _listen2] (node:net:2009:16)
+    at listenInCluster (node:net:2066:12)
+    at GetAddrInfoReqWrap.callback (node:net:2275:7)
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+  "code": "EADDRINUSE",
+  "errno": -4091,
+  "syscall": "listen",
+  "address": "::1",
+  "port": 5000
+}
+2026-07-18 16:30:24 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-18 16:30:24 [INFO]: HTTP server closed  
+2026-07-18 16:30:24 [INFO]: Socket.IO server closed  
+2026-07-18 16:30:48 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 16:30:48 [INFO]: Database connected successfully  
+2026-07-18 16:30:48 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 16:30:49 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 16:30:50 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 16:30:50 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 16:30:50 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 16:30:50 [INFO]: Socket.IO initialized successfully  
+2026-07-18 16:30:50 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobRecruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 16:31:12 [HTTP]: ::1 - - [18/Jul/2026:11:01:12 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 200 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:31:59 [HTTP]: ::1 - - [18/Jul/2026:11:01:59 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:32:26 [HTTP]: ::1 - - [18/Jul/2026:11:02:26 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:32:35 [HTTP]: ::1 - - [18/Jul/2026:11:02:35 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:32:52 [HTTP]: ::1 - - [18/Jul/2026:11:02:52 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:33:30 [HTTP]: ::1 - - [18/Jul/2026:11:03:30 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:34:29 [HTTP]: ::1 - - [18/Jul/2026:11:04:29 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:34:45 [HTTP]: ::1 - - [18/Jul/2026:11:04:45 +0000] "GET /api/careers HTTP/1.1" 200 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:34:46 [HTTP]: ::1 - - [18/Jul/2026:11:04:46 +0000] "GET /api/services HTTP/1.1" 200 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:35:35 [HTTP]: ::1 - - [18/Jul/2026:11:05:35 +0000] "POST /api/auth/login HTTP/1.1" 401 470 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:35:35 [HTTP]: ::1 - - [18/Jul/2026:11:05:35 +0000] "POST /api/auth/refresh-token HTTP/1.1" 401 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:35:47 [HTTP]: ::1 - - [18/Jul/2026:11:05:47 +0000] "POST /api/auth/login HTTP/1.1" 401 471 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:35:47 [HTTP]: ::1 - - [18/Jul/2026:11:05:47 +0000] "POST /api/auth/refresh-token HTTP/1.1" 401 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:36:01 [HTTP]: ::1 - - [18/Jul/2026:11:06:01 +0000] "POST /api/auth/login HTTP/1.1" 401 470 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:36:01 [HTTP]: ::1 - - [18/Jul/2026:11:06:01 +0000] "POST /api/auth/refresh-token HTTP/1.1" 401 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:36:44 [HTTP]: ::1 - - [18/Jul/2026:11:06:44 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:36:44 [HTTP]: ::1 - - [18/Jul/2026:11:06:44 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 230 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:36:47 [HTTP]: ::1 - - [18/Jul/2026:11:06:47 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:37:29 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 16:37:29 [WARN]: Cloudinary upload failed, using local file URL fallback:  
+2026-07-18 16:37:29 [HTTP]: ::1 - - [18/Jul/2026:11:07:29 +0000] "POST /api/uploads/image HTTP/1.1" 200 179 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:37:29 [HTTP]: ::1 - - [18/Jul/2026:11:07:29 +0000] "GET /uploads/images/7nx2eOB_1JcR.png HTTP/1.1" 200 7830775 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:37:33 [WARN]: Duplicate field value: slug. Please use another value.  {
+  "requestId": "LNtKQEAza7Yo",
+  "method": "POST",
+  "url": "/api/blogs",
+  "ip": "::1",
+  "userId": "6a5b55a7f0c3faa6f05fef58",
+  "statusCode": 500
+}
+2026-07-18 16:37:33 [HTTP]: ::1 - - [18/Jul/2026:11:07:33 +0000] "POST /api/blogs HTTP/1.1" 409 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:37:40 [WARN]: Duplicate field value: slug. Please use another value.  {
+  "requestId": "ie20szKQAwPt",
+  "method": "POST",
+  "url": "/api/blogs",
+  "ip": "::1",
+  "userId": "6a5b55a7f0c3faa6f05fef58",
+  "statusCode": 500
+}
+2026-07-18 16:37:40 [HTTP]: ::1 - - [18/Jul/2026:11:07:40 +0000] "POST /api/blogs HTTP/1.1" 409 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:37:50 [WARN]: Duplicate field value: slug. Please use another value.  {
+  "requestId": "kyvTJ2U6CeuS",
+  "method": "POST",
+  "url": "/api/blogs",
+  "ip": "::1",
+  "userId": "6a5b55a7f0c3faa6f05fef58",
+  "statusCode": 500
+}
+2026-07-18 16:37:50 [HTTP]: ::1 - - [18/Jul/2026:11:07:50 +0000] "POST /api/blogs HTTP/1.1" 409 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:37:58 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-18 16:37:58 [INFO]: HTTP server closed  
+2026-07-18 16:37:58 [INFO]: Socket.IO server closed  
+2026-07-18 16:38:07 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 16:38:07 [INFO]: Database connected successfully  
+2026-07-18 16:38:07 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 16:38:08 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 16:38:09 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 16:38:09 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 16:38:09 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 16:38:09 [INFO]: Socket.IO initialized successfully  
+2026-07-18 16:38:09 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobRecruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 16:38:14 [WARN]: Duplicate field value: slug. Please use another value.  {
+  "requestId": "Cw9QOY9wQ57R",
+  "method": "POST",
+  "url": "/api/blogs",
+  "ip": "::1",
+  "userId": "6a5b55a7f0c3faa6f05fef58",
+  "statusCode": 500
+}
+2026-07-18 16:38:14 [HTTP]: ::1 - - [18/Jul/2026:11:08:14 +0000] "POST /api/blogs HTTP/1.1" 409 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:39:03 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 16:39:03 [WARN]: Cloudinary upload failed, using local file URL fallback:  
+2026-07-18 16:39:03 [HTTP]: ::1 - - [18/Jul/2026:11:09:03 +0000] "POST /api/uploads/image HTTP/1.1" 200 200 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:39:03 [HTTP]: ::1 - - [18/Jul/2026:11:09:03 +0000] "GET /uploads/images/_2X2E_vXgEqf.png HTTP/1.1" 200 515933 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:39:06 [WARN]: Duplicate field value: slug. Please use another value.  {
+  "requestId": "hd7uicxRxYUh",
+  "method": "POST",
+  "url": "/api/blogs",
+  "ip": "::1",
+  "userId": "6a5b55a7f0c3faa6f05fef58",
+  "statusCode": 500
+}
+2026-07-18 16:39:06 [HTTP]: ::1 - - [18/Jul/2026:11:09:06 +0000] "POST /api/blogs HTTP/1.1" 409 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:39:19 [WARN]: Duplicate field value: slug. Please use another value.  {
+  "requestId": "qS1JwtQajska",
+  "method": "POST",
+  "url": "/api/blogs",
+  "ip": "::1",
+  "userId": "6a5b55a7f0c3faa6f05fef58",
+  "statusCode": 500
+}
+2026-07-18 16:39:19 [HTTP]: ::1 - - [18/Jul/2026:11:09:19 +0000] "POST /api/blogs HTTP/1.1" 409 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:39:23 [HTTP]: ::1 - - [18/Jul/2026:11:09:23 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:39:23 [HTTP]: ::1 - - [18/Jul/2026:11:09:23 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:39:26 [HTTP]: ::1 - - [18/Jul/2026:11:09:26 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:39:41 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 16:39:41 [WARN]: Cloudinary upload failed, using local file URL fallback:  
+2026-07-18 16:39:41 [HTTP]: ::1 - - [18/Jul/2026:11:09:41 +0000] "POST /api/uploads/image HTTP/1.1" 200 200 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:39:41 [HTTP]: ::1 - - [18/Jul/2026:11:09:41 +0000] "GET /uploads/images/zZ3jabq-EFUj.png HTTP/1.1" 200 184252 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:39:44 [WARN]: Duplicate field value: slug. Please use another value.  {
+  "requestId": "c8dJywIIrw_r",
+  "method": "POST",
+  "url": "/api/blogs",
+  "ip": "::1",
+  "userId": "6a5b55a7f0c3faa6f05fef58",
+  "statusCode": 500
+}
+2026-07-18 16:39:44 [HTTP]: ::1 - - [18/Jul/2026:11:09:44 +0000] "POST /api/blogs HTTP/1.1" 409 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:39:53 [WARN]: Duplicate field value: slug. Please use another value.  {
+  "requestId": "1dXDuWV3_fap",
+  "method": "POST",
+  "url": "/api/blogs",
+  "ip": "::1",
+  "userId": "6a5b55a7f0c3faa6f05fef58",
+  "statusCode": 500
+}
+2026-07-18 16:39:53 [HTTP]: ::1 - - [18/Jul/2026:11:09:53 +0000] "POST /api/blogs HTTP/1.1" 409 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36"  

@@ -97,12 +97,10 @@ const uploadToCloudinary = async (req, res, next) => {
         });
       } catch (cloudErr) {
         logger.warn('Cloudinary upload failed, using local file URL fallback:', cloudErr?.message || cloudErr);
-        // Fallback to local server static URL so submission succeeds seamlessly
-        const host = req.get('host') || 'localhost:5000';
-        const protocol = req.protocol || 'http';
+        // Fallback to local server static URL - use relative path so it works behind any proxy
         const relativeSubDir = path.relative(path.join(__dirname, '..', 'uploads'), file.destination || '').replace(/\\/g, '/');
         const fileSubPath = relativeSubDir ? `${relativeSubDir}/${file.filename}` : file.filename;
-        fileUrl = `${protocol}://${host}/uploads/${fileSubPath}`;
+        fileUrl = `/uploads/${fileSubPath}`;
         publicId = file.filename;
       }
 

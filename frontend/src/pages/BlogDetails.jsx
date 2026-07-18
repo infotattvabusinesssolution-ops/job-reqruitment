@@ -5,6 +5,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { toast } from 'react-hot-toast';
 import { blogApi } from '../api/candidateApi';
+import { getImageUrl } from '../constants';
 import {
   HiClock,
   HiUser,
@@ -129,7 +130,7 @@ const BlogDetails = () => {
             <div className="space-y-2">
               <div className="h-64 sm:h-96 rounded-2xl bg-gradient-to-br from-primary-50 to-accent-50 relative overflow-hidden flex items-center justify-center border border-gray-150 shadow-inner">
                 <img
-                  src={typeof blog.coverImage === 'string' ? blog.coverImage : blog.coverImage.url}
+                  src={getImageUrl(typeof blog.coverImage === 'string' ? blog.coverImage : blog.coverImage.url)}
                   alt={blog.coverImage?.alt || blog.title}
                   className="w-full h-full object-cover"
                 />
@@ -162,7 +163,7 @@ const BlogDetails = () => {
                   <div key={idx} className="bg-gray-50 border border-gray-150 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
                     <div className="h-48 overflow-hidden bg-gray-200 relative">
                       <img
-                        src={img.url}
+                        src={getImageUrl(img.url)}
                         alt={img.alt || img.caption || `Section image ${idx + 1}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         onError={(e) => { e.target.src = 'https://via.placeholder.com/400x250?text=Image+Not+Found'; }}
