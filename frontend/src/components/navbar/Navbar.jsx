@@ -28,10 +28,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
-        <div className="flex items-center justify-between py-1 min-h-[96px]">
+        <div className="flex items-center justify-between py-0.5 min-h-[64px] md:min-h-[72px]">
           {/* Logo */}
           <Link to="/" className="flex items-center -ml-2 sm:-ml-4">
-            <img src={logo} alt="Geo India Limited" className="h-20 md:h-24 w-auto object-contain" />
+            <img src={logo} alt="Geo India Limited" className="h-32 md:h-40 w-auto object-contain -my-6 md:-my-8" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -40,11 +40,10 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  isActive(link.path)
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-secondary-600 hover:text-primary-600 hover:bg-gray-50'
-                }`}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isActive(link.path)
+                  ? 'text-primary-600 bg-primary-50'
+                  : 'text-secondary-600 hover:text-primary-600 hover:bg-gray-50'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -153,11 +152,10 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                    isActive(link.path)
-                      ? 'text-primary-600 bg-primary-50'
-                      : 'text-secondary-600 hover:bg-gray-50'
-                  }`}
+                  className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${isActive(link.path)
+                    ? 'text-primary-600 bg-primary-50'
+                    : 'text-secondary-600 hover:bg-gray-50'
+                    }`}
                 >
                   {link.name}
                 </Link>

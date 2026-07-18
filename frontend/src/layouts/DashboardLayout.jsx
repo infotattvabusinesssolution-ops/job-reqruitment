@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   HiHome, HiBriefcase, HiUsers, HiDocumentText, HiCalendar,
   HiChartBar, HiBell, HiCog, HiLogout, HiMenu, HiX,
-  HiStar, HiClock, HiUserGroup, HiSearch, HiTrendingUp
+  HiStar, HiClock, HiUserGroup, HiSearch, HiTrendingUp,
+  HiQuestionMarkCircle
 } from 'react-icons/hi';
 import { useAuth } from '../hooks/useAuth';
 
@@ -45,6 +46,10 @@ const sidebarLinks = {
     { name: 'Jobs', path: '/dashboard/admin/jobs', icon: HiBriefcase },
     { name: 'Companies', path: '/dashboard/admin/companies', icon: HiUserGroup },
     { name: 'Blogs', path: '/dashboard/admin/blogs', icon: HiDocumentText },
+    { name: 'Services', path: '/dashboard/admin/services', icon: HiBriefcase },
+    { name: 'FAQs', path: '/dashboard/admin/faqs', icon: HiQuestionMarkCircle },
+    { name: 'Testimonials', path: '/dashboard/admin/testimonials', icon: HiStar },
+    { name: 'Careers', path: '/dashboard/admin/careers', icon: HiBriefcase },
     { name: 'Analytics', path: '/dashboard/admin/analytics', icon: HiChartBar },
     { name: 'Settings', path: '/dashboard/admin/settings', icon: HiCog },
   ],

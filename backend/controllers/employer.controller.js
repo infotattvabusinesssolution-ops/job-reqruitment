@@ -261,6 +261,59 @@ class EmployerController {
       next(error);
     }
   }
+
+  /**
+   * Submit hiring requirements via email to admin
+   */
+  async submitHiringRequirement(req, res, next) {
+    try {
+      const {
+        companyName,
+        contactPerson,
+        email,
+        phone,
+        jobPosition,
+        vacancies,
+        jobLocation,
+        qualification,
+        experience,
+        salaryRange,
+        skills,
+        employmentType,
+        joiningDate,
+        jobDescription,
+      } = req.body;
+
+      const emailService = require('../utils/emailService');
+
+      // Send email alert to admin
+      const hrEmail = process.env.SMTP_USER || 'Hr@geoindialimited.com';
+      await emailService.sendHiringRequirementAlert({
+        hrEmail,
+        companyName,
+        contactPerson,
+        email,
+        phone,
+        jobPosition,
+        vacancies,
+        jobLocation,
+        qualification,
+        experience,
+        salaryRange,
+        skills,
+        employmentType,
+        joiningDate,
+        jobDescription,
+      });
+
+      res.status(200).json({
+        success: true,
+        message: 'Hiring requirement submitted successfully',
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
 }
 
 module.exports = new EmployerController();

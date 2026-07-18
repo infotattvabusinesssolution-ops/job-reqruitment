@@ -1,30 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const testimonialController = require('../controllers/testimonial.controller');
 const { authenticate, authorize, optionalAuth } = require('../middlewares/auth');
 
-// GET /api/testimonial - List all
-router.get('/', optionalAuth, (req, res) => {
-  res.json({ success: true, message: 'testimonial list endpoint', data: [] });
-});
+// Public endpoints
+router.get('/', optionalAuth, testimonialController.getAllTestimonials.bind(testimonialController));
+router.get('/:id', optionalAuth, testimonialController.getTestimonialById.bind(testimonialController));
 
-// GET /api/testimonial/:id - Get single
-router.get('/:id', optionalAuth, (req, res) => {
-  res.json({ success: true, message: 'testimonial detail endpoint', data: null });
-});
-
-// POST /api/testimonial - Create
-router.post('/', authenticate, authorize('admin', 'super_admin'), (req, res) => {
-  res.json({ success: true, message: 'Create testimonial endpoint', data: null });
-});
-
-// PUT /api/testimonial/:id - Update
-router.put('/:id', authenticate, (req, res) => {
-  res.json({ success: true, message: 'Update testimonial endpoint', data: null });
-});
-
-// DELETE /api/testimonial/:id - Delete
-router.delete('/:id', authenticate, authorize('admin', 'super_admin'), (req, res) => {
-  res.json({ success: true, message: 'Delete testimonial endpoint' });
-});
+// Administrative CRUD endpoints
+router.post('/', authenticate, authorize('admin', 'super_admin'), testimonialController.createTestimonial.bind(testimonialController));
+router.put('/:id', authenticate, authorize('admin', 'super_admin'), testimonialController.updateTestimonial.bind(testimonialController));
+router.delete('/:id', authenticate, authorize('admin', 'super_admin'), testimonialController.deleteTestimonial.bind(testimonialController));
 
 module.exports = router;

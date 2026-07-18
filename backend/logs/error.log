@@ -357,3 +357,369 @@
   "ip": "::1",
   "statusCode": 500
 }
+2026-07-17 19:17:15 [ERROR]: MongoDB connection error: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/ MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:15 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:25 [ERROR]: MongoDB connection error: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/ MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:25 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:25 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:35 [ERROR]: MongoDB connection error: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/ MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:35 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:35 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:35 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:35 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:45 [ERROR]: Max reconnection attempts reached. Exiting process.  
+2026-07-17 19:34:38 [ERROR]: Seeding failed: E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null } MongoBulkWriteError: E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null }
+    at OrderedBulkOperation.handleWriteError (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\bulk\common.js:860:22)
+    at resultHandler (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\bulk\common.js:350:27)
+    at D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\utils.js:297:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  "code": 11000,
+  "writeErrors": [
+    {
+      "err": {
+        "index": 1,
+        "code": 11000,
+        "errmsg": "E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null }",
+        "op": {
+          "title": "Top IT Skills in High Demand This Year",
+          "content": "The technology landscape is moving fast. Right now, Cloud Infrastructure, Artificial Intelligence, and Full Stack Javascript frameworks (like Node.js, React, and TypeScript) are extremely hot. This guide details exactly what skills you should focus on to land high-paying IT roles in major Indian hubs.",
+          "excerpt": "Find out which programming languages, frameworks, and tools are most sought after in the current job market.",
+          "author": "6a59e33ac4ad2350ff9d207e",
+          "category": "6a5a36763e7469f650ccac9f",
+          "tags": [
+            "IT",
+            "technology",
+            "skills"
+          ],
+          "coverImage": {
+            "url": "",
+            "publicId": ""
+          },
+          "status": "published",
+          "isFeatured": true,
+          "publishedAt": "2026-07-17T14:04:38.529Z",
+          "readTime": 5,
+          "views": 0,
+          "likes": 0,
+          "shares": 0,
+          "metaKeywords": [],
+          "allowComments": true,
+          "_id": "6a5a367661592610fe2db56e",
+          "comments": [],
+          "__v": 0,
+          "createdAt": "2026-07-17T14:04:38.581Z",
+          "updatedAt": "2026-07-17T14:04:38.581Z"
+        }
+      },
+      "index": 1
+    }
+  ],
+  "result": {
+    "insertedCount": 1,
+    "matchedCount": 0,
+    "modifiedCount": 0,
+    "deletedCount": 0,
+    "upsertedCount": 0,
+    "upsertedIds": {},
+    "insertedIds": {
+      "0": "6a5a367661592610fe2db56d"
+    }
+  },
+  "insertedDocs": [
+    {
+      "title": "How to Build a Modern Resume in 2026",
+      "content": "Writing a resume in 2026 requires a different approach than in previous years. With AI matching and ATS (Applicant Tracking Systems) being widely adopted by enterprise companies like GeoIndiaLimited, it is critical to tailor your resume. In this article, we cover formatting, keywords, sections, and structural patterns that yield maximum success.",
+      "excerpt": "A comprehensive guide to writing a standout resume that gets you noticed by top employers.",
+      "author": "6a59e33ac4ad2350ff9d207e",
+      "category": "6a5a36763e7469f650ccac9e",
+      "tags": [
+        "resume",
+        "career",
+        "jobseeker"
+      ],
+      "coverImage": {
+        "url": "",
+        "publicId": ""
+      },
+      "status": "published",
+      "isFeatured": true,
+      "publishedAt": "2026-07-17T14:04:38.529Z",
+      "readTime": 5,
+      "views": 0,
+      "likes": 0,
+      "shares": 0,
+      "metaKeywords": [],
+      "allowComments": true,
+      "_id": "6a5a367661592610fe2db56d",
+      "comments": [],
+      "__v": 0,
+      "createdAt": "2026-07-17T14:04:38.581Z",
+      "updatedAt": "2026-07-17T14:04:38.581Z",
+      "id": "6a5a367661592610fe2db56d"
+    }
+  ]
+}
+2026-07-18 11:44:40 [ERROR]: Seeding failed: E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null } MongoBulkWriteError: E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null }
+    at OrderedBulkOperation.handleWriteError (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\bulk\common.js:860:22)
+    at resultHandler (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\bulk\common.js:350:27)
+    at D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\utils.js:297:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  "code": 11000,
+  "writeErrors": [
+    {
+      "err": {
+        "index": 1,
+        "code": 11000,
+        "errmsg": "E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null }",
+        "op": {
+          "title": "Top IT Skills in High Demand This Year",
+          "content": "The technology landscape is moving fast. Right now, Cloud Infrastructure, Artificial Intelligence, and Full Stack Javascript frameworks (like Node.js, React, and TypeScript) are extremely hot. This guide details exactly what skills you should focus on to land high-paying IT roles in major Indian hubs.",
+          "excerpt": "Find out which programming languages, frameworks, and tools are most sought after in the current job market.",
+          "author": "6a59e33ac4ad2350ff9d207e",
+          "category": "6a5a36763e7469f650ccac9f",
+          "tags": [
+            "IT",
+            "technology",
+            "skills"
+          ],
+          "coverImage": {
+            "url": "",
+            "publicId": ""
+          },
+          "status": "published",
+          "isFeatured": true,
+          "publishedAt": "2026-07-18T06:14:40.767Z",
+          "readTime": 5,
+          "views": 0,
+          "likes": 0,
+          "shares": 0,
+          "metaKeywords": [],
+          "allowComments": true,
+          "_id": "6a5b19d03aa5330410d56915",
+          "comments": [],
+          "__v": 0,
+          "createdAt": "2026-07-18T06:14:40.824Z",
+          "updatedAt": "2026-07-18T06:14:40.824Z"
+        }
+      },
+      "index": 1
+    }
+  ],
+  "result": {
+    "insertedCount": 1,
+    "matchedCount": 0,
+    "modifiedCount": 0,
+    "deletedCount": 0,
+    "upsertedCount": 0,
+    "upsertedIds": {},
+    "insertedIds": {
+      "0": "6a5b19d03aa5330410d56914"
+    }
+  },
+  "insertedDocs": [
+    {
+      "title": "How to Build a Modern Resume in 2026",
+      "content": "Writing a resume in 2026 requires a different approach than in previous years. With AI matching and ATS (Applicant Tracking Systems) being widely adopted by enterprise companies like GeoIndiaLimited, it is critical to tailor your resume. In this article, we cover formatting, keywords, sections, and structural patterns that yield maximum success.",
+      "excerpt": "A comprehensive guide to writing a standout resume that gets you noticed by top employers.",
+      "author": "6a59e33ac4ad2350ff9d207e",
+      "category": "6a5a36763e7469f650ccac9e",
+      "tags": [
+        "resume",
+        "career",
+        "jobseeker"
+      ],
+      "coverImage": {
+        "url": "",
+        "publicId": ""
+      },
+      "status": "published",
+      "isFeatured": true,
+      "publishedAt": "2026-07-18T06:14:40.767Z",
+      "readTime": 5,
+      "views": 0,
+      "likes": 0,
+      "shares": 0,
+      "metaKeywords": [],
+      "allowComments": true,
+      "_id": "6a5b19d03aa5330410d56914",
+      "comments": [],
+      "__v": 0,
+      "createdAt": "2026-07-18T06:14:40.823Z",
+      "updatedAt": "2026-07-18T06:14:40.823Z",
+      "id": "6a5b19d03aa5330410d56914"
+    }
+  ]
+}

@@ -3,6 +3,9 @@ const router = express.Router();
 const employerController = require('../controllers/employer.controller');
 const { authenticate, authorize } = require('../middlewares/auth');
 
+// Public route for Request Hiring Support SMTP notification
+router.post('/hiring-support', employerController.submitHiringRequirement.bind(employerController));
+
 // All employer routes require authentication and employer/admin authorization
 router.use(authenticate);
 router.use(authorize('employer', 'admin', 'super_admin'));

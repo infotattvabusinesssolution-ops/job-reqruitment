@@ -6,6 +6,10 @@ import AdminUsers from './admin/AdminUsers';
 import AdminJobs from './admin/AdminJobs';
 import AdminCompanies from './admin/AdminCompanies';
 import AdminBlogs from './admin/AdminBlogs';
+import AdminFAQs from './admin/AdminFAQs';
+import AdminTestimonials from './admin/AdminTestimonials';
+import AdminServices from './admin/AdminServices';
+import AdminCareers from './admin/AdminCareers';
 import AdminAnalytics from './admin/AdminAnalytics';
 import AdminSettings from './admin/AdminSettings';
 
@@ -24,6 +28,14 @@ const AdminDashboard = () => {
         return <AdminCompanies />;
       case 'blogs':
         return <AdminBlogs />;
+      case 'faqs':
+        return <AdminFAQs />;
+      case 'testimonials':
+        return <AdminTestimonials />;
+      case 'services':
+        return <AdminServices />;
+      case 'careers':
+        return <AdminCareers />;
       case 'analytics':
         return <AdminAnalytics />;
       case 'settings':

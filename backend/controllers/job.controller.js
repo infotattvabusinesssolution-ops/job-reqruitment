@@ -6,6 +6,7 @@ const Candidate = require('../models/Candidate');
 const { NotFoundError, BadRequestError, ForbiddenError } = require('../utils/errors');
 const logger = require('../utils/logger');
 const slugify = require('slugify');
+const emailService = require('../utils/emailService');
 
 class JobController {
   /**
@@ -417,6 +418,26 @@ class JobController {
       // Increment counts
       job.applicationCount += 1;
       await job.save({ validateBeforeSave: false });
+
+      // Send email alert to HR email address
+      try {
+        const candidateName = `${req.user.firstName} ${req.user.lastName}`;
+        const candidateEmail = req.user.email;
+        const candidatePhone = req.user.phone || '';
+        const hrEmail = process.env.SMTP_USER || 'Hr@geoindialimited.com';
+        
+        await emailService.sendNewApplicationAlert({
+          hrEmail,
+          candidateName,
+          candidateEmail,
+          candidatePhone,
+          jobTitle: job.title,
+          coverLetter,
+          resumeUrl: candidate.resume?.url,
+        });
+      } catch (err) {
+        logger.error('Failed to dispatch HR email alert on application:', err);
+      }
 
       res.status(201).json({
         success: true,

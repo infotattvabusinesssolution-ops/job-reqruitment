@@ -609,3 +609,772 @@
 2026-07-17 17:06:52 [HTTP]: ::1 - - [17/Jul/2026:11:36:52 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
 2026-07-17 17:07:35 [HTTP]: ::1 - - [17/Jul/2026:11:37:35 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
 2026-07-17 17:07:36 [HTTP]: ::1 - - [17/Jul/2026:11:37:36 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:23:25 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 18:23:25 [INFO]: Database connected successfully  
+2026-07-17 18:23:25 [INFO]: AutoSeed: Checking database records...  
+2026-07-17 18:23:25 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-17 18:23:26 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-17 18:23:26 [INFO]: AutoSeed: Admin user already exists  
+2026-07-17 18:23:26 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-17 18:23:26 [INFO]: Socket.IO initialized successfully  
+2026-07-17 18:23:26 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 18:23:36 [HTTP]: ::1 - - [17/Jul/2026:12:53:36 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:23:36 [HTTP]: ::1 - - [17/Jul/2026:12:53:36 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 229 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:23:40 [HTTP]: ::1 - - [17/Jul/2026:12:53:40 +0000] "GET /api/admin/users?limit=100 HTTP/1.1" 200 800 "http://localhost:5173/dashboard/admin/users" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:23:42 [HTTP]: ::1 - - [17/Jul/2026:12:53:42 +0000] "GET /api/jobs?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:24:06 [HTTP]: ::1 - - [17/Jul/2026:12:54:06 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:24:17 [HTTP]: ::1 - - [17/Jul/2026:12:54:17 +0000] "GET /api/admin/settings HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:24:22 [HTTP]: ::1 - - [17/Jul/2026:12:54:22 +0000] "POST /api/auth/logout HTTP/1.1" 401 - "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:24:22 [HTTP]: ::1 - - [17/Jul/2026:12:54:22 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:24:23 [HTTP]: ::1 - - [17/Jul/2026:12:54:23 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:24:23 [HTTP]: ::1 - - [17/Jul/2026:12:54:23 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:25:06 [HTTP]: ::1 - - [17/Jul/2026:12:55:06 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 18:26:23 [HTTP]: ::1 - - [17/Jul/2026:12:56:23 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:11:49 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-17 19:11:49 [INFO]: HTTP server closed  
+2026-07-17 19:11:49 [INFO]: Socket.IO server closed  
+2026-07-17 19:11:55 [INFO]: Starting database seeding...  
+2026-07-17 19:11:55 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:11:55 [INFO]: Seeding roles...  
+2026-07-17 19:11:56 [INFO]: Roles seeded successfully  
+2026-07-17 19:11:56 [INFO]: Seeding categories...  
+2026-07-17 19:11:57 [INFO]: Categories seeded successfully  
+2026-07-17 19:11:57 [INFO]: Seeding admin user...  
+2026-07-17 19:11:57 [INFO]: Admin user already exists  
+2026-07-17 19:11:57 [INFO]: Admin user seeded successfully  
+2026-07-17 19:11:57 [INFO]: Seeding FAQs...  
+2026-07-17 19:11:57 [INFO]: Seeded 15 FAQ questions  
+2026-07-17 19:11:57 [INFO]: FAQs seeded successfully  
+2026-07-17 19:11:57 [INFO]: Seeding Testimonials...  
+2026-07-17 19:11:57 [INFO]: Seeded 4 Testimonials  
+2026-07-17 19:12:02 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:12:02 [INFO]: Database connected successfully  
+2026-07-17 19:12:02 [INFO]: AutoSeed: Checking database records...  
+2026-07-17 19:12:03 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-17 19:12:04 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-17 19:12:04 [INFO]: AutoSeed: Admin user already exists  
+2026-07-17 19:12:04 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-17 19:12:04 [INFO]: Socket.IO initialized successfully  
+2026-07-17 19:12:04 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 19:12:27 [HTTP]: ::1 - - [17/Jul/2026:13:42:27 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:12:27 [HTTP]: ::1 - - [17/Jul/2026:13:42:27 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 229 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:12:30 [HTTP]: ::1 - - [17/Jul/2026:13:42:30 +0000] "GET /api/admin/users?limit=100 HTTP/1.1" 200 800 "http://localhost:5173/dashboard/admin/users" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:12:32 [HTTP]: ::1 - - [17/Jul/2026:13:42:32 +0000] "GET /api/jobs?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:12:35 [HTTP]: ::1 - - [17/Jul/2026:13:42:35 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:12:38 [HTTP]: ::1 - - [17/Jul/2026:13:42:38 +0000] "GET /api/faqs?all=true HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/faqs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:12:41 [HTTP]: ::1 - - [17/Jul/2026:13:42:41 +0000] "GET /api/testimonials?all=true HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/testimonials" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:12:44 [HTTP]: ::1 - - [17/Jul/2026:13:42:44 +0000] "GET /api/admin/settings HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:14:16 [HTTP]: ::1 - - [17/Jul/2026:13:44:16 +0000] "POST /api/auth/logout HTTP/1.1" 401 - "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:14:16 [HTTP]: ::1 - - [17/Jul/2026:13:44:16 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:14:16 [HTTP]: ::1 - - [17/Jul/2026:13:44:16 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:14:17 [HTTP]: ::1 - - [17/Jul/2026:13:44:17 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:14:46 [HTTP]: ::1 - - [17/Jul/2026:13:44:46 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:17:05 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 19:17:05 [INFO]: Retrying connection... Attempt 1/5  
+2026-07-17 19:17:15 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 19:17:15 [INFO]: Retrying connection... Attempt 2/5  
+2026-07-17 19:17:15 [ERROR]: MongoDB connection error: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/ MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:15 [INFO]: Retrying connection... Attempt 3/5  
+2026-07-17 19:17:15 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:20 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:17:25 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 19:17:25 [INFO]: Retrying connection... Attempt 1/5  
+2026-07-17 19:17:25 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 19:17:25 [INFO]: Retrying connection... Attempt 2/5  
+2026-07-17 19:17:25 [ERROR]: MongoDB connection error: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/ MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:25 [INFO]: Retrying connection... Attempt 3/5  
+2026-07-17 19:17:25 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:25 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:30 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:17:30 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:17:35 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 19:17:35 [INFO]: Retrying connection... Attempt 1/5  
+2026-07-17 19:17:35 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 19:17:35 [INFO]: Retrying connection... Attempt 2/5  
+2026-07-17 19:17:35 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 19:17:35 [INFO]: Retrying connection... Attempt 3/5  
+2026-07-17 19:17:35 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 19:17:35 [INFO]: Retrying connection... Attempt 4/5  
+2026-07-17 19:17:35 [ERROR]: MongoDB connection error: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/ MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:816:11)
+    at NativeConnection.openUri (D:\job-reqruitment\backend\node_modules\mongoose\lib\connection.js:791:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async DatabaseConnection.connect (D:\job-reqruitment\backend\config\database.js:27:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:35 [INFO]: Retrying connection... Attempt 5/5  
+2026-07-17 19:17:35 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:35 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:35 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:35 [ERROR]: MongoDB runtime error: Server selection timed out after 5000 ms MongoServerSelectionError: Server selection timed out after 5000 ms
+    at Timeout._onTimeout (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  "reason": {
+    "type": "ReplicaSetNoPrimary",
+    "servers": {},
+    "stale": false,
+    "compatible": true,
+    "heartbeatFrequencyMS": 10000,
+    "localThresholdMS": 15,
+    "setName": "atlas-2nt7yy-shard-0",
+    "maxElectionId": null,
+    "maxSetVersion": null,
+    "commonWireVersion": 0,
+    "logicalSessionTimeoutMinutes": null
+  }
+}
+2026-07-17 19:17:40 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:17:40 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:17:40 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:17:40 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:17:45 [WARN]: MongoDB disconnected. Attempting reconnection...  
+2026-07-17 19:19:51 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:19:51 [INFO]: Database connected successfully  
+2026-07-17 19:19:51 [INFO]: AutoSeed: Checking database records...  
+2026-07-17 19:19:52 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-17 19:19:52 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-17 19:19:52 [INFO]: AutoSeed: Admin user already exists  
+2026-07-17 19:19:52 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-17 19:19:52 [INFO]: Socket.IO initialized successfully  
+2026-07-17 19:19:52 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 19:19:59 [HTTP]: ::1 - - [17/Jul/2026:13:49:59 +0000] "GET /api/services HTTP/1.1" 200 26 "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:20:45 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-17 19:20:45 [INFO]: HTTP server closed  
+2026-07-17 19:20:45 [INFO]: Socket.IO server closed  
+2026-07-17 19:20:50 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:20:50 [INFO]: Database connected successfully  
+2026-07-17 19:20:50 [INFO]: AutoSeed: Checking database records...  
+2026-07-17 19:20:51 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-17 19:20:52 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-17 19:20:52 [INFO]: AutoSeed: Admin user already exists  
+2026-07-17 19:20:52 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-17 19:20:52 [INFO]: Socket.IO initialized successfully  
+2026-07-17 19:20:52 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 19:22:03 [HTTP]: ::1 - - [17/Jul/2026:13:52:03 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:23:19 [HTTP]: ::1 - - [17/Jul/2026:13:53:19 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:23:28 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-17 19:23:28 [INFO]: HTTP server closed  
+2026-07-17 19:23:28 [INFO]: Socket.IO server closed  
+2026-07-17 19:23:38 [INFO]: Starting database seeding...  
+2026-07-17 19:23:39 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:23:39 [INFO]: Seeding roles...  
+2026-07-17 19:23:39 [INFO]: Roles seeded successfully  
+2026-07-17 19:23:39 [INFO]: Seeding categories...  
+2026-07-17 19:23:40 [INFO]: Categories seeded successfully  
+2026-07-17 19:23:40 [INFO]: Seeding admin user...  
+2026-07-17 19:23:40 [INFO]: Admin user already exists  
+2026-07-17 19:23:40 [INFO]: Admin user seeded successfully  
+2026-07-17 19:23:40 [INFO]: Seeding FAQs...  
+2026-07-17 19:23:40 [INFO]: Seeded 15 FAQ questions  
+2026-07-17 19:23:40 [INFO]: FAQs seeded successfully  
+2026-07-17 19:23:40 [INFO]: Seeding Testimonials...  
+2026-07-17 19:23:40 [INFO]: Seeded 4 Testimonials  
+2026-07-17 19:23:40 [INFO]: Testimonials seeded successfully  
+2026-07-17 19:23:40 [INFO]: Seeding Services...  
+2026-07-17 19:23:40 [INFO]: Seeded 8 Services  
+2026-07-17 19:34:26 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:34:26 [INFO]: Database connected successfully  
+2026-07-17 19:34:26 [INFO]: AutoSeed: Checking database records...  
+2026-07-17 19:34:27 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-17 19:34:27 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-17 19:34:27 [INFO]: AutoSeed: Admin user already exists  
+2026-07-17 19:34:27 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-17 19:34:27 [INFO]: Socket.IO initialized successfully  
+2026-07-17 19:34:27 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 19:34:29 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-17 19:34:29 [INFO]: HTTP server closed  
+2026-07-17 19:34:29 [INFO]: Socket.IO server closed  
+2026-07-17 19:34:36 [INFO]: Starting database seeding...  
+2026-07-17 19:34:36 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:34:36 [INFO]: Seeding roles...  
+2026-07-17 19:34:37 [INFO]: Roles seeded successfully  
+2026-07-17 19:34:37 [INFO]: Seeding categories...  
+2026-07-17 19:34:38 [INFO]: Categories seeded successfully  
+2026-07-17 19:34:38 [INFO]: Seeding admin user...  
+2026-07-17 19:34:38 [INFO]: Admin user already exists  
+2026-07-17 19:34:38 [INFO]: Admin user seeded successfully  
+2026-07-17 19:34:38 [INFO]: Seeding FAQs...  
+2026-07-17 19:34:38 [INFO]: Seeded 15 FAQ questions  
+2026-07-17 19:34:38 [INFO]: FAQs seeded successfully  
+2026-07-17 19:34:38 [INFO]: Seeding Testimonials...  
+2026-07-17 19:34:38 [INFO]: Seeded 4 Testimonials  
+2026-07-17 19:34:38 [INFO]: Testimonials seeded successfully  
+2026-07-17 19:34:38 [INFO]: Seeding Services...  
+2026-07-17 19:34:38 [INFO]: Seeded 8 Services  
+2026-07-17 19:34:38 [INFO]: Services seeded successfully  
+2026-07-17 19:34:38 [INFO]: Seeding Blogs...  
+2026-07-17 19:34:38 [ERROR]: Seeding failed: E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null } MongoBulkWriteError: E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null }
+    at OrderedBulkOperation.handleWriteError (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\bulk\common.js:860:22)
+    at resultHandler (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\bulk\common.js:350:27)
+    at D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\utils.js:297:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  "code": 11000,
+  "writeErrors": [
+    {
+      "err": {
+        "index": 1,
+        "code": 11000,
+        "errmsg": "E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null }",
+        "op": {
+          "title": "Top IT Skills in High Demand This Year",
+          "content": "The technology landscape is moving fast. Right now, Cloud Infrastructure, Artificial Intelligence, and Full Stack Javascript frameworks (like Node.js, React, and TypeScript) are extremely hot. This guide details exactly what skills you should focus on to land high-paying IT roles in major Indian hubs.",
+          "excerpt": "Find out which programming languages, frameworks, and tools are most sought after in the current job market.",
+          "author": "6a59e33ac4ad2350ff9d207e",
+          "category": "6a5a36763e7469f650ccac9f",
+          "tags": [
+            "IT",
+            "technology",
+            "skills"
+          ],
+          "coverImage": {
+            "url": "",
+            "publicId": ""
+          },
+          "status": "published",
+          "isFeatured": true,
+          "publishedAt": "2026-07-17T14:04:38.529Z",
+          "readTime": 5,
+          "views": 0,
+          "likes": 0,
+          "shares": 0,
+          "metaKeywords": [],
+          "allowComments": true,
+          "_id": "6a5a367661592610fe2db56e",
+          "comments": [],
+          "__v": 0,
+          "createdAt": "2026-07-17T14:04:38.581Z",
+          "updatedAt": "2026-07-17T14:04:38.581Z"
+        }
+      },
+      "index": 1
+    }
+  ],
+  "result": {
+    "insertedCount": 1,
+    "matchedCount": 0,
+    "modifiedCount": 0,
+    "deletedCount": 0,
+    "upsertedCount": 0,
+    "upsertedIds": {},
+    "insertedIds": {
+      "0": "6a5a367661592610fe2db56d"
+    }
+  },
+  "insertedDocs": [
+    {
+      "title": "How to Build a Modern Resume in 2026",
+      "content": "Writing a resume in 2026 requires a different approach than in previous years. With AI matching and ATS (Applicant Tracking Systems) being widely adopted by enterprise companies like GeoIndiaLimited, it is critical to tailor your resume. In this article, we cover formatting, keywords, sections, and structural patterns that yield maximum success.",
+      "excerpt": "A comprehensive guide to writing a standout resume that gets you noticed by top employers.",
+      "author": "6a59e33ac4ad2350ff9d207e",
+      "category": "6a5a36763e7469f650ccac9e",
+      "tags": [
+        "resume",
+        "career",
+        "jobseeker"
+      ],
+      "coverImage": {
+        "url": "",
+        "publicId": ""
+      },
+      "status": "published",
+      "isFeatured": true,
+      "publishedAt": "2026-07-17T14:04:38.529Z",
+      "readTime": 5,
+      "views": 0,
+      "likes": 0,
+      "shares": 0,
+      "metaKeywords": [],
+      "allowComments": true,
+      "_id": "6a5a367661592610fe2db56d",
+      "comments": [],
+      "__v": 0,
+      "createdAt": "2026-07-17T14:04:38.581Z",
+      "updatedAt": "2026-07-17T14:04:38.581Z",
+      "id": "6a5a367661592610fe2db56d"
+    }
+  ]
+}
+2026-07-17 19:34:50 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-17 19:34:50 [INFO]: Database connected successfully  
+2026-07-17 19:34:50 [INFO]: AutoSeed: Checking database records...  
+2026-07-17 19:34:51 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-17 19:34:51 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-17 19:34:51 [INFO]: AutoSeed: Admin user already exists  
+2026-07-17 19:34:51 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-17 19:34:51 [INFO]: Socket.IO initialized successfully  
+2026-07-17 19:34:51 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-17 19:35:29 [HTTP]: ::1 - - [17/Jul/2026:14:05:29 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:35:29 [HTTP]: ::1 - - [17/Jul/2026:14:05:29 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 229 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:35:33 [HTTP]: ::1 - - [17/Jul/2026:14:05:33 +0000] "GET /api/services?all=true HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:35:51 [HTTP]: ::1 - - [17/Jul/2026:14:05:51 +0000] "GET /api/jobs?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:35:53 [HTTP]: ::1 - - [17/Jul/2026:14:05:53 +0000] "GET /api/admin/users?limit=100 HTTP/1.1" 200 800 "http://localhost:5173/dashboard/admin/companies" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:35:55 [HTTP]: ::1 - - [17/Jul/2026:14:05:55 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:35:57 [HTTP]: ::1 - - [17/Jul/2026:14:05:57 +0000] "GET /api/faqs?all=true HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/faqs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:35:58 [HTTP]: ::1 - - [17/Jul/2026:14:05:58 +0000] "GET /api/testimonials?all=true HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/testimonials" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:36:11 [HTTP]: ::1 - - [17/Jul/2026:14:06:11 +0000] "POST /api/auth/logout HTTP/1.1" 401 - "http://localhost:5173/dashboard/admin/testimonials" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:36:11 [HTTP]: ::1 - - [17/Jul/2026:14:06:11 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/testimonials" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:36:12 [HTTP]: ::1 - - [17/Jul/2026:14:06:12 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/dashboard/admin/testimonials" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:36:12 [HTTP]: ::1 - - [17/Jul/2026:14:06:12 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:36:14 [HTTP]: ::1 - - [17/Jul/2026:14:06:14 +0000] "GET /api/services HTTP/1.1" 200 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:36:23 [HTTP]: ::1 - - [17/Jul/2026:14:06:23 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-17 19:36:27 [HTTP]: ::1 - - [17/Jul/2026:14:06:27 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:44:37 [INFO]: Starting database seeding...  
+2026-07-18 11:44:38 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 11:44:38 [INFO]: Seeding roles...  
+2026-07-18 11:44:39 [INFO]: Roles seeded successfully  
+2026-07-18 11:44:39 [INFO]: Seeding categories...  
+2026-07-18 11:44:40 [INFO]: Categories seeded successfully  
+2026-07-18 11:44:40 [INFO]: Seeding admin user...  
+2026-07-18 11:44:40 [INFO]: Admin user already exists  
+2026-07-18 11:44:40 [INFO]: Admin user seeded successfully  
+2026-07-18 11:44:40 [INFO]: Seeding FAQs...  
+2026-07-18 11:44:40 [INFO]: Seeded 15 FAQ questions  
+2026-07-18 11:44:40 [INFO]: FAQs seeded successfully  
+2026-07-18 11:44:40 [INFO]: Seeding Testimonials...  
+2026-07-18 11:44:40 [INFO]: Seeded 4 Testimonials  
+2026-07-18 11:44:40 [INFO]: Testimonials seeded successfully  
+2026-07-18 11:44:40 [INFO]: Seeding Services...  
+2026-07-18 11:44:40 [INFO]: Seeded 8 Services  
+2026-07-18 11:44:40 [INFO]: Services seeded successfully  
+2026-07-18 11:44:40 [INFO]: Seeding Blogs...  
+2026-07-18 11:44:40 [ERROR]: Seeding failed: E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null } MongoBulkWriteError: E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null }
+    at OrderedBulkOperation.handleWriteError (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\bulk\common.js:860:22)
+    at resultHandler (D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\bulk\common.js:350:27)
+    at D:\job-reqruitment\backend\node_modules\mongoose\node_modules\mongodb\lib\utils.js:297:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  "code": 11000,
+  "writeErrors": [
+    {
+      "err": {
+        "index": 1,
+        "code": 11000,
+        "errmsg": "E11000 duplicate key error collection: test.blogs index: slug_1 dup key: { slug: null }",
+        "op": {
+          "title": "Top IT Skills in High Demand This Year",
+          "content": "The technology landscape is moving fast. Right now, Cloud Infrastructure, Artificial Intelligence, and Full Stack Javascript frameworks (like Node.js, React, and TypeScript) are extremely hot. This guide details exactly what skills you should focus on to land high-paying IT roles in major Indian hubs.",
+          "excerpt": "Find out which programming languages, frameworks, and tools are most sought after in the current job market.",
+          "author": "6a59e33ac4ad2350ff9d207e",
+          "category": "6a5a36763e7469f650ccac9f",
+          "tags": [
+            "IT",
+            "technology",
+            "skills"
+          ],
+          "coverImage": {
+            "url": "",
+            "publicId": ""
+          },
+          "status": "published",
+          "isFeatured": true,
+          "publishedAt": "2026-07-18T06:14:40.767Z",
+          "readTime": 5,
+          "views": 0,
+          "likes": 0,
+          "shares": 0,
+          "metaKeywords": [],
+          "allowComments": true,
+          "_id": "6a5b19d03aa5330410d56915",
+          "comments": [],
+          "__v": 0,
+          "createdAt": "2026-07-18T06:14:40.824Z",
+          "updatedAt": "2026-07-18T06:14:40.824Z"
+        }
+      },
+      "index": 1
+    }
+  ],
+  "result": {
+    "insertedCount": 1,
+    "matchedCount": 0,
+    "modifiedCount": 0,
+    "deletedCount": 0,
+    "upsertedCount": 0,
+    "upsertedIds": {},
+    "insertedIds": {
+      "0": "6a5b19d03aa5330410d56914"
+    }
+  },
+  "insertedDocs": [
+    {
+      "title": "How to Build a Modern Resume in 2026",
+      "content": "Writing a resume in 2026 requires a different approach than in previous years. With AI matching and ATS (Applicant Tracking Systems) being widely adopted by enterprise companies like GeoIndiaLimited, it is critical to tailor your resume. In this article, we cover formatting, keywords, sections, and structural patterns that yield maximum success.",
+      "excerpt": "A comprehensive guide to writing a standout resume that gets you noticed by top employers.",
+      "author": "6a59e33ac4ad2350ff9d207e",
+      "category": "6a5a36763e7469f650ccac9e",
+      "tags": [
+        "resume",
+        "career",
+        "jobseeker"
+      ],
+      "coverImage": {
+        "url": "",
+        "publicId": ""
+      },
+      "status": "published",
+      "isFeatured": true,
+      "publishedAt": "2026-07-18T06:14:40.767Z",
+      "readTime": 5,
+      "views": 0,
+      "likes": 0,
+      "shares": 0,
+      "metaKeywords": [],
+      "allowComments": true,
+      "_id": "6a5b19d03aa5330410d56914",
+      "comments": [],
+      "__v": 0,
+      "createdAt": "2026-07-18T06:14:40.823Z",
+      "updatedAt": "2026-07-18T06:14:40.823Z",
+      "id": "6a5b19d03aa5330410d56914"
+    }
+  ]
+}
+2026-07-18 11:45:27 [INFO]: Starting database seeding...  
+2026-07-18 11:45:28 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 11:45:28 [INFO]: Seeding roles...  
+2026-07-18 11:45:28 [INFO]: Roles seeded successfully  
+2026-07-18 11:45:28 [INFO]: Seeding categories...  
+2026-07-18 11:45:29 [INFO]: Categories seeded successfully  
+2026-07-18 11:45:29 [INFO]: Seeding admin user...  
+2026-07-18 11:45:29 [INFO]: Admin user already exists  
+2026-07-18 11:45:29 [INFO]: Admin user seeded successfully  
+2026-07-18 11:45:29 [INFO]: Seeding FAQs...  
+2026-07-18 11:45:29 [INFO]: Seeded 15 FAQ questions  
+2026-07-18 11:45:29 [INFO]: FAQs seeded successfully  
+2026-07-18 11:45:29 [INFO]: Seeding Testimonials...  
+2026-07-18 11:45:29 [INFO]: Seeded 4 Testimonials  
+2026-07-18 11:45:29 [INFO]: Testimonials seeded successfully  
+2026-07-18 11:45:29 [INFO]: Seeding Services...  
+2026-07-18 11:45:30 [INFO]: Seeded 8 Services  
+2026-07-18 11:45:30 [INFO]: Services seeded successfully  
+2026-07-18 11:45:30 [INFO]: Seeding Blogs...  
+2026-07-18 11:45:30 [INFO]: Seeded 3 Blogs  
+2026-07-18 11:45:30 [INFO]: Blogs seeded successfully  
+2026-07-18 11:45:30 [INFO]: Seeding Careers...  
+2026-07-18 11:45:30 [INFO]: Seeded 6 Careers  
+2026-07-18 11:45:37 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 11:45:37 [INFO]: Database connected successfully  
+2026-07-18 11:45:37 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 11:45:38 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 11:45:39 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 11:45:39 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 11:45:39 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 11:45:39 [INFO]: Socket.IO initialized successfully  
+2026-07-18 11:45:39 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 11:49:24 [HTTP]: ::1 - - [18/Jul/2026:06:19:24 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 200 79 "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:49:38 [HTTP]: ::1 - - [18/Jul/2026:06:19:38 +0000] "GET /api/jobs?page=1&limit=8&workMode=remote HTTP/1.1" 200 79 "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:49:40 [HTTP]: ::1 - - [18/Jul/2026:06:19:40 +0000] "GET /api/jobs?page=1&limit=8&workMode=remote&employmentType=part-time HTTP/1.1" 200 79 "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:49:42 [HTTP]: ::1 - - [18/Jul/2026:06:19:42 +0000] "GET /api/jobs?page=1&limit=8&workMode=remote&employmentType=part-time&experienceLevel=senior HTTP/1.1" 200 79 "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:50:10 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-18 11:50:10 [INFO]: HTTP server closed  
+2026-07-18 11:50:10 [INFO]: Socket.IO server closed  
+2026-07-18 11:50:14 [INFO]: Starting database seeding...  
+2026-07-18 11:50:15 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 11:50:15 [INFO]: Seeding roles...  
+2026-07-18 11:50:16 [INFO]: Roles seeded successfully  
+2026-07-18 11:50:16 [INFO]: Seeding categories...  
+2026-07-18 11:50:16 [INFO]: Categories seeded successfully  
+2026-07-18 11:50:16 [INFO]: Seeding admin user...  
+2026-07-18 11:50:17 [INFO]: Admin user already exists  
+2026-07-18 11:50:17 [INFO]: Admin user seeded successfully  
+2026-07-18 11:50:17 [INFO]: Seeding FAQs...  
+2026-07-18 11:50:17 [INFO]: Seeded 15 FAQ questions  
+2026-07-18 11:50:17 [INFO]: FAQs seeded successfully  
+2026-07-18 11:50:17 [INFO]: Seeding Testimonials...  
+2026-07-18 11:50:17 [INFO]: Seeded 4 Testimonials  
+2026-07-18 11:50:17 [INFO]: Testimonials seeded successfully  
+2026-07-18 11:50:17 [INFO]: Seeding Services...  
+2026-07-18 11:50:17 [INFO]: Seeded 8 Services  
+2026-07-18 11:50:17 [INFO]: Services seeded successfully  
+2026-07-18 11:50:17 [INFO]: Seeding Blogs...  
+2026-07-18 11:50:17 [INFO]: Seeded 3 Blogs  
+2026-07-18 11:50:17 [INFO]: Blogs seeded successfully  
+2026-07-18 11:50:17 [INFO]: Seeding Careers...  
+2026-07-18 11:50:17 [INFO]: Seeded 6 Careers  
+2026-07-18 11:50:17 [INFO]: Careers seeded successfully  
+2026-07-18 11:50:17 [INFO]: Seeding Jobs...  
+2026-07-18 11:50:18 [INFO]: Seeded 10 Jobs  
+2026-07-18 11:50:36 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 11:50:36 [INFO]: Database connected successfully  
+2026-07-18 11:50:36 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 11:50:37 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 11:50:38 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 11:50:38 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 11:50:38 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 11:50:38 [INFO]: Socket.IO initialized successfully  
+2026-07-18 11:50:38 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 11:50:39 [HTTP]: ::1 - - [18/Jul/2026:06:20:39 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 200 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:50:46 [HTTP]: ::1 - - [18/Jul/2026:06:20:46 +0000] "GET /api/jobs?page=1&limit=8&workMode=remote HTTP/1.1" 200 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:50:50 [HTTP]: ::1 - - [18/Jul/2026:06:20:50 +0000] "GET /api/jobs/slug/digital-marketing-strategist-mrpz9ivj HTTP/1.1" 200 - "http://localhost:5173/jobs/digital-marketing-strategist-mrpz9ivj" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:50:59 [HTTP]: ::1 - - [18/Jul/2026:06:20:59 +0000] "POST /api/jobs/6a5b1b222180bffcb22b2ca7/apply HTTP/1.1" 401 - "http://localhost:5173/jobs/digital-marketing-strategist-mrpz9ivj" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:50:59 [HTTP]: ::1 - - [18/Jul/2026:06:20:59 +0000] "POST /api/auth/refresh-token HTTP/1.1" 401 - "http://localhost:5173/jobs/digital-marketing-strategist-mrpz9ivj" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:51:18 [HTTP]: ::1 - - [18/Jul/2026:06:21:18 +0000] "GET /api/careers HTTP/1.1" 200 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:51:55 [HTTP]: ::1 - - [18/Jul/2026:06:21:55 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 200 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:53:59 [HTTP]: ::1 - - [18/Jul/2026:06:23:59 +0000] "GET /api/services HTTP/1.1" 200 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:55:45 [HTTP]: ::1 - - [18/Jul/2026:06:25:45 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:56:35 [HTTP]: ::1 - - [18/Jul/2026:06:26:35 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:58:50 [HTTP]: ::1 - - [18/Jul/2026:06:28:50 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:58:51 [HTTP]: ::1 - - [18/Jul/2026:06:28:51 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 229 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:58:53 [HTTP]: ::1 - - [18/Jul/2026:06:28:53 +0000] "GET /api/careers?all=true HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:58:59 [HTTP]: ::1 - - [18/Jul/2026:06:28:59 +0000] "GET /api/testimonials?all=true HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/testimonials" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:59:00 [HTTP]: ::1 - - [18/Jul/2026:06:29:00 +0000] "GET /api/services?all=true HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:59:01 [HTTP]: ::1 - - [18/Jul/2026:06:29:01 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:59:02 [HTTP]: ::1 - - [18/Jul/2026:06:29:02 +0000] "GET /api/admin/users?limit=100 HTTP/1.1" 200 800 "http://localhost:5173/dashboard/admin/companies" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:59:04 [HTTP]: ::1 - - [18/Jul/2026:06:29:04 +0000] "GET /api/jobs?limit=100 HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:59:32 [HTTP]: ::1 - - [18/Jul/2026:06:29:32 +0000] "POST /api/auth/logout HTTP/1.1" 401 - "http://localhost:5173/dashboard/admin/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:59:32 [HTTP]: ::1 - - [18/Jul/2026:06:29:32 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:59:32 [HTTP]: ::1 - - [18/Jul/2026:06:29:32 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/dashboard/admin/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 11:59:33 [HTTP]: ::1 - - [18/Jul/2026:06:29:33 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:01:04 [HTTP]: ::1 - - [18/Jul/2026:06:31:04 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:01:59 [HTTP]: ::1 - - [18/Jul/2026:06:31:59 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 200 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:09:42 [HTTP]: ::1 - - [18/Jul/2026:06:39:42 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:09:50 [HTTP]: ::1 - - [18/Jul/2026:06:39:50 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:09:53 [HTTP]: ::1 - - [18/Jul/2026:06:39:53 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:16:08 [HTTP]: ::1 - - [18/Jul/2026:06:46:08 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:18:45 [HTTP]: ::1 - - [18/Jul/2026:06:48:45 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:21:23 [HTTP]: ::1 - - [18/Jul/2026:06:51:23 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:22:42 [HTTP]: ::1 - - [18/Jul/2026:06:52:42 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:24:50 [HTTP]: ::1 - - [18/Jul/2026:06:54:50 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:25:08 [HTTP]: ::1 - - [18/Jul/2026:06:55:08 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:25:29 [HTTP]: ::1 - - [18/Jul/2026:06:55:29 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:27:16 [HTTP]: ::1 - - [18/Jul/2026:06:57:16 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:27:18 [HTTP]: ::1 - - [18/Jul/2026:06:57:18 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:27:33 [HTTP]: ::1 - - [18/Jul/2026:06:57:33 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  

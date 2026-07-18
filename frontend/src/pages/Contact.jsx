@@ -107,25 +107,25 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-4 text-left">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider mb-2">Full Name *</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider mb-2">Full Name *</label>
                     <input
                       type="text"
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleChange}
                       required
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                       placeholder="e.g. Aditya Sharma"
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider mb-2">Company Name</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider mb-2">Company Name</label>
                     <input
                       type="text"
                       name="companyName"
                       value={formData.companyName}
                       onChange={handleChange}
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                       placeholder="e.g. Company Pvt Ltd"
                     />
                   </div>
@@ -133,25 +133,25 @@ const Contact = () => {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider mb-2">Email Address *</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider mb-2">Email Address *</label>
                     <input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                       placeholder="business@company.com"
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider mb-2">Phone Number</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider mb-2">Phone Number</label>
                     <input
                       type="text"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                       placeholder="+91 98765 43210"
                     />
                   </div>
@@ -159,12 +159,12 @@ const Contact = () => {
 
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider mb-2">Enquiry Type *</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider mb-2">Enquiry Type *</label>
                     <select
                       name="enquiryType"
                       value={formData.enquiryType}
                       onChange={handleChange}
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 focus:ring-2 focus:ring-primary-500 outline-none"
                     >
                       <option value="Employer Services">Employer Services</option>
                       <option value="Job Seeker Support">Job Seeker Support</option>
@@ -172,12 +172,12 @@ const Contact = () => {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider mb-2">Service Required *</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider mb-2">Service Required *</label>
                     <select
                       name="serviceRequired"
                       value={formData.serviceRequired}
                       onChange={handleChange}
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 focus:ring-2 focus:ring-primary-500 outline-none"
                     >
                       <option value="IT Recruitment">IT Recruitment</option>
                       <option value="Non-IT Recruitment">Non-IT Recruitment</option>
@@ -190,39 +190,39 @@ const Contact = () => {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider mb-2">Vacancies</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider mb-2">Vacancies</label>
                     <input
                       type="number"
                       min={1}
                       name="vacancies"
                       value={formData.vacancies}
                       onChange={handleChange}
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 focus:ring-2 focus:ring-primary-500 outline-none"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider mb-2">Job Location</label>
+                  <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider mb-2">Job Location</label>
                   <input
                     type="text"
                     name="jobLocation"
                     value={formData.jobLocation}
                     onChange={handleChange}
-                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                     placeholder="e.g. Mumbai, Maharashtra"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider mb-2">Message *</label>
+                  <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider mb-2">Message *</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none resize-none"
+                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none resize-none"
                     placeholder="Describe your requirement or details here..."
                   />
                 </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { toast } from 'react-hot-toast';
+import axiosInstance from '../api/axiosInstance';
 import {
   HiShieldCheck,
   HiBriefcase,
@@ -36,7 +37,7 @@ const Employers = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.companyName || !formData.contactPerson || !formData.email || !formData.jobPosition) {
       toast.error('Please fill in the required fields (Company, Contact Person, Email, Job Position).');
@@ -44,7 +45,8 @@ const Employers = () => {
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      await axiosInstance.post('/employers/hiring-support', formData);
       toast.success('Hiring requirement submitted successfully! Our recruitment team will review and contact you.');
       setFormData({
         companyName: '',
@@ -62,8 +64,11 @@ const Employers = () => {
         joiningDate: '',
         jobDescription: '',
       });
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to submit hiring requirement. Please try again.');
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   const steps = [
@@ -171,7 +176,7 @@ const Employers = () => {
               <form onSubmit={handleSubmit} className="space-y-4 text-left">
                 {/* Company Name */}
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Company Name *</label>
+                  <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Company Name *</label>
                   <input
                     type="text"
                     name="companyName"
@@ -179,13 +184,13 @@ const Employers = () => {
                     onChange={handleChange}
                     required
                     placeholder="e.g. Geo India Limited"
-                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                   />
                 </div>
 
                 {/* Contact Person */}
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Contact Person Name *</label>
+                  <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Contact Person Name *</label>
                   <input
                     type="text"
                     name="contactPerson"
@@ -193,14 +198,14 @@ const Employers = () => {
                     onChange={handleChange}
                     required
                     placeholder="e.g. Rajesh Kumar"
-                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                   />
                 </div>
 
                 {/* Email and Phone */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Official Email *</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Official Email *</label>
                     <input
                       type="email"
                       name="email"
@@ -208,18 +213,18 @@ const Employers = () => {
                       onChange={handleChange}
                       required
                       placeholder="business@company.com"
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Phone Number</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Phone Number</label>
                     <input
                       type="text"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+91 98765 43210"
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                     />
                   </div>
                 </div>
@@ -227,7 +232,7 @@ const Employers = () => {
                 {/* Job Position and Vacancies */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Job Position *</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Job Position *</label>
                     <input
                       type="text"
                       name="jobPosition"
@@ -235,18 +240,18 @@ const Employers = () => {
                       onChange={handleChange}
                       required
                       placeholder="e.g. HR Executive"
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">No. of Vacancies</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">No. of Vacancies</label>
                     <input
                       type="number"
                       min={1}
                       name="vacancies"
                       value={formData.vacancies}
                       onChange={handleChange}
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 focus:ring-2 focus:ring-primary-500 outline-none"
                     />
                   </div>
                 </div>
@@ -254,25 +259,25 @@ const Employers = () => {
                 {/* Location and Qualification */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Job Location</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Job Location</label>
                     <input
                       type="text"
                       name="jobLocation"
                       value={formData.jobLocation}
                       onChange={handleChange}
                       placeholder="e.g. Mumbai, India"
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Required Qualification</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Required Qualification</label>
                     <input
                       type="text"
                       name="qualification"
                       value={formData.qualification}
                       onChange={handleChange}
                       placeholder="e.g. MBA / B.Tech"
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                     />
                   </div>
                 </div>
@@ -280,25 +285,25 @@ const Employers = () => {
                 {/* Experience & Salary */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Experience Level</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Experience Level</label>
                     <input
                       type="text"
                       name="experience"
                       value={formData.experience}
                       onChange={handleChange}
                       placeholder="e.g. 2-5 Years"
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Salary Range</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Salary Range</label>
                     <input
                       type="text"
                       name="salaryRange"
                       value={formData.salaryRange}
                       onChange={handleChange}
                       placeholder="e.g. 4-6 LPA"
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                     />
                   </div>
                 </div>
@@ -306,39 +311,39 @@ const Employers = () => {
                 {/* Skills & Joining Date */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Required Skills</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Required Skills</label>
                     <input
                       type="text"
                       name="skills"
                       value={formData.skills}
                       onChange={handleChange}
                       placeholder="e.g. IT Sourcing, Screening"
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Expected Joining</label>
+                    <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Expected Joining</label>
                     <input
                       type="text"
                       name="joiningDate"
                       value={formData.joiningDate}
                       onChange={handleChange}
                       placeholder="e.g. Immediate / 15 days"
-                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                      className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                     />
                   </div>
                 </div>
 
                 {/* Job Description Text */}
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Complete Job Description</label>
+                  <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Complete Job Description</label>
                   <textarea
                     rows={4}
                     name="jobDescription"
                     value={formData.jobDescription}
                     onChange={handleChange}
                     placeholder="Enter full job roles and responsibility parameters here..."
-                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none resize-none"
                   ></textarea>
                 </div>
 

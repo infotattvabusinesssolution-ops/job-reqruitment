@@ -33,7 +33,14 @@ import Careers from './pages/Careers';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Disclaimer from './pages/Disclaimer';
+import CorporateTraining from './pages/CorporateTraining';
+import EmployabilitySkills from './pages/EmployabilitySkills';
+import InterviewPreparation from './pages/InterviewPreparation';
+import SoftSkills from './pages/SoftSkills';
+import TechnicalTraining from './pages/TechnicalTraining';
+import InternshipPrograms from './pages/InternshipPrograms';
 import NotFound from './pages/NotFound';
+import preloaderLogo from './assets/image/White and Blue Modern Printing Service Instagram Post.png';
 
 const ProtectedRoute = ({ children, allowedRoles }) => {
   const token = localStorage.getItem('accessToken');
@@ -106,14 +113,15 @@ function App() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="text-center space-y-6"
         >
-          {/* Logo Circle */}
+          {/* Logo Image */}
           <div className="relative flex items-center justify-center">
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 2.5, ease: 'linear' }}
-              className="w-20 h-20 rounded-full border-4 border-primary-500 border-t-transparent flex items-center justify-center"
+            <motion.img
+              src={preloaderLogo}
+              alt="Geo India Limited Logo"
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+              className="w-24 h-24 rounded-full object-cover border-2 border-primary-500 shadow-xl"
             />
-            <div className="absolute font-bold text-lg text-primary-500">GIL</div>
           </div>
 
           {/* Title */}
@@ -157,6 +165,12 @@ function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/corporate-training" element={<CorporateTraining />} />
+        <Route path="/employability-skills" element={<EmployabilitySkills />} />
+        <Route path="/interview-preparation" element={<InterviewPreparation />} />
+        <Route path="/soft-skills" element={<SoftSkills />} />
+        <Route path="/technical-training" element={<TechnicalTraining />} />
+        <Route path="/internship-programs" element={<InternshipPrograms />} />
 
         {/* Auth Routes */}
         <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />

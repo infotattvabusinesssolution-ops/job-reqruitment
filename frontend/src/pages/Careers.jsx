@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { toast } from 'react-hot-toast';
+import { careerApi } from '../api/candidateApi';
+import axiosInstance from '../api/axiosInstance';
 import {
   HiBriefcase,
   HiLightBulb,
@@ -23,34 +26,63 @@ const Careers = () => {
     name: '',
     email: '',
     phone: '',
-    position: 'Recruitment Executive',
+    position: '',
     coverLetter: '',
   });
+  const [resumeFile, setResumeFile] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const { data: vacancies = [], isLoading } = useQuery({
+    queryKey: ['careers'],
+    queryFn: async () => {
+      const res = await careerApi.getAll();
+      return res.data.data;
+    },
+  });
+
+  const handleApplyClick = (title) => {
+    setFormData((prev) => ({ ...prev, position: title }));
+    document.getElementById('join-team-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email) {
-      toast.error('Please fill in your name and email address.');
+    if (!formData.name || !formData.email || !formData.position) {
+      toast.error('Please fill in your name, email address, and position.');
+      return;
+    }
+    if (!resumeFile) {
+      toast.error('Please upload your resume to apply.');
       return;
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      toast.success('Application submitted successfully! Our HR team will get back to you.');
-      setFormData({ name: '', email: '', phone: '', position: 'Recruitment Executive', coverLetter: '' });
-      setIsSubmitting(false);
-    }, 1500);
-  };
+    try {
+      const submitData = new FormData();
+      submitData.append('name', formData.name);
+      submitData.append('email', formData.email);
+      submitData.append('phone', formData.phone);
+      submitData.append('position', formData.position);
+      submitData.append('coverLetter', formData.coverLetter);
+      submitData.append('resume', resumeFile);
 
-  const vacancies = [
-    { title: 'Recruitment Executive', dept: 'HR & Sourcing', loc: 'Mumbai / Remote', exp: '1-2 Years', salary: '2.5 - 4 LPA' },
-    { title: 'Senior Recruiter', dept: 'Client Hiring', loc: 'Pune / Noida', exp: '3-5 Years', salary: '4.5 - 6.5 LPA' },
-    { title: 'HR Generalist / HR Executive', dept: 'Administration', loc: 'Mumbai', exp: '2-4 Years', salary: '3 - 5 LPA' },
-    { title: 'Business Development Executive', dept: 'Client Acquisition', loc: 'Delhi NCR', exp: '1-3 Years', salary: '3.5 - 5 LPA + Incentives' },
-    { title: 'Digital Marketing Executive', dept: 'Marketing', loc: 'Remote', exp: '1-3 Years', salary: '3 - 4.5 LPA' },
-    { title: 'Office Administrator', dept: 'Operations', loc: 'Mumbai', exp: '1-3 Years', salary: '2 - 3 LPA' },
-  ];
+      await axiosInstance.post('/careers/apply', submitData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      toast.success('Application submitted successfully! Our HR team will review your resume.');
+      setFormData({ name: '', email: '', phone: '', position: '', coverLetter: '' });
+      setResumeFile(null);
+      const fileInput = document.getElementById('resume-file-input');
+      if (fileInput) fileInput.value = '';
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to submit application. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const internships = [
     'Human Resources & Recruitment',
@@ -131,17 +163,32 @@ const Careers = () => {
                 <HiBriefcase className="w-5 h-5 text-primary-500" /> Internal Job Vacancies
               </h2>
               <div className="grid sm:grid-cols-2 gap-4">
-                {vacancies.map((job, idx) => (
-                  <div key={idx} className="p-4 bg-gray-50 border border-gray-100 rounded-xl space-y-2">
-                    <h4 className="font-bold text-secondary-950 text-xs">{job.title}</h4>
-                    <div className="text-[10px] text-secondary-500 space-y-1 font-semibold">
-                      <p>Department: {job.dept}</p>
-                      <p>Location: {job.loc}</p>
-                      <p>Experience: {job.exp}</p>
-                      <p>Expected Salary: {job.salary}</p>
+                {isLoading ? (
+                  <div className="col-span-2 text-center py-8 text-xs text-secondary-400 animate-pulse">Loading vacancies...</div>
+                ) : vacancies.length > 0 ? (
+                  vacancies.map((job, idx) => (
+                    <div
+                      key={job._id || idx}
+                      onClick={() => handleApplyClick(job.title)}
+                      className="p-4 bg-gray-50 border border-gray-150 rounded-xl space-y-2 cursor-pointer hover:border-primary-500 hover:bg-primary-50/20 hover:shadow-sm transition-all group text-left"
+                    >
+                      <div className="flex justify-between items-start gap-2">
+                        <h4 className="font-bold text-secondary-950 text-xs group-hover:text-primary-600 transition-colors">{job.title}</h4>
+                        <span className="text-[9px] text-primary-600 font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Apply Now &rarr;</span>
+                      </div>
+                      <div className="text-[10px] text-secondary-500 space-y-1 font-semibold">
+                        <p>Department: {job.dept}</p>
+                        <p>Location: {job.loc}</p>
+                        <p>Experience: {job.exp}</p>
+                        <p>Expected Salary: {job.salary}</p>
+                      </div>
                     </div>
+                  ))
+                ) : (
+                  <div className="col-span-2 text-center py-8 text-xs text-secondary-450 font-semibold bg-gray-50 border border-dashed border-gray-200 rounded-xl">
+                    We currently do not have any open internal positions. Submit your resume to be considered for future openings!
                   </div>
-                ))}
+                )}
               </div>
             </motion.div>
 
@@ -170,7 +217,7 @@ const Careers = () => {
           </div>
 
           {/* Form */}
-          <div>
+          <div id="join-team-section">
             <motion.div
               initial={{ opacity: 0, x: 25 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -183,57 +230,79 @@ const Careers = () => {
                   <HiMail className="w-5 h-5 text-primary-500" /> Join Our Team
                 </h3>
                 <p className="text-xs text-secondary-400">Apply for internal vacancies or internships.</p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-4 text-left">
+              </div>              <form onSubmit={handleSubmit} className="space-y-4 text-left">
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Full Name *</label>
+                  <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Full Name *</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Aditya Sharma"
-                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Email Address *</label>
+                  <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Email Address *</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="you@example.com"
-                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Position applied *</label>
+                  <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Phone Number</label>
+                  <input
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    placeholder="+91 98765 43210"
+                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary-500 outline-none"
+                  />
+                </div>
+
+                <div className="space-y-1">
+                  <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Position applied *</label>
                   <select
                     value={formData.position}
                     onChange={(e) => setFormData({ ...formData, position: e.target.value })}
-                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none"
+                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 focus:ring-2 focus:ring-primary-500 outline-none"
+                    required
                   >
-                    <option value="Recruitment Executive">Recruitment Executive</option>
-                    <option value="Senior Recruiter">Senior Recruiter</option>
-                    <option value="HR Generalist">HR Generalist / HR Executive</option>
-                    <option value="Business Development">Business Development Executive</option>
-                    <option value="Digital Marketing">Digital Marketing Executive</option>
+                    <option value="" disabled>Select a position...</option>
+                    {vacancies.map((job) => (
+                      <option key={job._id} value={job.title}>{job.title}</option>
+                    ))}
                     <option value="Internship Track">Internship Track</option>
+                    <option value="General Application">General Application / Other</option>
                   </select>
                 </div>
 
                 <div className="space-y-1">
-                  <label className="block text-[10px] font-bold text-secondary-500 uppercase tracking-wider">Message / Cover Letter</label>
+                  <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Upload Resume * (PDF / DOCX)</label>
+                  <input
+                    id="resume-file-input"
+                    type="file"
+                    required
+                    accept=".pdf,.doc,.docx"
+                    onChange={(e) => setResumeFile(e.target.files[0])}
+                    className="w-full border border-gray-200 rounded-xl p-2 text-xs bg-white text-secondary-900 focus:ring-2 focus:ring-primary-500 outline-none file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-[10px] file:font-bold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100 cursor-pointer"
+                  />
+                </div>
+
+                <div className="space-y-1">
+                  <label className="block text-[10px] font-bold text-secondary-700 uppercase tracking-wider">Message / Cover Letter</label>
                   <textarea
                     rows={4}
                     value={formData.coverLetter}
                     onChange={(e) => setFormData({ ...formData, coverLetter: e.target.value })}
                     placeholder="Briefly describe your interest or credentials..."
-                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs text-secondary-800 focus:ring-2 focus:ring-primary-500 outline-none resize-none"
+                    className="w-full border border-gray-200 rounded-xl p-2.5 text-xs bg-white text-secondary-900 focus:ring-2 focus:ring-primary-500 outline-none resize-none"
                   />
                 </div>
 

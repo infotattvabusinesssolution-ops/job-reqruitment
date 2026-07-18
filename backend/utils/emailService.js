@@ -187,6 +187,157 @@ class EmailService {
     `;
     return this.sendMail({ to: email, subject, html });
   }
+
+  async sendNewApplicationAlert({ hrEmail, candidateName, candidateEmail, candidatePhone, jobTitle, coverLetter, resumeUrl }) {
+    const subject = `New Job Application Received: ${jobTitle}`;
+    const html = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1f2937;">
+        <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 40px; text-align: center; border-radius: 10px 10px 0 0;">
+          <h1 style="color: white; margin: 0; font-size: 24px;">New Job Application</h1>
+          <p style="color: #94a3b8; margin-top: 10px;">Position: ${jobTitle}</p>
+        </div>
+        <div style="background: #ffffff; padding: 45px; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 10px 10px;">
+          <h3 style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Candidate Details</h3>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold; width: 130px;">Name:</td>
+              <td style="padding: 6px 0;">${candidateName}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Email:</td>
+              <td style="padding: 6px 0;"><a href="mailto:${candidateEmail}" style="color: #2563eb; text-decoration: none;">${candidateEmail}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Phone:</td>
+              <td style="padding: 6px 0;">${candidatePhone || 'N/A'}</td>
+            </tr>
+          </table>
+
+          <h3 style="color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Cover Letter</h3>
+          <p style="background-color: #f8fafc; padding: 15px; border-radius: 8px; font-style: italic; border-left: 4px solid #cbd5e1; white-space: pre-wrap; font-size: 14px; line-height: 1.6;">
+            ${coverLetter || 'No cover letter provided.'}
+          </p>
+
+          ${resumeUrl ? `
+          <div style="text-align: center; margin-top: 35px;">
+            <a href="${resumeUrl}" target="_blank" 
+               style="background: #2563eb; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; font-size: 14px; box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);">
+              View Candidate Resume
+            </a>
+          </div>
+          ` : `
+          <p style="color: #ef4444; font-weight: bold; margin-top: 20px;">No resume attachment linked to this candidate profile.</p>
+          `}
+        </div>
+      </div>
+    `;
+
+    return this.sendMail({
+      to: hrEmail,
+      subject,
+      html,
+    });
+  }
+
+  async sendHiringRequirementAlert({
+    hrEmail,
+    companyName,
+    contactPerson,
+    email,
+    phone,
+    jobPosition,
+    vacancies,
+    jobLocation,
+    qualification,
+    experience,
+    salaryRange,
+    skills,
+    employmentType,
+    joiningDate,
+    jobDescription,
+  }) {
+    const subject = `New Hiring Support Request from: ${companyName}`;
+    const html = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1f2937;">
+        <div style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); padding: 40px; text-align: center; border-radius: 10px 10px 0 0;">
+          <h1 style="color: white; margin: 0; font-size: 24px;">Hiring Support Requirement</h1>
+          <p style="color: #e0f2fe; margin-top: 10px;">Submitted by: ${companyName}</p>
+        </div>
+        <div style="background: #ffffff; padding: 45px; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 10px 10px;">
+          <h3 style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Contact Information</h3>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold; width: 150px;">Company:</td>
+              <td style="padding: 6px 0;">${companyName}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Contact Person:</td>
+              <td style="padding: 6px 0;">${contactPerson}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Official Email:</td>
+              <td style="padding: 6px 0;"><a href="mailto:${email}" style="color: #2563eb; text-decoration: none;">${email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Phone:</td>
+              <td style="padding: 6px 0;">${phone || 'N/A'}</td>
+            </tr>
+          </table>
+
+          <h3 style="color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Requirement Details</h3>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold; width: 150px;">Job Position:</td>
+              <td style="padding: 6px 0;">${jobPosition}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Vacancies:</td>
+              <td style="padding: 6px 0;">${vacancies || '1'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Job Location:</td>
+              <td style="padding: 6px 0;">${jobLocation || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Qualification:</td>
+              <td style="padding: 6px 0;">${qualification || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Experience:</td>
+              <td style="padding: 6px 0;">${experience || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Salary Range:</td>
+              <td style="padding: 6px 0;">${salaryRange || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Required Skills:</td>
+              <td style="padding: 6px 0;">${skills || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Job Type:</td>
+              <td style="padding: 6px 0;">${employmentType || 'Permanent'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Expected Joining:</td>
+              <td style="padding: 6px 0;">${joiningDate || 'N/A'}</td>
+            </tr>
+          </table>
+
+          <h3 style="color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Job Description / Remarks</h3>
+          <p style="background-color: #f8fafc; padding: 15px; border-radius: 8px; font-style: italic; border-left: 4px solid #0284c7; white-space: pre-wrap; font-size: 14px; line-height: 1.6;">
+            ${jobDescription || 'No description provided.'}
+          </p>
+        </div>
+      </div>
+    `;
+
+    return this.sendMail({
+      to: hrEmail,
+      subject,
+      html,
+    });
+  }
 }
 
 module.exports = new EmailService();

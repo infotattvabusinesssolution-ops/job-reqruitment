@@ -21,8 +21,10 @@ import {
 const Jobs = () => {
   // Page and filter state
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState('');
-  const [location, setLocation] = useState('');
+  const [searchInput, setSearchInput] = useState('');
+  const [locationInput, setLocationInput] = useState('');
+  const [appliedSearch, setAppliedSearch] = useState('');
+  const [appliedLocation, setAppliedLocation] = useState('');
   const [workMode, setWorkMode] = useState('');
   const [employmentType, setEmploymentType] = useState('');
   const [experienceLevel, setExperienceLevel] = useState('');
@@ -32,8 +34,8 @@ const Jobs = () => {
   const queryParams = {
     page,
     limit: 8,
-    search: search || undefined,
-    location: location || undefined,
+    search: appliedSearch || undefined,
+    location: appliedLocation || undefined,
     workMode: workMode || undefined,
     employmentType: employmentType || undefined,
     experienceLevel: experienceLevel || undefined,
@@ -54,13 +56,16 @@ const Jobs = () => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
+    setAppliedSearch(searchInput);
+    setAppliedLocation(locationInput);
     setPage(1);
-    refetch();
   };
 
   const handleClearFilters = () => {
-    setSearch('');
-    setLocation('');
+    setSearchInput('');
+    setLocationInput('');
+    setAppliedSearch('');
+    setAppliedLocation('');
     setWorkMode('');
     setEmploymentType('');
     setExperienceLevel('');
@@ -72,12 +77,25 @@ const Jobs = () => {
       <Helmet><title>Explore Premium Careers - JobReqruitment</title></Helmet>
 
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-secondary-900 via-secondary-800 to-primary-950 text-white py-12 mb-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative py-16 mb-8 overflow-hidden bg-gradient-to-br from-secondary-950 via-secondary-900 to-primary-950 border-b border-secondary-800">
+        {/* Glow Effects */}
+        <div className="absolute -top-12 left-1/4 w-80 h-80 bg-primary-500/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute -bottom-12 right-1/4 w-80 h-80 bg-accent-500/10 rounded-full blur-[100px] pointer-events-none" />
+        
+        {/* Fine Dot Grid Overlay */}
+        <div 
+          className="absolute inset-0 opacity-25 pointer-events-none" 
+          style={{ 
+            backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px)', 
+            backgroundSize: '24px 24px' 
+          }} 
+        />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl sm:text-5xl font-heading font-bold mb-3"
+            className="text-4xl sm:text-5xl font-heading font-bold mb-3 text-white drop-shadow-md"
           >
             Find Your Next Elite Opportunity
           </motion.h1>
@@ -85,7 +103,7 @@ const Jobs = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-secondary-200 max-w-2xl mx-auto"
+            className="text-lg text-secondary-300 max-w-2xl mx-auto drop-shadow-sm font-light"
           >
             Discover hand-picked positions from the world's most innovative enterprises.
           </motion.p>
@@ -100,8 +118,8 @@ const Jobs = () => {
             <input
               type="text"
               placeholder="Job title, keywords, or skills..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
               className="bg-transparent border-0 outline-none w-full text-secondary-800 text-sm"
             />
           </div>
@@ -110,8 +128,8 @@ const Jobs = () => {
             <input
               type="text"
               placeholder="City, state, or country..."
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
+              value={locationInput}
+              onChange={(e) => setLocationInput(e.target.value)}
               className="bg-transparent border-0 outline-none w-full text-secondary-800 text-sm"
             />
           </div>
@@ -139,9 +157,9 @@ const Jobs = () => {
               </button>
             </div>
 
-            {/* Work Mode */}
+             {/* Work Mode */}
             <div>
-              <label className="block text-xs font-bold uppercase text-secondary-500 tracking-wider mb-2">Work Mode</label>
+              <label className="block text-xs font-bold uppercase text-secondary-700 tracking-wider mb-2">Work Mode</label>
               <select
                 value={workMode}
                 onChange={(e) => { setWorkMode(e.target.value); setPage(1); }}
@@ -156,7 +174,7 @@ const Jobs = () => {
 
             {/* Employment Type */}
             <div>
-              <label className="block text-xs font-bold uppercase text-secondary-500 tracking-wider mb-2">Job Type</label>
+              <label className="block text-xs font-bold uppercase text-secondary-700 tracking-wider mb-2">Job Type</label>
               <select
                 value={employmentType}
                 onChange={(e) => { setEmploymentType(e.target.value); setPage(1); }}
@@ -173,7 +191,7 @@ const Jobs = () => {
 
             {/* Experience Level */}
             <div>
-              <label className="block text-xs font-bold uppercase text-secondary-500 tracking-wider mb-2">Experience Level</label>
+              <label className="block text-xs font-bold uppercase text-secondary-700 tracking-wider mb-2">Experience Level</label>
               <select
                 value={experienceLevel}
                 onChange={(e) => { setExperienceLevel(e.target.value); setPage(1); }}
@@ -368,7 +386,7 @@ const Jobs = () => {
                 <div className="space-y-4 mt-6">
                   {/* Work Mode */}
                   <div>
-                    <label className="block text-xs font-bold uppercase text-secondary-500 tracking-wider mb-2">Work Mode</label>
+                    <label className="block text-xs font-bold uppercase text-secondary-700 tracking-wider mb-2">Work Mode</label>
                     <select
                       value={workMode}
                       onChange={(e) => { setWorkMode(e.target.value); setPage(1); }}
@@ -383,7 +401,7 @@ const Jobs = () => {
 
                   {/* Employment Type */}
                   <div>
-                    <label className="block text-xs font-bold uppercase text-secondary-500 tracking-wider mb-2">Job Type</label>
+                    <label className="block text-xs font-bold uppercase text-secondary-700 tracking-wider mb-2">Job Type</label>
                     <select
                       value={employmentType}
                       onChange={(e) => { setEmploymentType(e.target.value); setPage(1); }}
@@ -400,7 +418,7 @@ const Jobs = () => {
 
                   {/* Experience Level */}
                   <div>
-                    <label className="block text-xs font-bold uppercase text-secondary-500 tracking-wider mb-2">Experience Level</label>
+                    <label className="block text-xs font-bold uppercase text-secondary-700 tracking-wider mb-2">Experience Level</label>
                     <select
                       value={experienceLevel}
                       onChange={(e) => { setExperienceLevel(e.target.value); setPage(1); }}

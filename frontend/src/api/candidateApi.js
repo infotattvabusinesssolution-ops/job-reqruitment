@@ -74,3 +74,35 @@ export const notificationApi = {
   delete: async (id) => axiosInstance.delete(`/notifications/${id}`),
   getUnreadCount: async () => axiosInstance.get('/notifications/unread-count'),
 };
+
+export const faqApi = {
+  getAll: async (params) => axiosInstance.get('/faqs', { params }),
+  getById: async (id) => axiosInstance.get(`/faqs/${id}`),
+  create: async (data) => axiosInstance.post('/faqs', data),
+  update: async (id, data) => axiosInstance.put(`/faqs/${id}`, data),
+  delete: async (id) => axiosInstance.delete(`/faqs/${id}`),
+};
+
+export const testimonialApi = {
+  getAll: async (params) => axiosInstance.get('/testimonials', { params }),
+  getById: async (id) => axiosInstance.get(`/testimonials/${id}`),
+  create: async (data) => axiosInstance.post('/testimonials', data),
+  update: async (id, data) => axiosInstance.put(`/testimonials/${id}`, data),
+  delete: async (id) => axiosInstance.delete(`/testimonials/${id}`),
+};
+
+export const serviceApi = {
+  getAll: async (params) => axiosInstance.get('/services', { params }),
+  getById: async (id) => axiosInstance.get(`/services/${id}`),
+  create: async (data) => axiosInstance.post('/services', data),
+  update: async (id, data) => axiosInstance.put(`/services/${id}`, data),
+  delete: async (id) => axiosInstance.delete(`/services/${id}`),
+};
+
+export const careerApi = {
+  getAll: async (params) => axiosInstance.get('/careers', { params }),
+  getById: async (id) => axiosInstance.get(`/careers/${id}`),
+  create: async (data) => axiosInstance.post('/careers', data),
+  update: async (id, data) => axiosInstance.put(`/careers/${id}`, data),
+  delete: async (id) => axiosInstance.delete(`/careers/${id}`),
+};
