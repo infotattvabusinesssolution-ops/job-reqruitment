@@ -8,6 +8,7 @@ import serviceExecutive from '../assets/image/service_executive.png';
 import serviceBulk from '../assets/image/service_bulk.png';
 import { FaWhatsapp } from 'react-icons/fa';
 import { toast } from 'react-hot-toast';
+import axiosInstance from '../api/axiosInstance';
 import {
   HiSearch,
   HiLocationMarker,
@@ -42,14 +43,14 @@ const stagger = {
 };
 
 const Hero = () => (
-  <section className="relative min-h-[90vh] pt-16 md:pt-34 flex items-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50">
+  <section className="relative min-h-[90vh] pt-5 md:pt-44 flex items-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50">
     <div className="absolute inset-0 overflow-hidden">
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-200/30 rounded-full blur-3xl" />
       <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent-200/30 rounded-full blur-3xl" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-primary-100/20 to-accent-100/20 rounded-full blur-3xl" />
     </div>
 
-    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-20">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="text-center lg:text-left flex flex-col items-center lg:items-start">
@@ -84,7 +85,7 @@ const Hero = () => (
 
         {/* Right Content */}
         <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="block relative mt-8 lg:mt-0">
-          <motion.div 
+          <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
             className="relative flex items-center justify-center"
@@ -141,21 +142,21 @@ const AboutPreview = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left: Content and Badges */}
           <motion.div {...fadeInUp} className="text-center lg:text-left flex flex-col items-center lg:items-start space-y-6">
             <div className="inline-flex items-center px-4 py-1.5 bg-primary-50 border border-primary-100 rounded-full text-primary-750 text-[10px] font-extrabold tracking-wider uppercase">
               WHO WE ARE
             </div>
-            
+
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-secondary-900 leading-tight">
               About <span className="gradient-text font-extrabold">Geo India Limited</span>
             </h2>
-            
+
             <p className="text-xs sm:text-sm text-secondary-650 leading-relaxed font-semibold">
               Geo India Limited is a professional recruitment, staffing, and workforce solutions company committed to connecting employers with suitable talent across India.
             </p>
-            
+
             <p className="text-xs sm:text-sm text-secondary-650 leading-relaxed">
               We understand that hiring the right employee requires time, industry knowledge, candidate screening, interview coordination, and continuous follow-up. Our recruitment consultants work closely with employers to understand their workforce requirements and provide relevant candidate profiles.
             </p>
@@ -224,19 +225,19 @@ const ServicesPreview = () => {
 
   const serviceCardVariant = {
     initial: { opacity: 0, y: 60 },
-    whileInView: { 
-      opacity: 1, 
+    whileInView: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
     }
   };
 
   const services = [
-    { 
-      icon: HiBriefcase, 
+    {
+      icon: HiBriefcase,
       badge: 'HIRE FOR THE LONG TERM',
-      title: 'Permanent Staffing', 
-      desc: 'Vetted direct hires looking to build careers at your firm.', 
+      title: 'Permanent Staffing',
+      desc: 'Vetted direct hires looking to build careers at your firm.',
       image: servicePermanent,
       color: 'blue',
       textColor: 'text-blue-600',
@@ -246,11 +247,11 @@ const ServicesPreview = () => {
       iconColor: 'text-blue-600',
       gradientBg: 'from-blue-400 to-indigo-600',
     },
-    { 
-      icon: HiClock, 
+    {
+      icon: HiClock,
       badge: 'FLEXIBLE. FAST. RELIABLE',
-      title: 'Contract Staffing', 
-      desc: 'On-demand contract talent for project sprints.', 
+      title: 'Contract Staffing',
+      desc: 'On-demand contract talent for project sprints.',
       image: serviceContract,
       color: 'emerald',
       textColor: 'text-emerald-600',
@@ -260,11 +261,11 @@ const ServicesPreview = () => {
       iconColor: 'text-emerald-600',
       gradientBg: 'from-emerald-400 to-teal-600',
     },
-    { 
-      icon: HiUserGroup, 
+    {
+      icon: HiUserGroup,
       badge: 'BUILD HIGH-PERFORMANCE TEAMS',
-      title: 'Executive Search', 
-      desc: 'Leadership hiring solutions for critical roles.', 
+      title: 'Executive Search',
+      desc: 'Leadership hiring solutions for critical roles.',
       image: serviceExecutive,
       color: 'purple',
       textColor: 'text-purple-600',
@@ -274,11 +275,11 @@ const ServicesPreview = () => {
       iconColor: 'text-purple-600',
       gradientBg: 'from-purple-400 to-indigo-600',
     },
-    { 
-      icon: HiLightningBolt, 
+    {
+      icon: HiLightningBolt,
       badge: 'VOLUME HIRING ASSURANCES',
-      title: 'Bulk Hiring', 
-      desc: 'Volume hiring mobilizations for immediate scale.', 
+      title: 'Bulk Hiring',
+      desc: 'Volume hiring mobilizations for immediate scale.',
       image: serviceBulk,
       color: 'amber',
       textColor: 'text-amber-600',
@@ -300,11 +301,11 @@ const ServicesPreview = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div {...fadeInUp} className="text-center mb-20">
-          <h2 className="text-4xl font-heading font-bold text-secondary-900 mb-4">Our Services</h2>
+          <h2 className="text-4xl font-heading font-bold text-secondary-900 mb-4">Our <span className="gradient-text font-extrabold">Services</span></h2>
           <p className="text-xs text-secondary-500 max-w-md mx-auto">Specialized staffing workflows to meet your project goals</p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           variants={staggerContainer}
           initial="initial"
           whileInView="whileInView"
@@ -358,10 +359,10 @@ const ServicesPreview = () => {
 
                   {/* Main Rounded Image Container */}
                   <div className="relative w-full h-full rounded-[2rem] overflow-hidden border-[4px] border-white shadow-lg z-10">
-                    <img 
-                      src={svc.image} 
-                      alt={svc.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    <img
+                      src={svc.image}
+                      alt={svc.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     {/* Wavy Corner Overlay inside Image container */}
                     <div className={`absolute bottom-0 right-0 w-20 h-14 bg-gradient-to-tr ${svc.gradientBg} rounded-tl-[2.5rem] opacity-90 pointer-events-none z-20`} />
@@ -370,8 +371,8 @@ const ServicesPreview = () => {
 
                 {/* Link */}
                 <div className="z-10 mt-auto">
-                  <Link 
-                    to="/services" 
+                  <Link
+                    to="/services"
                     className={`inline-flex items-center gap-2 text-xs font-bold ${svc.textColor} hover:underline`}
                   >
                     Read Details <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -388,47 +389,77 @@ const ServicesPreview = () => {
 
 const IndustriesPreview = () => {
   const industries = [
-    { 
-      name: 'IT', 
-      icon: '💻', 
-      bgLight: 'bg-blue-50 text-blue-600 border-blue-100', 
-      hoverBg: 'hover:border-blue-300 hover:shadow-blue-50' 
+    {
+      name: 'Information Technology (IT & Software)',
+      icon: '💻',
+      bgLight: 'bg-blue-50 text-blue-600 border-blue-100',
+      hoverBg: 'hover:border-blue-300 hover:shadow-blue-50'
     },
-    { 
-      name: 'BPO/KPO', 
-      icon: '📞', 
-      bgLight: 'bg-emerald-50 text-emerald-600 border-emerald-100', 
-      hoverBg: 'hover:border-emerald-300 hover:shadow-emerald-50' 
+    {
+      name: 'BPO & Call Centers',
+      icon: '📞',
+      bgLight: 'bg-emerald-50 text-emerald-600 border-emerald-100',
+      hoverBg: 'hover:border-emerald-300 hover:shadow-emerald-50'
     },
-    { 
-      name: 'BFSI', 
-      icon: '🏦', 
-      bgLight: 'bg-indigo-50 text-indigo-600 border-indigo-100', 
-      hoverBg: 'hover:border-indigo-300 hover:shadow-indigo-50' 
+    {
+      name: 'Banking, Financial Services & Insurance (BFSI)',
+      icon: '🏦',
+      bgLight: 'bg-indigo-50 text-indigo-600 border-indigo-100',
+      hoverBg: 'hover:border-indigo-300 hover:shadow-indigo-50'
     },
-    { 
-      name: 'Healthcare', 
-      icon: '🏥', 
-      bgLight: 'bg-rose-50 text-rose-600 border-rose-100', 
-      hoverBg: 'hover:border-rose-300 hover:shadow-rose-50' 
+    {
+      name: 'Healthcare & Pharmaceuticals',
+      icon: '🏥',
+      bgLight: 'bg-rose-50 text-rose-600 border-rose-100',
+      hoverBg: 'hover:border-rose-300 hover:shadow-rose-50'
     },
-    { 
-      name: 'Manufacturing', 
-      icon: '🏭', 
-      bgLight: 'bg-slate-50 text-slate-600 border-slate-100', 
-      hoverBg: 'hover:border-slate-300 hover:shadow-slate-50' 
+    {
+      name: 'Manufacturing & Engineering',
+      icon: '🏭',
+      bgLight: 'bg-slate-50 text-slate-600 border-slate-100',
+      hoverBg: 'hover:border-slate-300 hover:shadow-slate-50'
     },
-    { 
-      name: 'Retail / E-comm', 
-      icon: '🛍️', 
-      bgLight: 'bg-amber-50 text-amber-600 border-amber-100', 
-      hoverBg: 'hover:border-amber-300 hover:shadow-amber-50' 
+    {
+      name: 'E-commerce & Retail',
+      icon: '🛍️',
+      bgLight: 'bg-amber-50 text-amber-600 border-amber-100',
+      hoverBg: 'hover:border-amber-300 hover:shadow-amber-50'
     },
-    { 
-      name: 'Telecom', 
-      icon: '📡', 
-      bgLight: 'bg-purple-50 text-purple-600 border-purple-100', 
-      hoverBg: 'hover:border-purple-300 hover:shadow-purple-50' 
+    {
+      name: 'Logistics & Supply Chain',
+      icon: '🚚',
+      bgLight: 'bg-sky-50 text-sky-600 border-sky-100',
+      hoverBg: 'hover:border-sky-300 hover:shadow-sky-50'
+    },
+    {
+      name: 'Telecom',
+      icon: '📡',
+      bgLight: 'bg-purple-50 text-purple-600 border-purple-100',
+      hoverBg: 'hover:border-purple-300 hover:shadow-purple-50'
+    },
+    {
+      name: 'Education & EdTech',
+      icon: '🎓',
+      bgLight: 'bg-violet-50 text-violet-600 border-violet-100',
+      hoverBg: 'hover:border-violet-300 hover:shadow-violet-50'
+    },
+    {
+      name: 'Hospitality & Travel',
+      icon: '🏨',
+      bgLight: 'bg-pink-50 text-pink-600 border-pink-100',
+      hoverBg: 'hover:border-pink-300 hover:shadow-pink-50'
+    },
+    {
+      name: 'Energy & Utilities',
+      icon: '⚡',
+      bgLight: 'bg-yellow-50 text-yellow-600 border-yellow-100',
+      hoverBg: 'hover:border-yellow-300 hover:shadow-yellow-50'
+    },
+    {
+      name: 'Automotive',
+      icon: '🚗',
+      bgLight: 'bg-red-50 text-red-600 border-red-100',
+      hoverBg: 'hover:border-red-300 hover:shadow-red-50'
     },
   ];
 
@@ -490,11 +521,11 @@ const ProcessSection = () => {
 
   const processCardVariant = {
     initial: { opacity: 0, y: 80, scale: 0.92 },
-    whileInView: { 
-      opacity: 1, 
+    whileInView: {
+      opacity: 1,
       y: 0,
       scale: 1,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
     }
   };
 
@@ -528,7 +559,7 @@ const ProcessSection = () => {
           {/* Connector Line behind cards (Desktop only) */}
           <div className="absolute top-[40%] left-[8%] right-[8%] border-t-2 border-dashed border-primary-200/60 z-0 pointer-events-none hidden lg:block" />
 
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
@@ -577,23 +608,23 @@ const Testimonials = () => {
   const [current, setCurrent] = useState(0);
 
   const testimonials = [
-    { 
-      quote: "Geo India Limited delivered vetted React developers in just 48 hours. Exceptional turnaround time and support.", 
-      author: "COO", 
+    {
+      quote: "Geo India Limited delivered vetted React developers in just 48 hours. Exceptional turnaround time and support.",
+      author: "COO",
       company: "InnovateLabs India",
       initials: "IL",
       gradient: "from-blue-400 to-indigo-500",
     },
-    { 
-      quote: "Our contract staffing requirements were met with extreme speed. Compliant payroll services saved us hours.", 
-      author: "HR Director", 
+    {
+      quote: "Our contract staffing requirements were met with extreme speed. Compliant payroll services saved us hours.",
+      author: "HR Director",
       company: "TechCorp Services",
       initials: "TC",
       gradient: "from-emerald-400 to-teal-500",
     },
-    { 
-      quote: "Placed boardroom leaders with high discretion. Their executive search team is the best in the country.", 
-      author: "CEO", 
+    {
+      quote: "Placed boardroom leaders with high discretion. Their executive search team is the best in the country.",
+      author: "CEO",
       company: "NexGen Telecommunications",
       initials: "NX",
       gradient: "from-purple-400 to-pink-500",
@@ -624,7 +655,7 @@ const Testimonials = () => {
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent-50/40 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        
+
         {/* Header */}
         <motion.div {...fadeInUp} className="flex flex-col items-center space-y-4 mb-16">
           <div className="inline-flex items-center px-4 py-1.5 bg-primary-50 border border-primary-100 rounded-full text-primary-750 text-[10px] font-extrabold tracking-wider uppercase">
@@ -638,13 +669,13 @@ const Testimonials = () => {
 
         {/* Carousel Container */}
         <div className="relative min-h-[320px] md:min-h-[280px] flex items-center justify-center">
-          
+
           {/* Main Card */}
           <div className="w-full bg-white/70 backdrop-blur-sm border border-gray-150 p-8 sm:p-12 rounded-[2.5rem] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.04)] relative">
-            
+
             {/* Big quote mark decoration */}
             <span className="absolute top-6 left-8 text-7xl font-serif text-primary-200/40 select-none pointer-events-none">“</span>
-            
+
             {/* Slide Content */}
             <motion.div
               key={current}
@@ -707,9 +738,8 @@ const Testimonials = () => {
             <button
               key={idx}
               onClick={() => setCurrent(idx)}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                current === idx ? 'w-8 bg-primary-600' : 'w-2.5 bg-gray-200 hover:bg-gray-400'
-              }`}
+              className={`h-2.5 rounded-full transition-all duration-300 ${current === idx ? 'w-8 bg-primary-600' : 'w-2.5 bg-gray-200 hover:bg-gray-400'
+                }`}
             />
           ))}
         </div>
@@ -723,18 +753,27 @@ const ContactHome = () => {
   const [data, setData] = useState({ name: '', email: '', message: '' });
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!data.name || !data.email) {
       toast.error('Name and Email are required.');
       return;
     }
     setSubmitting(true);
-    setTimeout(() => {
+    try {
+      await axiosInstance.post('/contact/submit', {
+        fullName: data.name,
+        email: data.email,
+        message: data.message || 'Homepage Quick Consultation Inquiry',
+        enquiryType: 'General Inquiry',
+      });
       toast.success('Thank you! Message dispatched successfully.');
       setData({ name: '', email: '', message: '' });
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to send message. Please try again.');
+    } finally {
       setSubmitting(false);
-    }, 1200);
+    }
   };
 
   return (

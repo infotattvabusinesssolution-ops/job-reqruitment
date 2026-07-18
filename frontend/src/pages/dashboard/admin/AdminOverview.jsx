@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { Link } from 'react-router-dom';
 import { adminApi } from '../../../api/dashboardApi';
 import { HiUsers, HiBriefcase, HiDocumentText, HiUserGroup, HiCheckCircle } from 'react-icons/hi';
 
@@ -44,6 +45,25 @@ const AdminOverview = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Form Enquiries Quick Action Card */}
+      <div className="bg-gradient-to-r from-primary-900 via-primary-800 to-secondary-900 text-white p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="space-y-2 text-left">
+          <div className="inline-flex items-center px-3 py-1 bg-white/10 rounded-full text-amber-300 text-[10px] font-extrabold uppercase tracking-wider">
+            ★ Live Form Inbox & Resume Vault
+          </div>
+          <h2 className="text-2xl font-heading font-bold">Manage Incoming Website Form Submissions</h2>
+          <p className="text-xs text-secondary-300 max-w-xl leading-relaxed">
+            View full details of contact messages, employer hiring requirements, and candidate resume uploads sent through all website forms.
+          </p>
+        </div>
+        <Link
+          to="/dashboard/admin/enquiries"
+          className="px-6 py-3.5 bg-amber-500 hover:bg-amber-400 text-secondary-950 font-bold text-xs rounded-xl shadow-lg transition-all whitespace-nowrap flex-shrink-0"
+        >
+          View Form Enquiries →
+        </Link>
       </div>
 
       {/* System Status */}

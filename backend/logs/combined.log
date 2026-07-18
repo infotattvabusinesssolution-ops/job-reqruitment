@@ -1378,3 +1378,275 @@
 2026-07-18 12:27:16 [HTTP]: ::1 - - [18/Jul/2026:06:57:16 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
 2026-07-18 12:27:18 [HTTP]: ::1 - - [18/Jul/2026:06:57:18 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
 2026-07-18 12:27:33 [HTTP]: ::1 - - [18/Jul/2026:06:57:33 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:41:38 [HTTP]: ::1 - - [18/Jul/2026:07:11:38 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:41:48 [HTTP]: ::1 - - [18/Jul/2026:07:11:48 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:41:49 [HTTP]: ::1 - - [18/Jul/2026:07:11:49 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:43:22 [HTTP]: ::1 - - [18/Jul/2026:07:13:22 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:44:07 [HTTP]: ::1 - - [18/Jul/2026:07:14:07 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:45:14 [HTTP]: ::1 - - [18/Jul/2026:07:15:14 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:45:18 [HTTP]: ::1 - - [18/Jul/2026:07:15:18 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:45:26 [HTTP]: ::1 - - [18/Jul/2026:07:15:26 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:45:31 [HTTP]: ::1 - - [18/Jul/2026:07:15:31 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:45:34 [HTTP]: ::1 - - [18/Jul/2026:07:15:34 +0000] "GET /api/blogs/slug/how-to-build-a-modern-resume-in-2026 HTTP/1.1" 200 - "http://localhost:5173/blogs/how-to-build-a-modern-resume-in-2026" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:48:12 [HTTP]: ::1 - - [18/Jul/2026:07:18:12 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36"  
+2026-07-18 12:48:29 [HTTP]: ::1 - - [18/Jul/2026:07:18:29 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36"  
+2026-07-18 12:48:35 [HTTP]: ::1 - - [18/Jul/2026:07:18:35 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36"  
+2026-07-18 12:48:36 [HTTP]: ::1 - - [18/Jul/2026:07:18:36 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36"  
+2026-07-18 12:50:49 [HTTP]: ::1 - - [18/Jul/2026:07:20:49 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:51:09 [HTTP]: ::1 - - [18/Jul/2026:07:21:09 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:51:17 [HTTP]: ::1 - - [18/Jul/2026:07:21:17 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:57:56 [HTTP]: ::1 - - [18/Jul/2026:07:27:56 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 12:58:25 [HTTP]: ::1 - - [18/Jul/2026:07:28:25 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:00:44 [HTTP]: ::1 - - [18/Jul/2026:07:30:44 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:00:56 [HTTP]: ::1 - - [18/Jul/2026:07:30:56 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:03:34 [HTTP]: ::1 - - [18/Jul/2026:07:33:34 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:21:02 [HTTP]: ::1 - - [18/Jul/2026:07:51:02 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 200 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:21:07 [HTTP]: ::1 - - [18/Jul/2026:07:51:07 +0000] "GET /api/careers HTTP/1.1" 304 - "http://localhost:5173/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:21:09 [HTTP]: ::1 - - [18/Jul/2026:07:51:09 +0000] "GET /api/services HTTP/1.1" 304 - "http://localhost:5173/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:21:12 [HTTP]: ::1 - - [18/Jul/2026:07:51:12 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 304 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:33:33 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-18 13:33:33 [INFO]: HTTP server closed  
+2026-07-18 13:33:33 [INFO]: Socket.IO server closed  
+2026-07-18 13:34:03 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 13:34:03 [INFO]: Database connected successfully  
+2026-07-18 13:34:03 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 13:34:04 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 13:34:05 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 13:34:05 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 13:34:05 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 13:34:05 [INFO]: Socket.IO initialized successfully  
+2026-07-18 13:34:05 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 13:47:39 [HTTP]: ::1 - - [18/Jul/2026:08:17:39 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:47:40 [HTTP]: ::1 - - [18/Jul/2026:08:17:40 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 230 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:47:43 [HTTP]: ::1 - - [18/Jul/2026:08:17:43 +0000] "GET /api/admin/users?limit=100 HTTP/1.1" 200 800 "http://localhost:5173/dashboard/admin/users" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:47:46 [HTTP]: ::1 - - [18/Jul/2026:08:17:46 +0000] "GET /api/jobs?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:47:48 [HTTP]: ::1 - - [18/Jul/2026:08:17:48 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:47:51 [HTTP]: ::1 - - [18/Jul/2026:08:17:51 +0000] "GET /api/services?all=true HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/services" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:47:52 [HTTP]: ::1 - - [18/Jul/2026:08:17:52 +0000] "GET /api/faqs?all=true HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/faqs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:47:53 [HTTP]: ::1 - - [18/Jul/2026:08:17:53 +0000] "GET /api/testimonials?all=true HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/testimonials" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:47:54 [HTTP]: ::1 - - [18/Jul/2026:08:17:54 +0000] "GET /api/careers?all=true HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/careers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:47:56 [HTTP]: ::1 - - [18/Jul/2026:08:17:56 +0000] "GET /api/admin/settings HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/settings" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:48:50 [HTTP]: ::1 - - [18/Jul/2026:08:18:50 +0000] "GET /api/dashboard/stats HTTP/1.1" 200 96 "http://localhost:5173/dashboard/admin/analytics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:49:34 [HTTP]: ::1 - - [18/Jul/2026:08:19:34 +0000] "GET /api/dashboard/application-stats HTTP/1.1" 200 26 "http://localhost:5173/dashboard/admin/analytics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:49:34 [HTTP]: ::1 - - [18/Jul/2026:08:19:34 +0000] "GET /api/dashboard/job-stats HTTP/1.1" 200 56 "http://localhost:5173/dashboard/admin/analytics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:49:34 [HTTP]: ::1 - - [18/Jul/2026:08:19:34 +0000] "GET /api/dashboard/stats HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/analytics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:49:34 [HTTP]: ::1 - - [18/Jul/2026:08:19:34 +0000] "GET /api/dashboard/candidate-stats HTTP/1.1" 200 70 "http://localhost:5173/dashboard/admin/analytics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:49:34 [HTTP]: ::1 - - [18/Jul/2026:08:19:34 +0000] "GET /api/dashboard/employer-stats HTTP/1.1" 200 63 "http://localhost:5173/dashboard/admin/analytics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:49:34 [HTTP]: ::1 - - [18/Jul/2026:08:19:34 +0000] "GET /api/dashboard/activity HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/analytics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:52:52 [HTTP]: ::1 - - [18/Jul/2026:08:22:52 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 231 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:52:59 [HTTP]: ::1 - - [18/Jul/2026:08:22:59 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:52:59 [HTTP]: ::1 - - [18/Jul/2026:08:22:59 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:53:01 [HTTP]: ::1 - - [18/Jul/2026:08:23:01 +0000] "GET /api/contact/messages?search=&formType=all&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:53:02 [HTTP]: ::1 - - [18/Jul/2026:08:23:02 +0000] "GET /api/contact/messages?search=&formType=all&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:53:06 [HTTP]: ::1 - - [18/Jul/2026:08:23:06 +0000] "GET /api/contact/messages?search=&formType=all&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:53:07 [HTTP]: ::1 - - [18/Jul/2026:08:23:07 +0000] "GET /api/contact/messages?search=&formType=all&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:53:08 [HTTP]: ::1 - - [18/Jul/2026:08:23:08 +0000] "GET /api/contact/messages?search=&formType=contact&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:53:09 [HTTP]: ::1 - - [18/Jul/2026:08:23:09 +0000] "GET /api/contact/messages?search=&formType=hiring_support&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:53:10 [HTTP]: ::1 - - [18/Jul/2026:08:23:10 +0000] "GET /api/contact/messages?search=&formType=hiring_support&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:53:10 [HTTP]: ::1 - - [18/Jul/2026:08:23:10 +0000] "GET /api/contact/messages?search=&formType=job_seeker&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:53:11 [HTTP]: ::1 - - [18/Jul/2026:08:23:11 +0000] "GET /api/contact/messages?search=&formType=career_apply&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:53:14 [HTTP]: ::1 - - [18/Jul/2026:08:23:14 +0000] "GET /api/contact/messages?search=&formType=career_apply&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:54:01 [HTTP]: ::1 - - [18/Jul/2026:08:24:01 +0000] "GET /api/contact/messages?search=&formType=contact&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:54:03 [HTTP]: ::1 - - [18/Jul/2026:08:24:03 +0000] "GET /api/contact/messages?search=&formType=contact&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:54:03 [HTTP]: ::1 - - [18/Jul/2026:08:24:03 +0000] "GET /api/contact/messages?search=&formType=hiring_support&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:54:04 [HTTP]: ::1 - - [18/Jul/2026:08:24:04 +0000] "GET /api/contact/messages?search=&formType=hiring_support&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:54:08 [HTTP]: ::1 - - [18/Jul/2026:08:24:08 +0000] "GET /api/contact/messages?search=&formType=hiring_support&status=all HTTP/1.1" 404 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:54:18 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-18 13:54:18 [INFO]: HTTP server closed  
+2026-07-18 13:54:18 [INFO]: Socket.IO server closed  
+2026-07-18 13:54:49 [INFO]: Starting database seeding...  
+2026-07-18 13:54:50 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 13:54:50 [INFO]: Seeding roles...  
+2026-07-18 13:54:50 [INFO]: Roles seeded successfully  
+2026-07-18 13:54:50 [INFO]: Seeding categories...  
+2026-07-18 13:54:51 [INFO]: Categories seeded successfully  
+2026-07-18 13:54:51 [INFO]: Seeding admin user...  
+2026-07-18 13:54:51 [INFO]: Admin user already exists  
+2026-07-18 13:54:51 [INFO]: Admin user seeded successfully  
+2026-07-18 13:54:51 [INFO]: Seeding FAQs...  
+2026-07-18 13:54:51 [INFO]: Seeded 15 FAQ questions  
+2026-07-18 13:54:51 [INFO]: FAQs seeded successfully  
+2026-07-18 13:54:51 [INFO]: Seeding Testimonials...  
+2026-07-18 13:54:51 [INFO]: Seeded 4 Testimonials  
+2026-07-18 13:54:51 [INFO]: Testimonials seeded successfully  
+2026-07-18 13:54:51 [INFO]: Seeding Services...  
+2026-07-18 13:54:52 [INFO]: Seeded 8 Services  
+2026-07-18 13:54:52 [INFO]: Services seeded successfully  
+2026-07-18 13:54:52 [INFO]: Seeding Blogs...  
+2026-07-18 13:54:52 [INFO]: Seeded 3 Blogs  
+2026-07-18 13:54:52 [INFO]: Blogs seeded successfully  
+2026-07-18 13:54:52 [INFO]: Seeding Careers...  
+2026-07-18 13:54:52 [INFO]: Seeded 6 Careers  
+2026-07-18 13:54:52 [INFO]: Careers seeded successfully  
+2026-07-18 13:54:52 [INFO]: Seeding Jobs...  
+2026-07-18 13:54:53 [INFO]: Seeded 10 Jobs  
+2026-07-18 13:54:53 [INFO]: Jobs seeded successfully  
+2026-07-18 13:54:53 [INFO]: Seeding Form Messages & Enquiries...  
+2026-07-18 13:54:53 [INFO]: Seeded 8 Form Enquiries & Messages  
+2026-07-18 13:55:01 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 13:55:01 [INFO]: Database connected successfully  
+2026-07-18 13:55:01 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 13:55:02 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 13:55:03 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 13:55:03 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 13:55:03 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 13:55:03 [INFO]: Socket.IO initialized successfully  
+2026-07-18 13:55:03 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 13:55:03 [HTTP]: ::1 - - [18/Jul/2026:08:25:03 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:55:03 [HTTP]: ::1 - - [18/Jul/2026:08:25:03 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:55:05 [HTTP]: ::1 - - [18/Jul/2026:08:25:05 +0000] "GET /api/contact/messages?search=&formType=all&status=all HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:55:06 [HTTP]: ::1 - - [18/Jul/2026:08:25:06 +0000] "POST /api/contact/seed-sample-messages HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:55:07 [HTTP]: ::1 - - [18/Jul/2026:08:25:07 +0000] "GET /api/contact/messages?search=&formType=all&status=all HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:55:10 [HTTP]: ::1 - - [18/Jul/2026:08:25:10 +0000] "GET /api/contact/messages?search=&formType=contact&status=all HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:55:12 [HTTP]: ::1 - - [18/Jul/2026:08:25:12 +0000] "GET /api/contact/messages?search=&formType=hiring_support&status=all HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:55:16 [HTTP]: ::1 - - [18/Jul/2026:08:25:16 +0000] "GET /api/contact/messages?search=&formType=job_seeker&status=all HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:55:17 [HTTP]: ::1 - - [18/Jul/2026:08:25:17 +0000] "GET /api/contact/messages?search=&formType=career_apply&status=all HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:58:21 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-18 13:58:21 [INFO]: HTTP server closed  
+2026-07-18 13:58:22 [INFO]: Socket.IO server closed  
+2026-07-18 13:58:30 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 13:58:30 [INFO]: Database connected successfully  
+2026-07-18 13:58:30 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 13:58:31 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 13:58:32 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 13:58:32 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 13:58:32 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 13:58:32 [INFO]: Socket.IO initialized successfully  
+2026-07-18 13:58:32 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 13:58:56 [HTTP]: ::1 - - [18/Jul/2026:08:28:56 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:58:56 [HTTP]: ::1 - - [18/Jul/2026:08:28:56 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:58:58 [HTTP]: ::1 - - [18/Jul/2026:08:28:58 +0000] "GET /api/contact/messages?search=&formType=all&status=all HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:59:07 [HTTP]: ::1 - - [18/Jul/2026:08:29:07 +0000] "POST /api/auth/logout HTTP/1.1" 401 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:59:07 [HTTP]: ::1 - - [18/Jul/2026:08:29:07 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:59:07 [HTTP]: ::1 - - [18/Jul/2026:08:29:07 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/dashboard/admin/enquiries" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:59:07 [HTTP]: ::1 - - [18/Jul/2026:08:29:07 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:59:27 [HTTP]: ::1 - - [18/Jul/2026:08:29:27 +0000] "GET /api/jobs?page=1&limit=8 HTTP/1.1" 200 - "http://localhost:5173/jobs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 13:59:42 [INFO]: Email sent successfully to Hr@geoindialimited.com: <9b77be71-a573-aca9-9f96-3a7c474dbeb2@geoindialimited.com>  
+2026-07-18 13:59:42 [HTTP]: ::1 - - [18/Jul/2026:08:29:42 +0000] "POST /api/contact/submit HTTP/1.1" 200 506 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 14:00:13 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-18 14:00:13 [INFO]: HTTP server closed  
+2026-07-18 14:00:13 [INFO]: Socket.IO server closed  
+2026-07-18 14:00:20 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 14:00:20 [INFO]: Database connected successfully  
+2026-07-18 14:00:20 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 14:00:21 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 14:00:21 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 14:00:21 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 14:00:21 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 14:00:21 [INFO]: Socket.IO initialized successfully  
+2026-07-18 14:00:21 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 14:00:52 [INFO]: Email sent successfully to Hr@geoindialimited.com: <0366bb11-8acd-b833-21f0-439a7169472c@geoindialimited.com>  
+2026-07-18 14:00:52 [HTTP]: ::1 - - [18/Jul/2026:08:30:52 +0000] "POST /api/contact/submit HTTP/1.1" 200 593 "http://localhost:5173/contact" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 14:05:28 [ERROR]: Cloudinary upload failed: cloud_name is disabled  {
+  "name": "Error",
+  "http_code": 401
+}
+2026-07-18 14:05:28 [ERROR]: Cloudinary upload error: File upload failed Error: File upload failed
+    at CloudinaryConfig.uploadFile (D:\job-reqruitment\backend\config\cloudinary.js:42:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async uploadToCloudinary (D:\job-reqruitment\backend\middlewares\upload.js:81:22) 
+2026-07-18 14:05:28 [HTTP]: ::1 - - [18/Jul/2026:08:35:28 +0000] "POST /api/careers/upload-resume HTTP/1.1" 400 349 "http://localhost:5173/job-seekers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 14:06:55 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-18 14:06:55 [INFO]: HTTP server closed  
+2026-07-18 14:06:55 [INFO]: Socket.IO server closed  
+2026-07-18 14:07:03 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 14:07:03 [INFO]: Database connected successfully  
+2026-07-18 14:07:03 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 14:07:04 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 14:07:05 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 14:07:05 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 14:07:05 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 14:07:05 [INFO]: Socket.IO initialized successfully  
+2026-07-18 14:07:05 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 14:07:11 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 14:07:11 [WARN]: Cloudinary upload failed, using local file URL fallback:  
+2026-07-18 14:07:13 [INFO]: Email sent successfully to Hr@geoindialimited.com: <0b538722-809c-ff89-233d-af2f518198fe@geoindialimited.com>  
+2026-07-18 14:07:13 [HTTP]: ::1 - - [18/Jul/2026:08:37:13 +0000] "POST /api/careers/upload-resume HTTP/1.1" 200 127 "http://localhost:5173/job-seekers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 14:07:26 [HTTP]: ::1 - - [18/Jul/2026:08:37:26 +0000] "GET /uploads/v6dBG7wDu7GE.pdf HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 14:08:26 [HTTP]: ::1 - - [18/Jul/2026:08:38:26 +0000] "GET /uploads/v6dBG7wDu7GE.pdf HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 14:09:17 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-18 14:09:17 [INFO]: HTTP server closed  
+2026-07-18 14:09:17 [INFO]: Socket.IO server closed  
+2026-07-18 14:09:23 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 14:09:23 [INFO]: Database connected successfully  
+2026-07-18 14:09:23 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 14:09:24 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 14:09:25 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 14:09:25 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 14:09:25 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 14:09:25 [INFO]: Socket.IO initialized successfully  
+2026-07-18 14:09:25 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 14:10:27 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 14:10:27 [WARN]: Cloudinary upload failed, using local file URL fallback:  
+2026-07-18 14:10:50 [INFO]: Email sent successfully to Hr@geoindialimited.com: <33f5cd70-726c-d568-f78b-e3080d40f8d1@geoindialimited.com>  
+2026-07-18 14:10:50 [HTTP]: ::1 - - [18/Jul/2026:08:40:50 +0000] "POST /api/careers/upload-resume HTTP/1.1" 200 127 "http://localhost:5173/job-seekers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 14:11:00 [HTTP]: ::1 - - [18/Jul/2026:08:41:00 +0000] "GET /uploads/HD0KkXQUrnWI.pdf HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 14:12:33 [INFO]: SIGINT received. Starting graceful shutdown...  
+2026-07-18 14:12:33 [INFO]: HTTP server closed  
+2026-07-18 14:12:33 [INFO]: Socket.IO server closed  

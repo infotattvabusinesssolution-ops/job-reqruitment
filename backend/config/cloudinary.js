@@ -34,12 +34,13 @@ class CloudinaryConfig {
         folder: options.folder || 'job-reqruitment/general',
         use_filename: true,
         unique_filename: true,
+        resource_type: 'auto',
         ...options,
       });
       return result;
     } catch (error) {
-      logger.error('Cloudinary upload failed:', error);
-      throw new Error('File upload failed');
+      logger.error('Cloudinary upload failed detail:', error?.message || error);
+      throw error;
     }
   }
 

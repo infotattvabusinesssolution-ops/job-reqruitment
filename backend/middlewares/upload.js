@@ -67,7 +67,7 @@ const upload = multer({
   },
 });
 
-// Upload to Cloudinary middleware
+// Upload to Cloudinary middleware with local fallback
 const uploadToCloudinary = async (req, res, next) => {
   try {
     if (!req.file && !req.files) {
@@ -78,33 +78,48 @@ const uploadToCloudinary = async (req, res, next) => {
     const uploadedFiles = [];
 
     for (const file of Array.isArray(files) ? files : [files]) {
-      const result = await cloudinaryConfig.uploadFile(file.path, {
-        folder: `job-reqruitment/${file.fieldname || 'general'}`,
-        public_id: `file_${Date.now()}_${nanoid(8)}`,
-      });
+      let fileUrl = '';
+      let publicId = '';
 
-      // Delete local file after upload
-      fs.unlink(file.path, (err) => {
-        if (err) logger.error('Failed to delete local file:', err);
-      });
+      try {
+        const result = await cloudinaryConfig.uploadFile(file.path, {
+          folder: `job-reqruitment/${file.fieldname || 'general'}`,
+          public_id: `file_${Date.now()}_${nanoid(8)}`,
+          resource_type: 'auto',
+        });
+
+        fileUrl = result.secure_url;
+        publicId = result.public_id;
+
+        // Delete local temp file after successful Cloudinary upload
+        fs.unlink(file.path, (err) => {
+          if (err) logger.error('Failed to delete local temp file:', err);
+        });
+      } catch (cloudErr) {
+        logger.warn('Cloudinary upload failed, using local file URL fallback:', cloudErr?.message || cloudErr);
+        // Fallback to local server static URL so submission succeeds seamlessly
+        const host = req.get('host') || 'localhost:5000';
+        const protocol = req.protocol || 'http';
+        const relativeSubDir = path.relative(path.join(__dirname, '..', 'uploads'), file.destination || '').replace(/\\/g, '/');
+        const fileSubPath = relativeSubDir ? `${relativeSubDir}/${file.filename}` : file.filename;
+        fileUrl = `${protocol}://${host}/uploads/${fileSubPath}`;
+        publicId = file.filename;
+      }
 
       uploadedFiles.push({
-        url: result.secure_url,
-        publicId: result.public_id,
+        url: fileUrl,
+        publicId: publicId,
         originalName: file.originalname,
         mimeType: file.mimetype,
         size: file.size,
-        width: result.width,
-        height: result.height,
-        format: result.format,
       });
     }
 
     req.uploadedFiles = uploadedFiles;
     next();
   } catch (error) {
-    logger.error('Cloudinary upload error:', error);
-    next(new BadRequestError('File upload failed'));
+    logger.error('File upload middleware error:', error);
+    next(new BadRequestError('File processing failed. Please try again.'));
   }
 };
 

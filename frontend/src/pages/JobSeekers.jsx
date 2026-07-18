@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { toast } from 'react-hot-toast';
+import axiosInstance from '../api/axiosInstance';
 import {
   HiSearch,
   HiBriefcase,
@@ -48,7 +49,7 @@ const JobSeekers = () => {
     setResumeFile(e.target.files[0]);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.fullName || !formData.phone || !formData.email || !resumeFile) {
       toast.error('Please fill in required fields (Name, Phone, Email) and upload your resume.');
@@ -56,7 +57,21 @@ const JobSeekers = () => {
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      const submitData = new FormData();
+      Object.keys(formData).forEach((key) => {
+        submitData.append(key, formData[key]);
+      });
+      if (resumeFile) {
+        submitData.append('resume', resumeFile);
+      }
+
+      await axiosInstance.post('/careers/upload-resume', submitData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
       toast.success('Your resume and details have been submitted successfully!');
       setFormData({
         fullName: '',
@@ -74,8 +89,13 @@ const JobSeekers = () => {
         preferredJobRole: '',
       });
       setResumeFile(null);
+      const fileInput = document.getElementById('resume-file-input');
+      if (fileInput) fileInput.value = '';
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to submit resume details. Please try again.');
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -176,6 +196,63 @@ const JobSeekers = () => {
                     Freshers should focus on developing practical skills, improving communication, creating a professional resume, completing relevant internships, and preparing for basic interview questions. Highlight academic projects, certifications, internships, and transferable skills.
                   </p>
                 </div>
+              </div>
+            </motion.div>
+
+            {/* Skill Development & Training Programs */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-150 shadow-sm space-y-6 text-left"
+            >
+              <h2 className="text-xl font-heading font-bold text-secondary-900 border-b border-gray-100 pb-3">
+                Skill Development & Training Programs
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Link to="/corporate-training" className="p-4 border border-gray-150 rounded-xl hover:border-primary-400 hover:shadow-sm transition-all flex flex-col justify-between group">
+                  <div>
+                    <h4 className="font-bold text-secondary-900 text-sm mb-1 group-hover:text-primary-600 transition-colors">Corporate Training</h4>
+                    <p className="text-[11px] text-secondary-500 leading-relaxed">Tailored corporate training modules to align team skillsets with company benchmarks.</p>
+                  </div>
+                  <span className="text-[10px] font-bold text-primary-600 inline-flex items-center gap-1 mt-3">Learn More <HiArrowRight className="w-3 h-3" /></span>
+                </Link>
+                <Link to="/employability-skills" className="p-4 border border-gray-150 rounded-xl hover:border-primary-400 hover:shadow-sm transition-all flex flex-col justify-between group">
+                  <div>
+                    <h4 className="font-bold text-secondary-900 text-sm mb-1 group-hover:text-primary-600 transition-colors">Employability Skills</h4>
+                    <p className="text-[11px] text-secondary-500 leading-relaxed">Core competencies, professional behavior, and career preparation courses.</p>
+                  </div>
+                  <span className="text-[10px] font-bold text-primary-600 inline-flex items-center gap-1 mt-3">Learn More <HiArrowRight className="w-3 h-3" /></span>
+                </Link>
+                <Link to="/interview-preparation" className="p-4 border border-gray-150 rounded-xl hover:border-primary-400 hover:shadow-sm transition-all flex flex-col justify-between group">
+                  <div>
+                    <h4 className="font-bold text-secondary-900 text-sm mb-1 group-hover:text-primary-600 transition-colors">Interview Preparation</h4>
+                    <p className="text-[11px] text-secondary-500 leading-relaxed">Mock sessions, question drills, and visual presentation guides for candidates.</p>
+                  </div>
+                  <span className="text-[10px] font-bold text-primary-600 inline-flex items-center gap-1 mt-3">Learn More <HiArrowRight className="w-3 h-3" /></span>
+                </Link>
+                <Link to="/soft-skills" className="p-4 border border-gray-150 rounded-xl hover:border-primary-400 hover:shadow-sm transition-all flex flex-col justify-between group">
+                  <div>
+                    <h4 className="font-bold text-secondary-900 text-sm mb-1 group-hover:text-primary-600 transition-colors">Soft Skills</h4>
+                    <p className="text-[11px] text-secondary-500 leading-relaxed">Spoken English, communications, body language, and behavioral modules.</p>
+                  </div>
+                  <span className="text-[10px] font-bold text-primary-600 inline-flex items-center gap-1 mt-3">Learn More <HiArrowRight className="w-3 h-3" /></span>
+                </Link>
+                <Link to="/technical-training" className="p-4 border border-gray-150 rounded-xl hover:border-primary-400 hover:shadow-sm transition-all flex flex-col justify-between group">
+                  <div>
+                    <h4 className="font-bold text-secondary-900 text-sm mb-1 group-hover:text-primary-600 transition-colors">Technical Training</h4>
+                    <p className="text-[11px] text-secondary-500 leading-relaxed">Hands-on technology training covering coding languages, IT systems, and tools.</p>
+                  </div>
+                  <span className="text-[10px] font-bold text-primary-600 inline-flex items-center gap-1 mt-3">Learn More <HiArrowRight className="w-3 h-3" /></span>
+                </Link>
+                <Link to="/internship-programs" className="p-4 border border-gray-150 rounded-xl hover:border-primary-400 hover:shadow-sm transition-all flex flex-col justify-between group">
+                  <div>
+                    <h4 className="font-bold text-secondary-900 text-sm mb-1 group-hover:text-primary-600 transition-colors">Internship Programs</h4>
+                    <p className="text-[11px] text-secondary-500 leading-relaxed">Real-world workspace exposure and mentorship opportunities for students and freshers.</p>
+                  </div>
+                  <span className="text-[10px] font-bold text-primary-600 inline-flex items-center gap-1 mt-3">Learn More <HiArrowRight className="w-3 h-3" /></span>
+                </Link>
               </div>
             </motion.div>
           </div>

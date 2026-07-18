@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { HiUserGroup, HiClipboardList, HiAcademicCap, HiOfficeBuilding, HiArrowRight, HiIdentification } from 'react-icons/hi';
+import { HiUserGroup, HiClipboardList, HiAcademicCap, HiOfficeBuilding, HiArrowRight, HiIdentification, HiArrowLeft } from 'react-icons/hi';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -50,6 +50,14 @@ const InternshipPrograms = () => {
       <section className="bg-gradient-to-r from-amber-900 via-amber-800 to-orange-950 text-white py-20 mb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(245,158,11,0.15),transparent)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+          <div>
+            <Link
+              to="/job-seekers"
+              className="inline-flex items-center text-xs font-bold text-white/70 hover:text-white transition-colors gap-1.5 group"
+            >
+              <HiArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" /> Back to Job Seekers
+            </Link>
+          </div>
           <div className="inline-flex items-center px-3.5 py-1.5 bg-amber-500/20 border border-amber-500/30 rounded-full text-amber-255 text-[10px] font-bold tracking-widest uppercase">
             Start Your Career
           </div>
@@ -127,7 +135,7 @@ const InternshipPrograms = () => {
           </div>
           <Link
             to="/contact"
-            className="px-8 py-4 bg-white hover:bg-amber-50 text-amber-850 font-bold text-xs rounded-xl shadow-md transition-all whitespace-nowrap flex items-center gap-2 group z-10"
+            className="px-8 py-4 bg-white hover:bg-amber-50 text-amber-800 font-bold text-xs rounded-xl shadow-md transition-all whitespace-nowrap flex items-center gap-2 group z-10"
           >
             Submit Internship Application <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>

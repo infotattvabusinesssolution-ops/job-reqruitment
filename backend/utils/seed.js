@@ -10,6 +10,7 @@ const Blog = require('../models/Blog');
 const Career = require('../models/Career');
 const Company = require('../models/Company');
 const Job = require('../models/Job');
+const ContactMessage = require('../models/ContactMessage');
 const logger = require('../utils/logger');
 const slugify = require('slugify');
 
@@ -62,6 +63,11 @@ async function seed() {
     logger.info('Seeding Jobs...');
     await seedJobs();
     logger.info('Jobs seeded successfully');
+
+    // Seed Contact & Form Messages
+    logger.info('Seeding Form Messages & Enquiries...');
+    await seedContactMessages();
+    logger.info('Form Messages seeded successfully');
 
     logger.info('Database seeding completed successfully!');
     process.exit(0);
@@ -720,6 +726,132 @@ async function seedJobs() {
   }
 
   logger.info(`Seeded ${defaultJobs.length} Jobs`);
+}
+
+async function seedContactMessages() {
+  const sampleMessages = [
+    // 2 Contact Form Entries
+    {
+      fullName: 'Vikas Sharma',
+      email: 'vikas.sharma@techcorp.in',
+      phone: '+91 98765 43210',
+      companyName: 'TechCorp Solutions',
+      formType: 'contact',
+      enquiryType: 'Employer Services',
+      serviceRequired: 'Permanent Recruitment Support',
+      vacancies: '5',
+      jobLocation: 'Noida, UP',
+      message: 'We are looking for customized IT recruitment services for expanding our engineering squad in Noida. Please share your engagement terms and commercial proposal.',
+      status: 'new',
+    },
+    {
+      fullName: 'Ananya Roy',
+      email: 'ananya.roy@solutions.com',
+      phone: '+91 91234 56789',
+      companyName: 'Global Solutions India',
+      formType: 'contact',
+      enquiryType: 'Corporate Training',
+      serviceRequired: 'Soft Skills & Leadership Training',
+      vacancies: '50',
+      jobLocation: 'Gurugram, Haryana',
+      message: 'Urgent requirement for a 3-day corporate soft skills and client communication workshop for 50 newly onboarded consultants.',
+      status: 'contacted',
+      notes: 'Initial call completed on 17th July. Sent proposal document via email.',
+    },
+
+    // 2 Hiring Support Entries
+    {
+      fullName: 'Priya Verma',
+      email: 'p.verma@enterprisetech.co.in',
+      phone: '+91 99887 76655',
+      companyName: 'Enterprise Tech Solutions',
+      formType: 'hiring_support',
+      enquiryType: 'Employer Services',
+      serviceRequired: 'Full Time Permanent Hiring',
+      vacancies: '5',
+      jobPosition: 'Senior React & Node.js Developers',
+      jobLocation: 'Bengaluru / Remote',
+      message: 'Qualification: B.Tech / M.Tech in CS\nExperience: 4 - 7 Years\nSalary Range: 15 - 22 LPA\nRequired Skills: React, Node.js, AWS, MongoDB\nExpected Joining: Immediate to 30 Days\n\nJob Description / Remarks:\nWe need 5 senior full stack engineers with solid cloud experience for our fintech product suite.',
+      status: 'in_progress',
+      notes: 'Shortlisted candidate resumes dispatched to client HR.',
+    },
+    {
+      fullName: 'Rohan Kulkarni',
+      email: 'r.kulkarni@tataauto.com',
+      phone: '+91 94567 12345',
+      companyName: 'Tata Auto Components',
+      formType: 'hiring_support',
+      enquiryType: 'Employer Services',
+      serviceRequired: 'Bulk Campus & Industrial Staffing',
+      vacancies: '20',
+      jobPosition: 'Mechanical Quality Control Engineers',
+      jobLocation: 'Pune, Maharashtra',
+      message: 'Qualification: Diploma / B.E Mechanical\nExperience: 0 - 2 Years\nSalary Range: 3.5 - 5.0 LPA\nRequired Skills: Quality Inspection, AutoCAD, ISO Standards\nExpected Joining: 1st August 2026\n\nJob Description / Remarks:\nBulk hiring drive required for 20 diploma and engineering graduates for our plant in Chakan, Pune.',
+      status: 'new',
+    },
+
+    // 2 Job Seeker Resume Upload Entries
+    {
+      fullName: 'Amit Kumar Patel',
+      email: 'amit.patel.dev@gmail.com',
+      phone: '+91 88776 65544',
+      companyName: '',
+      formType: 'job_seeker',
+      enquiryType: 'Job Seeker Resume Upload',
+      serviceRequired: 'IT & Software Engineering',
+      jobPosition: 'Senior Java Backend Engineer',
+      jobLocation: 'Bengaluru / Hyderabad',
+      message: 'Highest Qualification: M.Tech Software Engineering\nWork Experience: 6.5 Years\nCurrent Job Title: Senior Software Engineer\nCurrent Salary (LPA): 14.5\nExpected Salary (LPA): 19.0\nNotice Period: 15 Days\nPreferred Industry: IT / Product\nPreferred Role: Lead Java / Microservices Developer',
+      resumeUrl: 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf',
+      status: 'contacted',
+      notes: 'Profile screened. Matching with Enterprise Tech requisition.',
+    },
+    {
+      fullName: 'Neha Gupta',
+      email: 'neha.gupta.hr@yahoo.com',
+      phone: '+91 97112 33445',
+      companyName: '',
+      formType: 'job_seeker',
+      enquiryType: 'Job Seeker Resume Upload',
+      serviceRequired: 'Human Resources & Talent Acquisition',
+      jobPosition: 'HR Generalist & Operations Specialist',
+      jobLocation: 'Delhi NCR',
+      message: 'Highest Qualification: MBA in Human Resources\nWork Experience: 4 Years\nCurrent Job Title: Senior HR Executive\nCurrent Salary (LPA): 6.8\nExpected Salary (LPA): 9.0\nNotice Period: 30 Days\nPreferred Industry: Corporate / Staffing\nPreferred Role: HR Manager / Talent Acquisition Lead',
+      resumeUrl: 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf',
+      status: 'new',
+    },
+
+    // 2 Career Application Entries
+    {
+      fullName: 'Rajesh V. Nair',
+      email: 'rajesh.nair@gmail.com',
+      phone: '+91 98220 11223',
+      companyName: '',
+      formType: 'career_apply',
+      enquiryType: 'Career Application',
+      jobPosition: 'Senior IT Recruitment Consultant',
+      message: 'Applying for the Senior IT Recruitment Consultant role at Geo India Limited. I bring 5+ years of experience in technical sourcing, client relationship management, and bulk tech hiring across IT hubs.',
+      resumeUrl: 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf',
+      status: 'resolved',
+      notes: 'Interview scheduled and final offer letter issued.',
+    },
+    {
+      fullName: 'Simran Kaur',
+      email: 'simran.kaur98@gmail.com',
+      phone: '+91 99100 44332',
+      companyName: '',
+      formType: 'career_apply',
+      enquiryType: 'Career Application',
+      jobPosition: 'Business Development & Digital Marketing Intern',
+      message: 'Currently pursuing final year BBA in Marketing. Enthusiastic about joining Geo India Limited to support client acquisition, social media campaigns, and lead generation.',
+      resumeUrl: 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf',
+      status: 'new',
+    },
+  ];
+
+  await ContactMessage.deleteMany({});
+  await ContactMessage.insertMany(sampleMessages);
+  logger.info(`Seeded ${sampleMessages.length} Form Enquiries & Messages`);
 }
 
 seed();

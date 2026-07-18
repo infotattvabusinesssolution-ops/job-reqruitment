@@ -8,10 +8,11 @@ class EmailService {
   }
 
   initialize() {
+    const port = parseInt(process.env.SMTP_PORT) || 587;
     this.transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: parseInt(process.env.SMTP_PORT) || 587,
-      secure: process.env.SMTP_PORT === '465',
+      host: process.env.SMTP_HOST || 'smtp.hostinger.com',
+      port,
+      secure: port === 465,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -21,8 +22,9 @@ class EmailService {
 
   async sendMail({ to, subject, html, text, attachments = [] }) {
     try {
+      const fromEmail = process.env.MAIL_FROM || process.env.SMTP_USER || 'Hr@geoindialimited.com';
       const mailOptions = {
-        from: `"${process.env.SMTP_FROM_NAME || 'JobReqruitment'}" <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
+        from: `"${process.env.SMTP_FROM_NAME || 'Geo India Limited'}" <${fromEmail}>`,
         to,
         subject,
         html,
@@ -189,6 +191,32 @@ class EmailService {
   }
 
   async sendNewApplicationAlert({ hrEmail, candidateName, candidateEmail, candidatePhone, jobTitle, coverLetter, resumeUrl }) {
+    const fs = require('fs');
+    const path = require('path');
+
+    let fullResumeUrl = resumeUrl || '';
+    const emailAttachments = [];
+
+    if (resumeUrl) {
+      if (resumeUrl.startsWith('http://') || resumeUrl.startsWith('https://')) {
+        fullResumeUrl = resumeUrl;
+      } else {
+        const baseUrl = process.env.BACKEND_URL || process.env.APP_URL || 'http://localhost:5000';
+        fullResumeUrl = `${baseUrl.replace(/\/$/, '')}${resumeUrl.startsWith('/') ? '' : '/'}${resumeUrl}`;
+      }
+
+      if (resumeUrl.includes('/uploads/')) {
+        const filename = resumeUrl.split('/uploads/')[1];
+        const filePath = path.join(__dirname, '..', 'uploads', filename);
+        if (fs.existsSync(filePath)) {
+          emailAttachments.push({
+            filename: filename,
+            path: filePath,
+          });
+        }
+      }
+    }
+
     const subject = `New Job Application Received: ${jobTitle}`;
     const html = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1f2937;">
@@ -218,11 +246,11 @@ class EmailService {
             ${coverLetter || 'No cover letter provided.'}
           </p>
 
-          ${resumeUrl ? `
+          ${fullResumeUrl ? `
           <div style="text-align: center; margin-top: 35px;">
-            <a href="${resumeUrl}" target="_blank" 
+            <a href="${fullResumeUrl}" target="_blank" 
                style="background: #2563eb; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; font-size: 14px; box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);">
-              View Candidate Resume
+              Download Candidate Resume
             </a>
           </div>
           ` : `
@@ -236,6 +264,7 @@ class EmailService {
       to: hrEmail,
       subject,
       html,
+      attachments: emailAttachments,
     });
   }
 
@@ -336,6 +365,214 @@ class EmailService {
       to: hrEmail,
       subject,
       html,
+    });
+  }
+
+  async sendContactEnquiryAlert({
+    hrEmail,
+    fullName,
+    companyName,
+    email,
+    phone,
+    enquiryType,
+    serviceRequired,
+    vacancies,
+    jobLocation,
+    message,
+  }) {
+    const subject = `New Contact Form Enquiry: [${enquiryType || 'General'}] ${fullName}`;
+    const html = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1f2937;">
+        <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 40px; text-align: center; border-radius: 10px 10px 0 0;">
+          <h1 style="color: white; margin: 0; font-size: 24px;">New Contact Form Submission</h1>
+          <p style="color: #94a3b8; margin-top: 10px;">Type: ${enquiryType || 'General Inquiry'}</p>
+        </div>
+        <div style="background: #ffffff; padding: 45px; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 10px 10px;">
+          <h3 style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Contact Information</h3>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold; width: 140px;">Full Name:</td>
+              <td style="padding: 6px 0;">${fullName}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Company:</td>
+              <td style="padding: 6px 0;">${companyName || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Email:</td>
+              <td style="padding: 6px 0;"><a href="mailto:${email}" style="color: #2563eb; text-decoration: none;">${email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Phone:</td>
+              <td style="padding: 6px 0;">${phone || 'N/A'}</td>
+            </tr>
+          </table>
+
+          <h3 style="color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Enquiry Details</h3>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold; width: 140px;">Enquiry Type:</td>
+              <td style="padding: 6px 0;">${enquiryType || 'General Inquiry'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Service Required:</td>
+              <td style="padding: 6px 0;">${serviceRequired || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Vacancies:</td>
+              <td style="padding: 6px 0;">${vacancies || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Job Location:</td>
+              <td style="padding: 6px 0;">${jobLocation || 'N/A'}</td>
+            </tr>
+          </table>
+
+          <h3 style="color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Message</h3>
+          <p style="background-color: #f8fafc; padding: 15px; border-radius: 8px; font-style: italic; border-left: 4px solid #2563eb; white-space: pre-wrap; font-size: 14px; line-height: 1.6;">
+            ${message || 'No message content provided.'}
+          </p>
+        </div>
+      </div>
+    `;
+
+    return this.sendMail({
+      to: hrEmail,
+      subject,
+      html,
+    });
+  }
+
+  async sendResumeUploadAlert({
+    hrEmail,
+    fullName,
+    phone,
+    email,
+    currentLocation,
+    preferredLocation,
+    highestQualification,
+    workExperience,
+    currentJobTitle,
+    currentSalary,
+    expectedSalary,
+    noticePeriod,
+    preferredIndustry,
+    preferredJobRole,
+    resumeUrl,
+  }) {
+    const fs = require('fs');
+    const path = require('path');
+
+    let fullResumeUrl = resumeUrl || '';
+    const emailAttachments = [];
+
+    if (resumeUrl) {
+      if (resumeUrl.startsWith('http://') || resumeUrl.startsWith('https://')) {
+        fullResumeUrl = resumeUrl;
+      } else {
+        const baseUrl = process.env.BACKEND_URL || process.env.APP_URL || 'http://localhost:5000';
+        fullResumeUrl = `${baseUrl.replace(/\/$/, '')}${resumeUrl.startsWith('/') ? '' : '/'}${resumeUrl}`;
+      }
+
+      if (resumeUrl.includes('/uploads/')) {
+        const filename = resumeUrl.split('/uploads/')[1];
+        const filePath = path.join(__dirname, '..', 'uploads', filename);
+        if (fs.existsSync(filePath)) {
+          emailAttachments.push({
+            filename: filename,
+            path: filePath,
+          });
+        }
+      }
+    }
+
+    const subject = `New Job Seeker Profile & Resume: ${fullName}`;
+    const html = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1f2937;">
+        <div style="background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); padding: 40px; text-align: center; border-radius: 10px 10px 0 0;">
+          <h1 style="color: white; margin: 0; font-size: 24px;">New Job Seeker Resume Upload</h1>
+          <p style="color: #ccfbf1; margin-top: 10px;">Candidate: ${fullName}</p>
+        </div>
+        <div style="background: #ffffff; padding: 45px; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 10px 10px;">
+          <h3 style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Personal & Contact Information</h3>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold; width: 160px;">Name:</td>
+              <td style="padding: 6px 0;">${fullName}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Email:</td>
+              <td style="padding: 6px 0;"><a href="mailto:${email}" style="color: #2563eb; text-decoration: none;">${email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Phone:</td>
+              <td style="padding: 6px 0;">${phone}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Current Location:</td>
+              <td style="padding: 6px 0;">${currentLocation || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Preferred Location:</td>
+              <td style="padding: 6px 0;">${preferredLocation || 'N/A'}</td>
+            </tr>
+          </table>
+
+          <h3 style="color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Professional Details</h3>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold; width: 160px;">Highest Qualification:</td>
+              <td style="padding: 6px 0;">${highestQualification || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Work Experience:</td>
+              <td style="padding: 6px 0;">${workExperience || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Current Job Title:</td>
+              <td style="padding: 6px 0;">${currentJobTitle || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Current Salary (LPA):</td>
+              <td style="padding: 6px 0;">${currentSalary || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Expected Salary (LPA):</td>
+              <td style="padding: 6px 0;">${expectedSalary || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Notice Period:</td>
+              <td style="padding: 6px 0;">${noticePeriod || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Preferred Industry:</td>
+              <td style="padding: 6px 0;">${preferredIndustry || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold;">Preferred Job Role:</td>
+              <td style="padding: 6px 0;">${preferredJobRole || 'N/A'}</td>
+            </tr>
+          </table>
+
+          ${fullResumeUrl ? `
+          <div style="text-align: center; margin-top: 35px;">
+            <a href="${fullResumeUrl}" target="_blank" 
+               style="background: #0d9488; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; font-size: 14px; box-shadow: 0 4px 6px -1px rgba(13, 148, 136, 0.2);">
+              Download Candidate Resume
+            </a>
+          </div>
+          ` : `
+          <p style="color: #ef4444; font-weight: bold; margin-top: 20px;">No resume file attached to this candidate profile.</p>
+          `}
+        </div>
+      </div>
+    `;
+
+    return this.sendMail({
+      to: hrEmail,
+      subject,
+      html,
+      attachments: emailAttachments,
     });
   }
 }

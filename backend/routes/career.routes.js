@@ -8,6 +8,7 @@ const { uploadResume } = require('../middlewares/upload');
 router.get('/', optionalAuth, careerController.getAllCareers.bind(careerController));
 router.get('/:id', optionalAuth, careerController.getCareerById.bind(careerController));
 router.post('/apply', uploadResume, careerController.applyForCareer.bind(careerController));
+router.post('/upload-resume', uploadResume, careerController.uploadJobSeekerResume.bind(careerController));
 
 // Administrative CRUD endpoints
 router.post('/', authenticate, authorize('admin', 'super_admin'), careerController.createCareer.bind(careerController));

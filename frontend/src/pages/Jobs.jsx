@@ -269,64 +269,58 @@ const Jobs = () => {
 
             {/* Job Listings Grid */}
             <div className="grid sm:grid-cols-2 gap-6 mb-8">
-              <AnimatePresence>
-                {!isLoading &&
-                  jobs.map((job) => (
-                    <motion.div
-                      key={job._id}
-                      layout
-                      initial={{ opacity: 0, scale: 0.98 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0 }}
-                      className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
-                    >
-                      <div>
-                        {/* Tags / Badges */}
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-primary-50 text-primary-700 rounded-md">
-                            {job.employmentType}
-                          </span>
-                          <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-green-50 text-green-700 rounded-md">
-                            {job.workMode}
-                          </span>
-                        </div>
-
-                        {/* Title & Company */}
-                        <h3 className="text-lg font-heading font-bold text-secondary-900 mb-1.5 hover:text-primary-600 transition-colors">
-                          <Link to={`/jobs/${job.slug}`}>{job.title}</Link>
-                        </h3>
-                        <p className="text-xs text-primary-600 font-semibold mb-4">{job.company?.name || 'Enterprise partner'}</p>
-
-                        {/* Locations & Salary details */}
-                        <div className="space-y-2 mb-4 text-xs text-secondary-500">
-                          <div className="flex items-center gap-1.5">
-                            <HiLocationMarker className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                            <span>{job.locations?.[0]?.city || 'Hybrid/Remote Locations'}, {job.locations?.[0]?.country || 'India'}</span>
-                          </div>
-                          {job.salary?.isVisible && (
-                            <div className="flex items-center gap-1.5">
-                              <HiCurrencyRupee className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                              <span>₹{job.salary.min ? job.salary.min.toLocaleString('en-IN') : 'N/A'} - ₹{job.salary.max ? job.salary.max.toLocaleString('en-IN') : 'N/A'} {job.salary.period}</span>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-
-                      {/* CTA Footer */}
-                      <div className="pt-4 border-t border-gray-100 flex items-center justify-between mt-4">
-                        <span className="text-[10px] text-gray-400">
-                          Posted {new Date(job.createdAt).toLocaleDateString()}
+              {!isLoading &&
+                jobs.map((job) => (
+                  <div
+                    key={job._id}
+                    className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+                  >
+                    <div>
+                      {/* Tags / Badges */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-primary-50 text-primary-700 rounded-md">
+                          {job.employmentType}
                         </span>
-                        <Link
-                          to={`/jobs/${job.slug}`}
-                          className="inline-flex items-center text-xs font-semibold text-primary-600 hover:text-primary-700 gap-1 hover:underline"
-                        >
-                          View Details <HiArrowRight className="w-3.5 h-3.5" />
-                        </Link>
+                        <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-green-50 text-green-700 rounded-md">
+                          {job.workMode}
+                        </span>
                       </div>
-                    </motion.div>
-                  ))}
-              </AnimatePresence>
+
+                      {/* Title & Company */}
+                      <h3 className="text-lg font-heading font-bold text-secondary-900 mb-1.5 hover:text-primary-600 transition-colors">
+                        <Link to={`/jobs/${job.slug}`}>{job.title}</Link>
+                      </h3>
+                      <p className="text-xs text-primary-600 font-semibold mb-4">{job.company?.name || 'Enterprise partner'}</p>
+
+                      {/* Locations & Salary details */}
+                      <div className="space-y-2 mb-4 text-xs text-secondary-500">
+                        <div className="flex items-center gap-1.5">
+                          <HiLocationMarker className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                          <span>{job.locations?.[0]?.city || 'Hybrid/Remote Locations'}, {job.locations?.[0]?.country || 'India'}</span>
+                        </div>
+                        {job.salary?.isVisible && (
+                          <div className="flex items-center gap-1.5">
+                            <HiCurrencyRupee className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                            <span>₹{job.salary.min ? job.salary.min.toLocaleString('en-IN') : 'N/A'} - ₹{job.salary.max ? job.salary.max.toLocaleString('en-IN') : 'N/A'} {job.salary.period}</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* CTA Footer */}
+                    <div className="pt-4 border-t border-gray-100 flex items-center justify-between mt-4">
+                      <span className="text-[10px] text-gray-400">
+                        Posted {new Date(job.createdAt).toLocaleDateString()}
+                      </span>
+                      <Link
+                        to={`/jobs/${job.slug}`}
+                        className="inline-flex items-center text-xs font-semibold text-primary-600 hover:text-primary-700 gap-1 hover:underline"
+                      >
+                        View Details <HiArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                ))}
             </div>
 
             {/* Pagination Controls */}

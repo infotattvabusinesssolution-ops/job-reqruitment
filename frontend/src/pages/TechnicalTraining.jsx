@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { HiDesktopComputer, HiCloudDownload, HiDatabase, HiShieldExclamation, HiArrowRight } from 'react-icons/hi';
+import { HiDesktopComputer, HiCloudDownload, HiDatabase, HiShieldExclamation, HiArrowRight, HiArrowLeft } from 'react-icons/hi';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -50,6 +50,14 @@ const TechnicalTraining = () => {
       <section className="bg-gradient-to-r from-blue-950 via-indigo-900 to-indigo-950 text-white py-20 mb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(67,56,202,0.15),transparent)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+          <div>
+            <Link
+              to="/job-seekers"
+              className="inline-flex items-center text-xs font-bold text-white/70 hover:text-white transition-colors gap-1.5 group"
+            >
+              <HiArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" /> Back to Job Seekers
+            </Link>
+          </div>
           <div className="inline-flex items-center px-3.5 py-1.5 bg-indigo-500/20 border border-indigo-500/30 rounded-full text-indigo-200 text-[10px] font-bold tracking-widest uppercase">
             Technical Mastery
           </div>
@@ -117,7 +125,7 @@ const TechnicalTraining = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gradient-to-br from-indigo-650 to-indigo-850 text-white rounded-3xl p-8 sm:p-12 shadow-xl flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-indigo-600 to-indigo-800 text-white rounded-3xl p-8 sm:p-12 shadow-xl flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden">
           <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/5 rounded-full -mr-32 -mb-32 pointer-events-none" />
           <div className="space-y-3 max-w-xl z-10 text-center md:text-left">
             <h2 className="text-2xl font-bold">Ready to Become a Software Professional?</h2>
@@ -127,7 +135,7 @@ const TechnicalTraining = () => {
           </div>
           <Link
             to="/contact"
-            className="px-8 py-4 bg-white hover:bg-indigo-50 text-indigo-850 font-bold text-xs rounded-xl shadow-md transition-all whitespace-nowrap flex items-center gap-2 group z-10"
+            className="px-8 py-4 bg-white hover:bg-indigo-50 text-indigo-800 font-bold text-xs rounded-xl shadow-md transition-all whitespace-nowrap flex items-center gap-2 group z-10"
           >
             Enroll in Technical Training <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>

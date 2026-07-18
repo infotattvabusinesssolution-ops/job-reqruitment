@@ -18,7 +18,6 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const { isAuthenticated, user, logout, userRole } = useAuth();
   const location = useLocation();
@@ -26,11 +25,11 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1a2e5c] border-b border-[#253f7c] shadow-lg shadow-black/10">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between py-0.5 min-h-[64px] md:min-h-[72px]">
           {/* Logo */}
-          <Link to="/" className="flex items-center -ml-2 sm:-ml-4">
+          <Link to="/" className="flex items-center -ml-2 sm:-ml-4 pt-3">
             <img src={logo} alt="Geo India Limited" className="h-32 md:h-40 w-auto object-contain -my-6 md:-my-8" />
           </Link>
 
@@ -41,8 +40,8 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isActive(link.path)
-                  ? 'text-primary-600 bg-primary-50'
-                  : 'text-secondary-600 hover:text-primary-600 hover:bg-gray-50'
+                  ? 'text-white bg-[#253f7c] font-semibold'
+                  : 'text-neutral-200 hover:text-white hover:bg-[#253f7c]/70'
                   }`}
               >
                 {link.name}
@@ -52,35 +51,27 @@ const Navbar = () => {
 
           {/* Right Side */}
           <div className="flex items-center space-x-3">
-            {/* Search */}
-            <button
-              onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 rounded-lg text-secondary-500 hover:text-primary-600 hover:bg-gray-50 transition-all"
-            >
-              <HiSearch className="w-5 h-5" />
-            </button>
-
             {/* Notifications */}
             {isAuthenticated && (
-              <button className="p-2 rounded-lg text-secondary-500 hover:text-primary-600 hover:bg-gray-50 transition-all relative">
+              <button className="p-2 rounded-lg text-neutral-300 hover:text-white hover:bg-[#253f7c] transition-all relative">
                 <HiBell className="w-5 h-5" />
                 <span className="absolute top-1 right-1 w-2 h-2 bg-danger-500 rounded-full"></span>
               </button>
             )}
 
-            {/* Auth Buttons / User Menu */}
-            {isAuthenticated ? (
+            {/* Auth User Menu */}
+            {isAuthenticated && (
               <div className="relative">
                 <button
                   onClick={() => setDropdownOpen(!dropdownOpen)}
-                  className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-all"
+                  className="flex items-center space-x-2 p-2 rounded-lg hover:bg-[#253f7c] transition-all"
                 >
                   <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center">
                     <span className="text-white text-sm font-medium">
                       {user?.firstName?.[0]}{user?.lastName?.[0]}
                     </span>
                   </div>
-                  <HiChevronDown className="w-4 h-4 text-secondary-500" />
+                  <HiChevronDown className="w-4 h-4 text-neutral-350" />
                 </button>
 
                 <AnimatePresence>
@@ -89,25 +80,25 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2"
+                      className="absolute right-0 mt-2 w-56 bg-[#1a2e5c] border border-[#253f7c] rounded-xl shadow-2xl py-2"
                     >
-                      <div className="px-4 py-2 border-b border-gray-100">
-                        <p className="text-sm font-medium text-secondary-900">{user?.firstName} {user?.lastName}</p>
-                        <p className="text-xs text-secondary-500 capitalize">{userRole}</p>
+                      <div className="px-4 py-2 border-b border-[#253f7c]">
+                        <p className="text-sm font-medium text-white">{user?.firstName} {user?.lastName}</p>
+                        <p className="text-xs text-neutral-350 capitalize">{userRole}</p>
                       </div>
-                      <Link to="/dashboard" className="block px-4 py-2 text-sm text-secondary-600 hover:bg-gray-50 hover:text-primary-600">
+                      <Link to="/dashboard" className="block px-4 py-2 text-sm text-neutral-200 hover:bg-[#253f7c] hover:text-white">
                         Dashboard
                       </Link>
-                      <Link to="/dashboard/profile" className="block px-4 py-2 text-sm text-secondary-600 hover:bg-gray-50 hover:text-primary-600">
+                      <Link to="/dashboard/profile" className="block px-4 py-2 text-sm text-neutral-200 hover:bg-[#253f7c] hover:text-white">
                         My Profile
                       </Link>
-                      <Link to="/dashboard/settings" className="block px-4 py-2 text-sm text-secondary-600 hover:bg-gray-50 hover:text-primary-600">
+                      <Link to="/dashboard/settings" className="block px-4 py-2 text-sm text-neutral-200 hover:bg-[#253f7c] hover:text-white">
                         Settings
                       </Link>
-                      <hr className="my-1 border-gray-100" />
+                      <hr className="my-1 border-[#253f7c]" />
                       <button
                         onClick={logout}
-                        className="w-full text-left px-4 py-2 text-sm text-danger-600 hover:bg-danger-50"
+                        className="w-full text-left px-4 py-2 text-sm text-danger-400 hover:bg-danger-950/20"
                       >
                         Sign Out
                       </button>
@@ -115,21 +106,12 @@ const Navbar = () => {
                   )}
                 </AnimatePresence>
               </div>
-            ) : (
-              <div className="hidden sm:flex items-center space-x-2">
-                <Link to="/login" className="btn-secondary text-sm px-4 py-2">
-                  Sign In
-                </Link>
-                <Link to="/register" className="btn-primary text-sm px-4 py-2">
-                  Get Started
-                </Link>
-              </div>
             )}
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg text-secondary-500 hover:bg-gray-50 transition-all"
+              className="lg:hidden p-2 rounded-lg text-neutral-300 hover:bg-[#253f7c] transition-all"
             >
               {isOpen ? <HiX className="w-6 h-6" /> : <HiMenu className="w-6 h-6" />}
             </button>
@@ -144,7 +126,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-gray-100 bg-white"
+            className="lg:hidden border-t border-[#253f7c] bg-[#1a2e5c]"
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link) => (
@@ -153,47 +135,13 @@ const Navbar = () => {
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${isActive(link.path)
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-secondary-600 hover:bg-gray-50'
+                    ? 'text-white bg-[#253f7c] font-semibold'
+                    : 'text-neutral-200 hover:bg-[#253f7c]/70 hover:text-white'
                     }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              {!isAuthenticated && (
-                <div className="pt-4 space-y-2">
-                  <Link to="/login" onClick={() => setIsOpen(false)} className="block w-full text-center btn-secondary">
-                    Sign In
-                  </Link>
-                  <Link to="/register" onClick={() => setIsOpen(false)} className="block w-full text-center btn-primary">
-                    Get Started
-                  </Link>
-                </div>
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Search Overlay */}
-      <AnimatePresence>
-        {searchOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-lg p-4"
-          >
-            <div className="max-w-3xl mx-auto">
-              <div className="relative">
-                <HiSearch className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-secondary-400" />
-                <input
-                  type="text"
-                  placeholder="Search jobs, companies, skills..."
-                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all"
-                  autoFocus
-                />
-              </div>
             </div>
           </motion.div>
         )}

@@ -159,7 +159,21 @@ class CareerController {
 
       const resumeUrl = req.uploadedFiles && req.uploadedFiles[0]?.url;
 
+      const ContactMessage = require('../models/ContactMessage');
       const emailService = require('../utils/emailService');
+
+      // Save to database for admin panel viewing
+      await ContactMessage.create({
+        fullName: name,
+        email,
+        phone: phone || '',
+        formType: 'career_apply',
+        enquiryType: 'Career Application',
+        jobPosition: position,
+        message: coverLetter || 'Application submitted via Careers page.',
+        resumeUrl,
+      });
+
       const hrEmail = process.env.SMTP_USER || 'Hr@geoindialimited.com';
 
       try {
@@ -179,6 +193,83 @@ class CareerController {
       res.status(200).json({
         success: true,
         message: 'Application submitted successfully! Our HR team will get back to you.',
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  /**
+   * Upload Job Seeker profile & resume
+   */
+  async uploadJobSeekerResume(req, res, next) {
+    try {
+      const {
+        fullName,
+        phone,
+        email,
+        currentLocation,
+        preferredLocation,
+        highestQualification,
+        workExperience,
+        currentJobTitle,
+        currentSalary,
+        expectedSalary,
+        noticePeriod,
+        preferredIndustry,
+        preferredJobRole,
+      } = req.body;
+
+      if (!fullName || !email || !phone) {
+        throw new BadRequestError('Full Name, Email, and Phone number are required.');
+      }
+
+      const resumeUrl = req.uploadedFiles && req.uploadedFiles[0]?.url;
+
+      const ContactMessage = require('../models/ContactMessage');
+      const emailService = require('../utils/emailService');
+
+      // Save to database for admin panel viewing
+      await ContactMessage.create({
+        fullName,
+        email,
+        phone,
+        formType: 'job_seeker',
+        enquiryType: 'Job Seeker Resume Upload',
+        jobPosition: preferredJobRole || currentJobTitle || 'Job Seeker Profile',
+        jobLocation: preferredLocation || currentLocation || '',
+        serviceRequired: preferredIndustry || 'Recruitment Support',
+        message: `Highest Qualification: ${highestQualification || 'N/A'}\nWork Experience: ${workExperience || 'N/A'}\nCurrent Job Title: ${currentJobTitle || 'N/A'}\nCurrent Salary (LPA): ${currentSalary || 'N/A'}\nExpected Salary (LPA): ${expectedSalary || 'N/A'}\nNotice Period: ${noticePeriod || 'N/A'}\nPreferred Industry: ${preferredIndustry || 'N/A'}\nPreferred Role: ${preferredJobRole || 'N/A'}`,
+        resumeUrl,
+      });
+
+      const hrEmail = process.env.SMTP_USER || 'Hr@geoindialimited.com';
+
+      try {
+        await emailService.sendResumeUploadAlert({
+          hrEmail,
+          fullName,
+          phone,
+          email,
+          currentLocation,
+          preferredLocation,
+          highestQualification,
+          workExperience,
+          currentJobTitle,
+          currentSalary,
+          expectedSalary,
+          noticePeriod,
+          preferredIndustry,
+          preferredJobRole,
+          resumeUrl,
+        });
+      } catch (err) {
+        logger.error('Failed to dispatch JobSeeker resume HR email alert:', err);
+      }
+
+      res.status(200).json({
+        success: true,
+        message: 'Your resume and details have been submitted successfully! Our recruiters will review your profile.',
       });
     } catch (error) {
       next(error);

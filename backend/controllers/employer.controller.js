@@ -284,7 +284,23 @@ class EmployerController {
         jobDescription,
       } = req.body;
 
+      const ContactMessage = require('../models/ContactMessage');
       const emailService = require('../utils/emailService');
+
+      // Save to database for admin panel viewing
+      await ContactMessage.create({
+        fullName: contactPerson,
+        companyName,
+        email,
+        phone,
+        formType: 'hiring_support',
+        enquiryType: 'Employer Services',
+        serviceRequired: employmentType || 'Hiring Support',
+        vacancies: vacancies ? vacancies.toString() : '1',
+        jobPosition,
+        jobLocation,
+        message: `Qualification: ${qualification || 'N/A'}\nExperience: ${experience || 'N/A'}\nSalary Range: ${salaryRange || 'N/A'}\nRequired Skills: ${skills || 'N/A'}\nExpected Joining: ${joiningDate || 'N/A'}\n\nJob Description / Remarks:\n${jobDescription || 'N/A'}`,
+      });
 
       // Send email alert to admin
       const hrEmail = process.env.SMTP_USER || 'Hr@geoindialimited.com';

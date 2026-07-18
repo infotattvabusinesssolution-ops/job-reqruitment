@@ -36,19 +36,25 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Recruitment Services */}
+          {/* Offerings */}
           <div className="space-y-6">
-            <h3 className="text-sm font-heading font-bold uppercase tracking-wider text-secondary-200">Recruitment Services</h3>
-            <ul className="space-y-3 text-xs text-secondary-300">
-              <li><Link to="/services" className="hover:text-white transition-colors">IT Recruitment</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Non-IT Recruitment</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Bulk Hiring</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Executive Search</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Contract Staffing</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Permanent Staffing</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Payroll Services</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">RPO Solutions</Link></li>
-            </ul>
+            <div>
+              <h3 className="text-sm font-heading font-bold uppercase tracking-wider text-secondary-200 mb-3.5">Recruitment</h3>
+              <ul className="space-y-2.5 text-xs text-secondary-300">
+                <li><Link to="/services" className="hover:text-white transition-colors">Staffing Solutions</Link></li>
+                <li><Link to="/services" className="hover:text-white transition-colors">Executive Search & RPO</Link></li>
+                <li><Link to="/services" className="hover:text-white transition-colors">Bulk Hiring & Payroll</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-heading font-bold uppercase tracking-wider text-secondary-200 mb-3.5">Training & Internships</h3>
+              <ul className="space-y-2.5 text-xs text-secondary-300">
+                <li><Link to="/corporate-training" className="hover:text-white transition-colors">Corporate Training</Link></li>
+                <li><Link to="/technical-training" className="hover:text-white transition-colors">Technical Training</Link></li>
+                <li><Link to="/soft-skills" className="hover:text-white transition-colors">Soft Skills & Interview Prep</Link></li>
+                <li><Link to="/internship-programs" className="hover:text-white transition-colors">Internship Programs</Link></li>
+              </ul>
+            </div>
           </div>
 
           {/* Contact Information */}

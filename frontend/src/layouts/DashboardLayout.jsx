@@ -5,7 +5,7 @@ import {
   HiHome, HiBriefcase, HiUsers, HiDocumentText, HiCalendar,
   HiChartBar, HiBell, HiCog, HiLogout, HiMenu, HiX,
   HiStar, HiClock, HiUserGroup, HiSearch, HiTrendingUp,
-  HiQuestionMarkCircle
+  HiQuestionMarkCircle, HiMail
 } from 'react-icons/hi';
 import { useAuth } from '../hooks/useAuth';
 
@@ -42,6 +42,7 @@ const sidebarLinks = {
   ],
   admin: [
     { name: 'Dashboard', path: '/dashboard/admin', icon: HiHome },
+    { name: 'Form Enquiries', path: '/dashboard/admin/enquiries', icon: HiMail },
     { name: 'Users', path: '/dashboard/admin/users', icon: HiUsers },
     { name: 'Jobs', path: '/dashboard/admin/jobs', icon: HiBriefcase },
     { name: 'Companies', path: '/dashboard/admin/companies', icon: HiUserGroup },

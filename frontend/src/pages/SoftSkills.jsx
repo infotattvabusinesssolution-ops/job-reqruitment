@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { HiChatAlt, HiLightBulb, HiUserGroup, HiPresentationChartLine, HiArrowRight, HiVolumeUp } from 'react-icons/hi';
+import { HiChatAlt, HiLightBulb, HiUserGroup, HiPresentationChartLine, HiArrowRight, HiVolumeUp, HiArrowLeft } from 'react-icons/hi';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -50,6 +50,14 @@ const SoftSkills = () => {
       <section className="bg-gradient-to-r from-purple-900 via-purple-800 to-pink-950 text-white py-20 mb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(219,39,119,0.1),transparent)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+          <div>
+            <Link
+              to="/job-seekers"
+              className="inline-flex items-center text-xs font-bold text-white/70 hover:text-white transition-colors gap-1.5 group"
+            >
+              <HiArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" /> Back to Job Seekers
+            </Link>
+          </div>
           <div className="inline-flex items-center px-3.5 py-1.5 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-200 text-[10px] font-bold tracking-widest uppercase">
             Interpersonal Growth
           </div>
@@ -127,7 +135,7 @@ const SoftSkills = () => {
           </div>
           <Link
             to="/contact"
-            className="px-8 py-4 bg-white hover:bg-purple-50 text-purple-850 font-bold text-xs rounded-xl shadow-md transition-all whitespace-nowrap flex items-center gap-2 group z-10"
+            className="px-8 py-4 bg-white hover:bg-purple-50 text-purple-800 font-bold text-xs rounded-xl shadow-md transition-all whitespace-nowrap flex items-center gap-2 group z-10"
           >
             Inquire About Workshops <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>

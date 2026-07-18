@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { HiCollection, HiSearch, HiIdentification, HiUserGroup, HiArrowRight, HiTrendingUp } from 'react-icons/hi';
+import { HiCollection, HiSearch, HiIdentification, HiUserGroup, HiArrowRight, HiTrendingUp, HiArrowLeft } from 'react-icons/hi';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -50,6 +50,14 @@ const EmployabilitySkills = () => {
       <section className="bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-950 text-white py-20 mb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(16,185,129,0.1),transparent)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+          <div>
+            <Link
+              to="/job-seekers"
+              className="inline-flex items-center text-xs font-bold text-white/70 hover:text-white transition-colors gap-1.5 group"
+            >
+              <HiArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" /> Back to Job Seekers
+            </Link>
+          </div>
           <div className="inline-flex items-center px-3.5 py-1.5 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-200 text-[10px] font-bold tracking-widest uppercase">
             Bridge the Gap
           </div>

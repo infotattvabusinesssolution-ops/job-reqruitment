@@ -11,6 +11,7 @@ import AdminTestimonials from './admin/AdminTestimonials';
 import AdminServices from './admin/AdminServices';
 import AdminCareers from './admin/AdminCareers';
 import AdminAnalytics from './admin/AdminAnalytics';
+import AdminEnquiries from './admin/AdminEnquiries';
 import AdminSettings from './admin/AdminSettings';
 
 const AdminDashboard = () => {
@@ -22,6 +23,9 @@ const AdminDashboard = () => {
         return <AdminOverview />;
       case 'users':
         return <AdminUsers />;
+      case 'enquiries':
+      case 'messages':
+        return <AdminEnquiries />;
       case 'jobs':
         return <AdminJobs />;
       case 'companies':
