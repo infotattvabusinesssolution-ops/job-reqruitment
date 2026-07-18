@@ -1675,3 +1675,43 @@
 2026-07-18 14:13:25 [INFO]: Email sent successfully to Hr@geoindialimited.com: <3e3c2824-3bca-b3d7-3a90-e4dcc7451278@geoindialimited.com>  
 2026-07-18 14:13:25 [HTTP]: ::1 - - [18/Jul/2026:08:43:25 +0000] "POST /api/careers/upload-resume HTTP/1.1" 200 127 "http://localhost:5173/job-seekers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
 2026-07-18 14:13:35 [HTTP]: ::1 - - [18/Jul/2026:08:43:35 +0000] "GET /uploads/resumes/whLOxqxvx10x.pdf HTTP/1.1" 200 160974 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:31:15 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 15:31:15 [INFO]: Database connected successfully  
+2026-07-18 15:31:15 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 15:31:16 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 15:31:17 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 15:31:17 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 15:31:17 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 15:31:17 [INFO]: Socket.IO initialized successfully  
+2026-07-18 15:31:17 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobReqruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 15:32:03 [HTTP]: ::1 - - [18/Jul/2026:10:02:03 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:32:03 [HTTP]: ::1 - - [18/Jul/2026:10:02:03 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 229 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:32:10 [HTTP]: ::1 - - [18/Jul/2026:10:02:10 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:32:29 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 15:32:29 [WARN]: Cloudinary upload failed, using local file URL fallback:  
+2026-07-18 15:32:29 [HTTP]: ::1 - - [18/Jul/2026:10:02:29 +0000] "POST /api/uploads/image HTTP/1.1" 200 216 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:32:29 [HTTP]: ::1 - - [18/Jul/2026:10:02:29 +0000] "GET /uploads/images/wv7UDALTIaVT.png HTTP/1.1" 200 1667 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:32:40 [HTTP]: ::1 - - [18/Jul/2026:10:02:40 +0000] "POST /api/blogs HTTP/1.1" 201 609 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:32:40 [HTTP]: ::1 - - [18/Jul/2026:10:02:40 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:33:25 [HTTP]: ::1 - - [18/Jul/2026:10:03:25 +0000] "POST /api/auth/logout HTTP/1.1" 401 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:33:25 [HTTP]: ::1 - - [18/Jul/2026:10:03:25 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:33:25 [HTTP]: ::1 - - [18/Jul/2026:10:03:25 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:33:25 [HTTP]: ::1 - - [18/Jul/2026:10:03:25 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:33:27 [HTTP]: ::1 - - [18/Jul/2026:10:03:27 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 200 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:37:04 [HTTP]: ::1 - - [18/Jul/2026:10:07:04 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:37:04 [HTTP]: ::1 - - [18/Jul/2026:10:07:04 +0000] "GET /uploads/images/wv7UDALTIaVT.png HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:44:04 [HTTP]: ::1 - - [18/Jul/2026:10:14:04 +0000] "POST /api/auth/forgot-password HTTP/1.1" 200 77 "http://localhost:5173/forgot-password" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:46:03 [HTTP]: ::1 - - [18/Jul/2026:10:16:03 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:46:03 [HTTP]: ::1 - - [18/Jul/2026:10:16:03 +0000] "GET /uploads/images/wv7UDALTIaVT.png HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 15:46:08 [HTTP]: ::1 - - [18/Jul/2026:10:16:08 +0000] "GET /api/blogs/slug/a HTTP/1.1" 200 708 "http://localhost:5173/blogs/a" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
