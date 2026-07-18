@@ -1907,3 +1907,77 @@
   "statusCode": 500
 }
 2026-07-18 16:39:53 [HTTP]: ::1 - - [18/Jul/2026:11:09:53 +0000] "POST /api/blogs HTTP/1.1" 409 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36"  
+2026-07-18 16:43:41 [INFO]: MongoDB connected successfully to mongodb://infotattvabusinesssolution_db_user:69HI4f3FGsAutWSQ@ac-lgpbr05-shard-00-00.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-01.z30idnq.mongodb.net:27017,ac-lgpbr05-shard-00-02.z30idnq.mongodb.net:27017/?ssl=true&replicaSet=atlas-2nt7yy-shard-0&authSource=admin&appName=Cluster0  
+2026-07-18 16:43:41 [INFO]: Database connected successfully  
+2026-07-18 16:43:41 [INFO]: AutoSeed: Checking database records...  
+2026-07-18 16:43:42 [INFO]: AutoSeed: Roles verified/seeded  
+2026-07-18 16:43:43 [INFO]: AutoSeed: Categories verified/seeded  
+2026-07-18 16:43:43 [INFO]: AutoSeed: Admin user already exists  
+2026-07-18 16:43:43 [INFO]: AutoSeed: Admin user verified/seeded  
+2026-07-18 16:43:43 [INFO]: Socket.IO initialized successfully  
+2026-07-18 16:43:43 [INFO]: 
+╔══════════════════════════════════════════════════════════╗
+║            JobRecruitment Platform Server                ║
+╠══════════════════════════════════════════════════════════╣
+║  Status:    Running                                      ║
+║  Port:      5000                                       ║
+║  Host:      localhost                                  ║
+║  Env:       development                                ║
+║  API:       http://localhost:5000/api          ║
+║  Health:    http://localhost:5000/health       ║
+╚══════════════════════════════════════════════════════════╝
+          
+2026-07-18 16:43:50 [HTTP]: ::1 - - [18/Jul/2026:11:13:50 +0000] "GET /api/auth/me HTTP/1.1" 200 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:43:50 [HTTP]: ::1 - - [18/Jul/2026:11:13:50 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:43:55 [HTTP]: ::1 - - [18/Jul/2026:11:13:55 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:17 [HTTP]: ::1 - - [18/Jul/2026:11:15:17 +0000] "POST /api/auth/logout HTTP/1.1" 401 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:17 [HTTP]: ::1 - - [18/Jul/2026:11:15:17 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:18 [HTTP]: ::1 - - [18/Jul/2026:11:15:18 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:18 [HTTP]: ::1 - - [18/Jul/2026:11:15:18 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:18 [HTTP]: ::1 - - [18/Jul/2026:11:15:18 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:18 [HTTP]: ::1 - - [18/Jul/2026:11:15:18 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:46 [HTTP]: ::1 - - [18/Jul/2026:11:15:46 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:46 [HTTP]: ::1 - - [18/Jul/2026:11:15:46 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 230 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:48 [HTTP]: ::1 - - [18/Jul/2026:11:15:48 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:53 [HTTP]: ::1 - - [18/Jul/2026:11:15:53 +0000] "DELETE /api/blogs/6a5b5b4194fba0a013dc08e8 HTTP/1.1" 200 62 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:53 [HTTP]: ::1 - - [18/Jul/2026:11:15:53 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:56 [HTTP]: ::1 - - [18/Jul/2026:11:15:56 +0000] "DELETE /api/blogs/6a5b5b2894fba0a013dc08df HTTP/1.1" 200 62 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:56 [HTTP]: ::1 - - [18/Jul/2026:11:15:56 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 1007 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:59 [HTTP]: ::1 - - [18/Jul/2026:11:15:59 +0000] "DELETE /api/blogs/6a5b5afd94fba0a013dc08d4 HTTP/1.1" 200 62 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:45:59 [HTTP]: ::1 - - [18/Jul/2026:11:15:59 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 82 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:46:31 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 16:46:31 [WARN]: Cloudinary upload failed, using local file URL fallback:  
+2026-07-18 16:46:31 [HTTP]: ::1 - - [18/Jul/2026:11:16:31 +0000] "POST /api/uploads/image HTTP/1.1" 200 180 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:46:31 [HTTP]: ::1 - - [18/Jul/2026:11:16:31 +0000] "GET /uploads/images/6GniHCDh1MB_.webp HTTP/1.1" 200 12616 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:46:38 [HTTP]: ::1 - - [18/Jul/2026:11:16:38 +0000] "POST /api/blogs HTTP/1.1" 201 642 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:46:39 [HTTP]: ::1 - - [18/Jul/2026:11:16:39 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 799 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:46:45 [HTTP]: ::1 - - [18/Jul/2026:11:16:45 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:46:45 [HTTP]: ::1 - - [18/Jul/2026:11:16:45 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:46:47 [HTTP]: ::1 - - [18/Jul/2026:11:16:47 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 200 797 "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:46:57 [HTTP]: ::1 - - [18/Jul/2026:11:16:57 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:46:57 [HTTP]: ::1 - - [18/Jul/2026:11:16:57 +0000] "GET /uploads/images/6GniHCDh1MB_.webp HTTP/1.1" 304 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:47:10 [HTTP]: ::1 - - [18/Jul/2026:11:17:10 +0000] "GET /api/blogs/slug/blogs-management HTTP/1.1" 200 741 "http://localhost:5173/blogs/blogs-management" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:47:19 [HTTP]: ::1 - - [18/Jul/2026:11:17:19 +0000] "GET /api/blogs/slug/blogs-management HTTP/1.1" 200 741 "http://localhost:5173/blogs/blogs-management" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:47:19 [HTTP]: ::1 - - [18/Jul/2026:11:17:19 +0000] "GET /uploads/images/6GniHCDh1MB_.webp HTTP/1.1" 304 - "http://localhost:5173/blogs/blogs-management" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:47:29 [HTTP]: ::1 - - [18/Jul/2026:11:17:29 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 200 797 "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:47:50 [HTTP]: ::1 - - [18/Jul/2026:11:17:50 +0000] "POST /api/auth/login HTTP/1.1" 200 - "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:47:50 [HTTP]: ::1 - - [18/Jul/2026:11:17:50 +0000] "GET /api/admin/system-stats HTTP/1.1" 200 230 "http://localhost:5173/dashboard/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:47:53 [HTTP]: ::1 - - [18/Jul/2026:11:17:53 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 799 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:47:53 [HTTP]: ::1 - - [18/Jul/2026:11:17:53 +0000] "GET /uploads/images/6GniHCDh1MB_.webp HTTP/1.1" 304 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:49:01 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 16:49:01 [WARN]: Cloudinary upload failed, using local file URL fallback:  
+2026-07-18 16:49:01 [HTTP]: ::1 - - [18/Jul/2026:11:19:01 +0000] "POST /api/uploads/image HTTP/1.1" 200 178 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:49:01 [HTTP]: ::1 - - [18/Jul/2026:11:19:01 +0000] "GET /uploads/images/NstQWz-Tbkev.png HTTP/1.1" 200 124620 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:49:09 [HTTP]: ::1 - - [18/Jul/2026:11:19:09 +0000] "POST /api/blogs HTTP/1.1" 201 860 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:49:09 [HTTP]: ::1 - - [18/Jul/2026:11:19:09 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:49:55 [ERROR]: Cloudinary upload failed detail:  
+2026-07-18 16:49:55 [WARN]: Cloudinary upload failed, using local file URL fallback:  
+2026-07-18 16:49:55 [HTTP]: ::1 - - [18/Jul/2026:11:19:55 +0000] "POST /api/uploads/image HTTP/1.1" 200 178 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:49:55 [HTTP]: ::1 - - [18/Jul/2026:11:19:55 +0000] "GET /uploads/images/kHNg7UmwIZwi.jpg HTTP/1.1" 200 122231 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:49:57 [HTTP]: ::1 - - [18/Jul/2026:11:19:57 +0000] "POST /api/blogs HTTP/1.1" 201 848 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:49:57 [HTTP]: ::1 - - [18/Jul/2026:11:19:57 +0000] "GET /api/blogs?limit=100 HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:50:02 [HTTP]: ::1 - - [18/Jul/2026:11:20:02 +0000] "POST /api/auth/logout HTTP/1.1" 401 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:50:02 [HTTP]: ::1 - - [18/Jul/2026:11:20:02 +0000] "POST /api/auth/refresh-token HTTP/1.1" 200 - "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:50:02 [HTTP]: ::1 - - [18/Jul/2026:11:20:02 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/dashboard/admin/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:50:02 [HTTP]: ::1 - - [18/Jul/2026:11:20:02 +0000] "POST /api/auth/logout HTTP/1.1" 200 52 "http://localhost:5173/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
+2026-07-18 16:50:04 [HTTP]: ::1 - - [18/Jul/2026:11:20:04 +0000] "GET /api/blogs?page=1&limit=6 HTTP/1.1" 200 - "http://localhost:5173/blogs" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"  
